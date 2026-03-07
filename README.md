@@ -1,13 +1,13 @@
-# PolinRider: DPRK threat actor implants malware in 621 GitHub repositories
+# PolinRider: DPRK threat actor implants malware in 634 GitHub repositories
 
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 - **Date:** 2026-03-07
-- **Severity:** CRITICAL — active supply chain infection across 621 public repositories
+- **Severity:** CRITICAL — active supply chain infection across 634 public repositories
 
 ---
 
-The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **621 public GitHub repositories** belonging to **301 unique owners**. 
+The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **634 public GitHub repositories** belonging to **337 unique owners**. 
 
 The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.  Even worse, this threat actor has used the same technique to craft malicious NPM packages as well. 
 
@@ -17,7 +17,7 @@ The OpenSourceMalware team has attributed this campaign to the DPRK, and the thr
 
 ---
 
-This campaign is growing quickly with the total number of compromised repositories growing from 116 yesterday, to 546 in less than 24 hours.
+This campaign is growing quickly with the total number of compromised repositories growing from 116 two days ago, to 634 today (March 8, 2026).
 
 ![GitHub Repos Compromised](./images/PolinRider-campaign-combined-github-downloads.png)
 
@@ -25,10 +25,10 @@ This campaign is growing quickly with the total number of compromised repositori
 
 | Metric | Count |
 |--------|-------|
-| Unique repositories infected | 621 |
-| Unique owners affected | 303 |
-| — Individual users | 263 |
-| — Organisations | 40 |
+| Unique repositories infected | 634 |
+| Unique owners affected | 336 |
+| — Individual users | 292 |
+| — Organisations | 44 |
 
 ---
 
@@ -67,7 +67,7 @@ This final payload is a sophisticated **blockchain-based dead drop resolver** th
 
 ### List of Compromised Repositories
 
-All 621 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider).
+All 634 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider).
 
 | # | Repository | Owner | Owner Type | Stars | Forks | Infected Files | File Paths | Description | Repo URL |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -720,7 +720,7 @@ All 621 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?s
 | `App.js` | 13 |
 | `app.js` | 2 |
 
-The dominance of `postcss.config.mjs` (416 of 621 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+The dominance of `postcss.config.mjs` (416 of 634 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
 
 ---
 
@@ -965,7 +965,7 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | `next.config.mjs` | 13 |
 | `index.js` | 6 |
 | **Total (pre-dedup)** | **588** |
-| **Unique repos** | **621** |
+| **Unique repos** | **634** |
 
 ---
 
@@ -974,8 +974,8 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | File | Description |
 |------|-------------|
 | `README.md` | This report |
-| `affected_repos.csv` | All 621 affected repositories — organisations first, then users, each sorted by stars+forks descending |
-| `affected_users.csv` | All 303 affected owners — organisations first, then users, each sorted by followers descending |
+| `affected_repos.csv` | All 634 affected repositories — organisations first, then users, each sorted by stars+forks descending |
+| `affected_users.csv` | All 336 affected owners — organisations first, then users, each sorted by followers descending |
 
 ---
 
