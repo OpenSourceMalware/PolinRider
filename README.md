@@ -7,6 +7,8 @@
 
 ---
 
+![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
+
 ## Technical Details
 
 The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **560 public GitHub repositories** belonging to **301 unique owners**. 
