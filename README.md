@@ -657,6 +657,8 @@ The dominance of `postcss.config.mjs` (416 of 565 repos, ~74%) strongly points t
 
 ## Malware Technical Analysis
 
+The OSM team wrote up the complete attack chain for this malware in our blog post about the Neutralinojs compromise.  You can read that analsys [HERE](https://opensourcemalware.com/blog/neutralinojs-compromise).
+
 ### Obfuscation Layers
 
 The malware uses 4 layers of obfuscation:
