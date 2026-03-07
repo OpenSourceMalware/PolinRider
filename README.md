@@ -1,4 +1,4 @@
-# PolinRider: DPRK threat actor implants malware in 560 GitHub repositories 
+# PolinRider: DPRK threat actor implants malware in 560 GitHub repositories
 
 **Date:** 2026-03-07
 **Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
@@ -12,8 +12,7 @@
 The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered an ongoing campaign
 A threat actor
 
-
-## Scope of Attack
+## Summary
 
 A malicious obfuscated JavaScript payload identified by the string `rmcej%otb%` has been found injected into legitimate JavaScript config files across **560 public GitHub repositories** belonging to **301 unique owners**.
 
@@ -29,6 +28,8 @@ The payload is appended to the end of real project config files — silently, af
 |--------|-------|
 | Unique repositories infected | 565 |
 | Unique owners affected | 303 |
+| — Individual users | 263 |
+| — Organisations | 40 |
 | Total stars across infected repos | 179 |
 | Total forks across infected repos | 87 |
 | Total followers across affected owners | 2,475 |
@@ -131,13 +132,27 @@ The full CSVs are sorted by impact for triage.
 | `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
 | `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
 
-### Top Owners by Follower Count
+### Top Organisations by Followers
 
-| Owner | Followers | Repos Affected |
-|-------|----------:|---------------:|
+| Organisation | Followers | Repos Affected |
+|--------------|----------:|---------------:|
+| `sparktechagency` | 130 | 12 |
+| `FSDTeam-SAA` | 21 | 11 |
+| `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
+| `Codechef-VITC-Student-Chapter` | 17 | 1 |
+| `softvence-omega-future-stack` | 11 | 4 |
+| `The-Extra-Project` | 11 | 1 |
+| `etrainermis` | 7 | 1 |
+| `tricodenetwork` | 7 | 1 |
+| `Binary-Mindz` | 6 | 1 |
+| `FlowBondTech` | 3 | 3 |
+
+### Top Individual Users by Followers
+
+| User | Followers | Repos Affected |
+|------|----------:|---------------:|
 | `coderkhalide` | 349 | 4 |
 | `finom` | 172 | 3 |
-| `sparktechagency` | 130 | 12 |
 | `Victorola-coder` | 121 | 1 |
 | `dhruvmalik007` | 87 | 6 |
 | `a-belard` | 43 | 1 |
@@ -145,8 +160,9 @@ The full CSVs are sorted by impact for triage.
 | `Nathanim1919` | 38 | 5 |
 | `kanchana404` | 33 | 3 |
 | `AKDebug-UX` | 30 | 3 |
+| `web-ghoul` | 29 | 2 |
 
-> **Priority targets:** `sparktechagency` (130 followers, 12 repos) is the highest-volume owner. `coderkhalide` (349 followers, 4 repos) has the widest direct reach.
+> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
 
 ---
 
@@ -231,8 +247,8 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | File | Description |
 |------|-------------|
 | `rmcej-otb-threat-report.md` | This report |
-| `affected_repos.csv` | All 565 affected repositories with owner, stars, forks, file paths, and URLs — sorted by stars+forks descending |
-| `affected_users.csv` | All 303 affected owners with follower count, public repo count, and affected repo links — sorted by followers descending |
+| `affected_repos.csv` | All 565 affected repositories — organisations first, then users, each sorted by stars+forks descending |
+| `affected_users.csv` | All 303 affected owners — organisations first, then users, each sorted by followers descending |
 
 ---
 
