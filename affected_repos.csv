@@ -1,484 +1,566 @@
-#,Repository,Owner,Owner Type,Infected Files,File Paths,Repo URL
-1,01aksh/jobPilotFrontend,01aksh,User,1,tailwind.config.js,https://github.com/01aksh/jobPilotFrontend
-2,213020aumc/nestjs-basics,213020aumc,User,1,eslint.config.mjs,https://github.com/213020aumc/nestjs-basics
-3,a-belard/rayyan,a-belard,User,1,frontend/postcss.config.mjs,https://github.com/a-belard/rayyan
-4,Abd-elrahmann/inestors-backend,Abd-elrahmann,User,1,server.js,https://github.com/Abd-elrahmann/inestors-backend
-5,Abd-elrahmann/profit-backend,Abd-elrahmann,User,1,eslint.config.mjs,https://github.com/Abd-elrahmann/profit-backend
-6,Abdalla1990/generate-questions,Abdalla1990,User,1,generate-questions/question-generation/config.js,https://github.com/Abdalla1990/generate-questions
-7,abdullah2310ishaq/afronaut,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/afronaut
-8,abdullah2310ishaq/personal-portfolio,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/personal-portfolio
-9,abdullah2310ishaq/zeebuddy,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/zeebuddy
-10,abdullah2310ishaq/resposive-doctor-websote,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/resposive-doctor-websote
-11,abdullah2310ishaq/ecommerce_jewellery_store,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/ecommerce_jewellery_store
-12,abdullah2310ishaq/company,abdullah2310ishaq,User,1,postcss.config.mjs,https://github.com/abdullah2310ishaq/company
-13,AbdulwahidHusein/portfolio-1,AbdulwahidHusein,User,1,astro.config.mjs,https://github.com/AbdulwahidHusein/portfolio-1
-14,AbdulwahidHusein/ai-tools-directory,AbdulwahidHusein,User,1,postcss.config.mjs,https://github.com/AbdulwahidHusein/ai-tools-directory
-15,abimtad/upload_file,abimtad,User,1,postcss.config.mjs,https://github.com/abimtad/upload_file
-16,acanaveras/autonomous_5g_slicing,acanaveras,User,1,NeMo-Agent-Toolkit-UI/tailwind.config.js,https://github.com/acanaveras/autonomous_5g_slicing
-17,addis-ale/better-auth-level,addis-ale,User,1,src/index.ts,https://github.com/addis-ale/better-auth-level
-18,addis-ale/wetruck-shipper,addis-ale,User,1,postcss.config.mjs,https://github.com/addis-ale/wetruck-shipper
-19,Addis-Career/Frontend,Addis-Career,Organization,1,postcss.config.mjs,https://github.com/Addis-Career/Frontend
-20,addygeek/Walmart-Inventory-Clearance-Optimizer,addygeek,User,1,frontend/tailwind.config.js,https://github.com/addygeek/Walmart-Inventory-Clearance-Optimizer
-21,Adharshms/builder,Adharshms,User,1,eslint.config.mjs,https://github.com/Adharshms/builder
-22,Adithyahewage/portfolio_website,Adithyahewage,User,1,postcss.config.mjs,https://github.com/Adithyahewage/portfolio_website
-23,Adithyahewage/Salon-demo,Adithyahewage,User,1,postcss.config.mjs,https://github.com/Adithyahewage/Salon-demo
-24,Adithyahewage/Gym-demo,Adithyahewage,User,1,postcss.config.mjs,https://github.com/Adithyahewage/Gym-demo
-25,ahmadraza382/Luxeurs-Shopping-Store,ahmadraza382,User,1,postcss.config.mjs,https://github.com/ahmadraza382/Luxeurs-Shopping-Store
-26,ahmadraza382/E-commerce-website,ahmadraza382,User,1,postcss.config.mjs,https://github.com/ahmadraza382/E-commerce-website
-27,ahmadraza382/Portfolio,ahmadraza382,User,1,postcss.config.mjs,https://github.com/ahmadraza382/Portfolio
-28,ahmadraza382/FinanceAi,ahmadraza382,User,1,tailwind.config.js,https://github.com/ahmadraza382/FinanceAi
-29,ahmadraza382/APIs-integration,ahmadraza382,User,1,postcss.config.mjs,https://github.com/ahmadraza382/APIs-integration
-30,ahmedghonim/esraa,ahmedghonim,User,1,postcss.config.mjs,https://github.com/ahmedghonim/esraa
-31,ahnaafarafee/bionic-seven,ahnaafarafee,User,2,eslint.config.mjs | postcss.config.mjs,https://github.com/ahnaafarafee/bionic-seven
-32,AhsanalyOfficial/ahsan_portfolio,AhsanalyOfficial,User,1,postcss.config.mjs,https://github.com/AhsanalyOfficial/ahsan_portfolio
-33,akashstwt/eth-global-cryptowiki,akashstwt,User,1,postcss.config.mjs,https://github.com/akashstwt/eth-global-cryptowiki
-34,AKDebug-UX/DoneWithIt,AKDebug-UX,User,1,App.js,https://github.com/AKDebug-UX/DoneWithIt
-35,AKDebug-UX/interactive-tv-app,AKDebug-UX,User,1,tailwind.config.js,https://github.com/AKDebug-UX/interactive-tv-app
-36,AKDebug-UX/whatsapp-bot-master,AKDebug-UX,User,1,config.js,https://github.com/AKDebug-UX/whatsapp-bot-master
-37,AKDebug-UX/challengePR,AKDebug-UX,User,1,postcss.config.mjs,https://github.com/AKDebug-UX/challengePR
-38,Al-amin07/project-9-client,Al-amin07,User,3,eslint.config.mjs | tailwind.config.js | postcss.config.mjs,https://github.com/Al-amin07/project-9-client
-39,Al-amin07/nest-template,Al-amin07,User,1,eslint.config.mjs,https://github.com/Al-amin07/nest-template
-40,Al-amin07/project_5_frontend,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/project_5_frontend
-41,Al-amin07/project_5_backend,Al-amin07,User,1,eslint.config.mjs,https://github.com/Al-amin07/project_5_backend
-42,Al-amin07/file_sure,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/file_sure
-43,Al-amin07/bigso_app,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/bigso_app
-44,Al-amin07/purple-cat-server,Al-amin07,User,1,eslint.config.mjs,https://github.com/Al-amin07/purple-cat-server
-45,Al-amin07/purple-cat-client,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/purple-cat-client
-46,Al-amin07/apparel-trade-bd,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/apparel-trade-bd
-47,Al-amin07/hyshin,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/hyshin
-48,Al-amin07/web-programming-lab,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/web-programming-lab
-49,Al-amin07/pioneer,Al-amin07,User,1,postcss.config.mjs,https://github.com/Al-amin07/pioneer
-50,Al-amin07/backend_danyel_new,Al-amin07,User,1,eslint.config.mjs,https://github.com/Al-amin07/backend_danyel_new
-51,Ali-Hamas/Todo-App,Ali-Hamas,User,1,frontend/postcss.config.mjs,https://github.com/Ali-Hamas/Todo-App
-52,Ali-Hamas/Website-Todo,Ali-Hamas,User,1,frontend/postcss.config.mjs,https://github.com/Ali-Hamas/Website-Todo
-53,Ali-Hamas/AI-Learn-Hub,Ali-Hamas,User,1,frontend/tailwind.config.js,https://github.com/Ali-Hamas/AI-Learn-Hub
-54,Ali-Hamas/VPS-Error,Ali-Hamas,User,1,frontend/tailwind.config.js,https://github.com/Ali-Hamas/VPS-Error
-55,Ali-Hamas/Learn_Hub,Ali-Hamas,User,1,frontend/tailwind.config.js,https://github.com/Ali-Hamas/Learn_Hub
-56,Aman-scripts/NugenEmployabilityTest,Aman-scripts,User,1,postcss.config.mjs,https://github.com/Aman-scripts/NugenEmployabilityTest
-57,AmazingAsim/kabutar,AmazingAsim,User,1,index.js,https://github.com/AmazingAsim/kabutar
-58,AmazingAsim/nextdeals,AmazingAsim,User,1,next.config.mjs,https://github.com/AmazingAsim/nextdeals
-59,amit-biswas-1992/joykoly-test-app,amit-biswas-1992,User,1,tailwind.config.js,https://github.com/amit-biswas-1992/joykoly-test-app
-60,amMubbasher/shop.ceenami.com,amMubbasher,User,1,server/routes/userRoutes.js,https://github.com/amMubbasher/shop.ceenami.com
-61,Anees201173/MoreApp_Backend,Anees201173,User,1,src/app.js,https://github.com/Anees201173/MoreApp_Backend
-62,anilgoswamistartbitsolutions/travel-platform,anilgoswamistartbitsolutions,User,2,sites/holidaydeals/postcss.config.mjs | travel_template/package/postcss.config.mjs,https://github.com/anilgoswamistartbitsolutions/travel-platform
-63,anilgoswamistartbitsolutions/travel-payload-sites,anilgoswamistartbitsolutions,User,2,sites/holidaydeals/postcss.config.mjs | sites/luxurytravels/postcss.config.mjs,https://github.com/anilgoswamistartbitsolutions/travel-payload-sites
-64,anilgoswamistartbitsolutions/bolt-novel-merry,anilgoswamistartbitsolutions,User,1,tailwind.config.js,https://github.com/anilgoswamistartbitsolutions/bolt-novel-merry
-65,Anthem-InfoTech-Pvt-Ltd/raffily-business-cron,Anthem-InfoTech-Pvt-Ltd,Organization,1,emailTemplates/raffle-results.js,https://github.com/Anthem-InfoTech-Pvt-Ltd/raffily-business-cron
-66,Anthem-InfoTech-Pvt-Ltd/dashboards,Anthem-InfoTech-Pvt-Ltd,Organization,1,postcss.config.mjs,https://github.com/Anthem-InfoTech-Pvt-Ltd/dashboards
-67,anthemnandani/ai,anthemnandani,User,1,postcss.config.mjs,https://github.com/anthemnandani/ai
-68,arif1101/AadilPay-backend,arif1101,User,1,eslint.config.mjs,https://github.com/arif1101/AadilPay-backend
-69,arjunkhetia/NestJS-PostgreSQL-Project,arjunkhetia,User,1,eslint.config.mjs,https://github.com/arjunkhetia/NestJS-PostgreSQL-Project
-70,arjunkhetia/NestJS-MongoDB-Project,arjunkhetia,User,1,eslint.config.mjs,https://github.com/arjunkhetia/NestJS-MongoDB-Project
-71,arjunkhetia/NestJS-Swagger-Project,arjunkhetia,User,1,eslint.config.mjs,https://github.com/arjunkhetia/NestJS-Swagger-Project
-72,arjunkhetia/NestJS-Enterprise-Project,arjunkhetia,User,1,eslint.config.mjs,https://github.com/arjunkhetia/NestJS-Enterprise-Project
-73,Arman8957/zenith-be,Arman8957,User,1,eslint.config.mjs,https://github.com/Arman8957/zenith-be
-74,Arman8957/husss-be,Arman8957,User,1,eslint.config.mjs,https://github.com/Arman8957/husss-be
-75,AronWebSolutionPVTLTD/cycle-races-admin,AronWebSolutionPVTLTD,User,1,vite.config.mjs,https://github.com/AronWebSolutionPVTLTD/cycle-races-admin
-76,AronWebSolutionPVTLTD/cycle-races-frontend,AronWebSolutionPVTLTD,User,1,next.config.mjs,https://github.com/AronWebSolutionPVTLTD/cycle-races-frontend
-77,asadullah-kazmi/syncspace,asadullah-kazmi,User,1,frontend/postcss.config.mjs,https://github.com/asadullah-kazmi/syncspace
-78,Atif-Hameed/unsigned-admin,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/unsigned-admin
-79,Atif-Hameed/als-admin,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/als-admin
-80,Atif-Hameed/unsigned-frontend,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/unsigned-frontend
-81,Atif-Hameed/social-admin,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/social-admin
-82,Atif-Hameed/cybenty,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/cybenty
-83,Atif-Hameed/ALS-Panel,Atif-Hameed,User,1,postcss.config.mjs,https://github.com/Atif-Hameed/ALS-Panel
-84,Atik203/My-Anime-Server,Atik203,User,1,eslint.config.mjs,https://github.com/Atik203/My-Anime-Server
-85,Atik203/Scholar-Flow,Atik203,User,1,apps/frontend/postcss.config.mjs,https://github.com/Atik203/Scholar-Flow
-86,Atik203/My-Anime-Client,Atik203,User,1,tailwind.config.js,https://github.com/Atik203/My-Anime-Client
-87,Automobile-System/frontend,Automobile-System,Organization,1,postcss.config.mjs,https://github.com/Automobile-System/frontend
-88,aviel9552/plusfive-backend,aviel9552,User,1,server.js,https://github.com/aviel9552/plusfive-backend
-89,Axxi3/hennery,Axxi3,User,1,postcss.config.mjs,https://github.com/Axxi3/hennery
-90,Axxi3/ladyfoxx,Axxi3,User,1,postcss.config.mjs,https://github.com/Axxi3/ladyfoxx
-91,ayanmal1k/DragoPump,ayanmal1k,User,1,postcss.config.mjs,https://github.com/ayanmal1k/DragoPump
-92,ayanmal1k/Sol-Market,ayanmal1k,User,1,postcss.config.mjs,https://github.com/ayanmal1k/Sol-Market
-93,Ayesha-Siddiqui1234/katy-youth-hackathon-2025-dev-post-,Ayesha-Siddiqui1234,User,1,frontend/postcss.config.mjs,https://github.com/Ayesha-Siddiqui1234/katy-youth-hackathon-2025-dev-post-
-94,badhon252/shift-scheduler,badhon252,User,1,postcss.config.mjs,https://github.com/badhon252/shift-scheduler
-95,Barosz30/Portfolio,Barosz30,User,1,tailwind.config.js,https://github.com/Barosz30/Portfolio
-96,Bart3kL/shopify-components,Bart3kL,User,1,polaris-components/postcss.config.mjs,https://github.com/Bart3kL/shopify-components
-97,bhavik-dreamz/Pdf-search-based-on-ai-backend,bhavik-dreamz,User,1,routes/chatRoutes.js,https://github.com/bhavik-dreamz/Pdf-search-based-on-ai-backend
-98,BhavikPatel-dreamz/br-dj,BhavikPatel-dreamz,Organization,1,vite.config.js,https://github.com/BhavikPatel-dreamz/br-dj
-99,BhavikPatel-dreamz/Homeopathway,BhavikPatel-dreamz,Organization,1,postcss.config.mjs,https://github.com/BhavikPatel-dreamz/Homeopathway
-100,BhavikPatel-dreamz/Products-filters-react,BhavikPatel-dreamz,Organization,1,src/App.js,https://github.com/BhavikPatel-dreamz/Products-filters-react
-101,Binary-Mindz/agimtula_server,Binary-Mindz,Organization,1,eslint.config.mjs,https://github.com/Binary-Mindz/agimtula_server
-102,BrennansWave-com/brennanswave,BrennansWave-com,Organization,1,postcss.config.mjs,https://github.com/BrennansWave-com/brennanswave
-103,brianonbased-dev/BaseAppShop,brianonbased-dev,User,1,postcss.config.mjs,https://github.com/brianonbased-dev/BaseAppShop
-104,brown2020/ikigaifinder,brown2020,User,1,postcss.config.mjs,https://github.com/brown2020/ikigaifinder
-105,Button-20/perfume-showcase,Button-20,User,1,next.config.mjs,https://github.com/Button-20/perfume-showcase
-106,Button-20/juzbuild-background-processor,Button-20,User,1,templates/homely/postcss.config.mjs,https://github.com/Button-20/juzbuild-background-processor
-107,Button-20/juzbuild,Button-20,User,1,postcss.config.mjs,https://github.com/Button-20/juzbuild
-108,carrantal/frontend,carrantal,User,1,postcss.config.mjs,https://github.com/carrantal/frontend
-109,chetanji028/tradingview2,chetanji028,User,1,server/routes/api/users.js,https://github.com/chetanji028/tradingview2
-110,ChiraniSiriwardhana/Portfolio,ChiraniSiriwardhana,User,1,postcss.config.mjs,https://github.com/ChiraniSiriwardhana/Portfolio
-111,Cloudrika/cloudrika-web,Cloudrika,Organization,2,apps/email-portal/next.config.mjs | packages/ui/postcss.config.mjs,https://github.com/Cloudrika/cloudrika-web
-112,Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform,Codechef-VITC-Student-Chapter,Organization,1,Client/postcss.config.mjs,https://github.com/Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform
-113,codecrafter201/Kapacia_AI_Backend,codecrafter201,User,1,routes/api.js,https://github.com/codecrafter201/Kapacia_AI_Backend
-114,CODECUBE-001/frontend,CODECUBE-001,Organization,1,astro.config.mjs,https://github.com/CODECUBE-001/frontend
-115,coderkhalide/Anti-Detect-Browser,coderkhalide,User,1,src/renderer/tailwind.config.js,https://github.com/coderkhalide/Anti-Detect-Browser
-116,coderkhalide/Trading-Journal,coderkhalide,User,1,postcss.config.mjs,https://github.com/coderkhalide/Trading-Journal
-117,coderkhalide/selorax-canvas,coderkhalide,User,1,apps/canvas-v2/postcss.config.mjs,https://github.com/coderkhalide/selorax-canvas
-118,coderkhalide/scalping-trading-tools,coderkhalide,User,1,postcss.config.mjs,https://github.com/coderkhalide/scalping-trading-tools
-119,cto-varun/user-crud-design-nextjs,cto-varun,User,1,postcss.config.mjs,https://github.com/cto-varun/user-crud-design-nextjs
-120,cywasay/leaders,cywasay,User,1,leaders-admin/postcss.config.mjs,https://github.com/cywasay/leaders
-121,cywasay/neorecruits-,cywasay,User,1,postcss.config.mjs,https://github.com/cywasay/neorecruits-
-122,DamikaDeshan/FaceDetectionClient,DamikaDeshan,User,1,tailwind.config.js,https://github.com/DamikaDeshan/FaceDetectionClient
-123,dawahanigeria-team/rayyan-server,dawahanigeria-team,Organization,1,eslint.config.mjs,https://github.com/dawahanigeria-team/rayyan-server
-124,Dawit212119/Devodemy,Dawit212119,User,1,postcss.config.mjs,https://github.com/Dawit212119/Devodemy
-125,Dawit212119/DMS,Dawit212119,User,1,client/tailwind.config.js,https://github.com/Dawit212119/DMS
-126,deepaksh798/dashboard-second,deepaksh798,User,1,postcss.config.mjs,https://github.com/deepaksh798/dashboard-second
-127,dev-muneeb-1520/restraunt-management-app-backend,dev-muneeb-1520,User,1,eslint.config.mjs,https://github.com/dev-muneeb-1520/restraunt-management-app-backend
-128,dev-muneeb-1520/nest-js-quiz-manager,dev-muneeb-1520,User,1,server/eslint.config.mjs,https://github.com/dev-muneeb-1520/nest-js-quiz-manager
-129,dev1scaleupally/july-nextjs-fastify-task,dev1scaleupally,User,1,backend/src/routes/index.js,https://github.com/dev1scaleupally/july-nextjs-fastify-task
-130,developerdesigner18/Frontend-Task,developerdesigner18,User,1,postcss.config.mjs,https://github.com/developerdesigner18/Frontend-Task
-131,developerDesinger/Scrapping-Dashboard-Frontend,developerDesinger,User,1,tailwind.config.js,https://github.com/developerDesinger/Scrapping-Dashboard-Frontend
-132,developerDesinger/robo-play,developerDesinger,User,1,routes/aiResumeTailor.route.js,https://github.com/developerDesinger/robo-play
-133,dhruvmalik007/forensics-board,dhruvmalik007,User,1,postcss.config.mjs,https://github.com/dhruvmalik007/forensics-board
-134,dhruvmalik007/small-case_preEthDelhi,dhruvmalik007,User,1,apps/web/tailwind.config.js,https://github.com/dhruvmalik007/small-case_preEthDelhi
-135,dhruvmalik007/xrpl_haks_hackathon_project,dhruvmalik007,User,1,postcss.config.mjs,https://github.com/dhruvmalik007/xrpl_haks_hackathon_project
-136,dhruvmalik007/smallcase_defi,dhruvmalik007,User,1,apps/web/tailwind.config.js,https://github.com/dhruvmalik007/smallcase_defi
-137,dmytro-chushko/form-editor,dmytro-chushko,User,1,postcss.config.mjs,https://github.com/dmytro-chushko/form-editor
-138,dmytro-chushko/portfolio-dev-dc,dmytro-chushko,User,1,postcss.config.mjs,https://github.com/dmytro-chushko/portfolio-dev-dc
-139,durlav-bose/sdi-lead-discovery,durlav-bose,User,1,next.config.mjs,https://github.com/durlav-bose/sdi-lead-discovery
-140,emmanueldavidson96/popular_saas_product_landing_page,emmanueldavidson96,User,1,postcss.config.mjs,https://github.com/emmanueldavidson96/popular_saas_product_landing_page
-141,Enigma-Incorporated-Ltd/N0DE-Website,Enigma-Incorporated-Ltd,Organization,2,tailwind.config.js | src/tailwind.config.js,https://github.com/Enigma-Incorporated-Ltd/N0DE-Website
-142,etrainermis/mineduc-Form,etrainermis,Organization,1,postcss.config.mjs,https://github.com/etrainermis/mineduc-Form
-143,FabrikCreations/fabrik-lightbox,FabrikCreations,Organization,1,Gruntfile.js,https://github.com/FabrikCreations/fabrik-lightbox
-144,fareed-aslam/capitalkv,fareed-aslam,User,1,CapitalKV-AI-master/frontend/postcss.config.mjs,https://github.com/fareed-aslam/capitalkv
-145,farhanmasood-se/live-docs,farhanmasood-se,User,1,postcss.config.mjs,https://github.com/farhanmasood-se/live-docs
-146,farhanmasood-se/slack-clone,farhanmasood-se,User,1,postcss.config.mjs,https://github.com/farhanmasood-se/slack-clone
-147,farihulrouf/orcx_fe,farihulrouf,User,1,postcss.config.mjs,https://github.com/farihulrouf/orcx_fe
-148,finom/opensource.gubanov.eu,finom,User,1,webpack.config.js,https://github.com/finom/opensource.gubanov.eu
-149,finom/realtime-kanban,finom,User,1,postcss.config.mjs,https://github.com/finom/realtime-kanban
-150,finom/blok,finom,User,1,postcss.config.mjs,https://github.com/finom/blok
-151,finom/vovk-hello-world,finom,User,1,postcss.config.mjs,https://github.com/finom/vovk-hello-world
-152,Flitzinteractive/FlitzSpace,Flitzinteractive,User,1,client/tailwind.config.js,https://github.com/Flitzinteractive/FlitzSpace
-153,FlowBondTech/danz-web,FlowBondTech,Organization,1,postcss.config.mjs,https://github.com/FlowBondTech/danz-web
-154,FlowBondTech/danz-miniapps,FlowBondTech,Organization,1,danz-main/postcss.config.mjs,https://github.com/FlowBondTech/danz-miniapps
-155,FlowRMS/flow-connect-frontend-new,FlowRMS,Organization,1,postcss.config.mjs,https://github.com/FlowRMS/flow-connect-frontend-new
-156,FlowRMSLabs/flowdemandwebsite,FlowRMSLabs,Organization,1,postcss.config.mjs,https://github.com/FlowRMSLabs/flowdemandwebsite
-157,FrazKhan1/dev-team-chat,FrazKhan1,User,1,postcss.config.mjs,https://github.com/FrazKhan1/dev-team-chat
-158,freelancework00700/CRM-test-task,freelancework00700,User,1,postcss.config.mjs,https://github.com/freelancework00700/CRM-test-task
-159,FSDTeam-SAA/ftfdesignco-backend,FSDTeam-SAA,Organization,1,src/router/index.js,https://github.com/FSDTeam-SAA/ftfdesignco-backend
-160,FSDTeam-SAA/rayb_23-backend,FSDTeam-SAA,Organization,1,src/modules/business/business.router.js,https://github.com/FSDTeam-SAA/rayb_23-backend
-161,FSDTeam-SAA/cstrat_frontend,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/cstrat_frontend
-162,FSDTeam-SAA/brazen-kits,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/brazen-kits
-163,FSDTeam-SAA/Igghy-dashboard,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/Igghy-dashboard
-164,FSDTeam-SAA/nico41278-frontend,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/nico41278-frontend
-165,FSDTeam-SAA/sahara_53,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/sahara_53
-166,FSDTeam-SAA/hinkel-Website,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/hinkel-Website
-167,FSDTeam-SAA/iwmsadvisors,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/iwmsadvisors
-168,FSDTeam-SAA/admin-dashboard-gman,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/admin-dashboard-gman
-169,FSDTeam-SAA/AMES_Investment_new,FSDTeam-SAA,Organization,1,tailwind.config.js,https://github.com/FSDTeam-SAA/AMES_Investment_new
-170,FSDTeam-SAA/lowready-frontend,FSDTeam-SAA,Organization,1,postcss.config.mjs,https://github.com/FSDTeam-SAA/lowready-frontend
-171,fsdteam8/n_Krypted-frontend,fsdteam8,User,1,postcss.config.mjs,https://github.com/fsdteam8/n_Krypted-frontend
-172,fsdteam8/lowready-dashboard,fsdteam8,User,1,postcss.config.mjs,https://github.com/fsdteam8/lowready-dashboard
-173,fsdteam8/stevenar77-dashboard,fsdteam8,User,1,postcss.config.mjs,https://github.com/fsdteam8/stevenar77-dashboard
-174,fyunusa/video-tool,fyunusa,User,1,postcss.config.mjs,https://github.com/fyunusa/video-tool
-175,GARAGE-POS/nextjs_test,GARAGE-POS,Organization,1,postcss.config.mjs,https://github.com/GARAGE-POS/nextjs_test
-176,garrycha/test-job,garrycha,User,1,postcss.config.mjs,https://github.com/garrycha/test-job
-177,gmhridu/bicycle-assignment-ph,gmhridu,User,1,eslint.config.mjs,https://github.com/gmhridu/bicycle-assignment-ph
-178,Gowreesh-VT/Gowreesh-VT.github.io,Gowreesh-VT,User,1,js/breadcrumb-schema.js,https://github.com/Gowreesh-VT/Gowreesh-VT.github.io
-179,Gowreesh-VT/AWS-Web-Dev,Gowreesh-VT,User,1,postcss.config.mjs,https://github.com/Gowreesh-VT/AWS-Web-Dev
-180,Gowreesh-VT/OnlyFoundersV2,Gowreesh-VT,User,1,postcss.config.mjs,https://github.com/Gowreesh-VT/OnlyFoundersV2
-181,Gowreesh-VT/VITopoly,Gowreesh-VT,User,1,postcss.config.mjs,https://github.com/Gowreesh-VT/VITopoly
-182,Gowreesh-VT/SherlockIT,Gowreesh-VT,User,1,postcss.config.mjs,https://github.com/Gowreesh-VT/SherlockIT
-183,gSimani/ConcordBroker,gSimani,User,2,apps/web/tailwind.config.js | backups/apps_web_before_master_/tailwind.config.js,https://github.com/gSimani/ConcordBroker
-184,hamza-nafasat/rentin-frontend,hamza-nafasat,User,1,postcss.config.mjs,https://github.com/hamza-nafasat/rentin-frontend
-185,Harsimran-Nugen/assignment,Harsimran-Nugen,User,1,postcss.config.mjs,https://github.com/Harsimran-Nugen/assignment
-186,Hassam-01/Forsit-task,Hassam-01,User,1,tailwind.config.js,https://github.com/Hassam-01/Forsit-task
-187,HevenDev/rmw-new-design,HevenDev,User,1,postcss.config.mjs,https://github.com/HevenDev/rmw-new-design
-188,himanshu077/material-card-ui-test,himanshu077,User,1,postcss.config.cjs,https://github.com/himanshu077/material-card-ui-test
-189,Hriday-paul/anyjob-wellcome,Hriday-paul,User,1,postcss.config.mjs,https://github.com/Hriday-paul/anyjob-wellcome
-190,humayun506034/ReviewHub-Client,humayun506034,User,1,postcss.config.mjs,https://github.com/humayun506034/ReviewHub-Client
-191,hunain25/QuickFistAid,hunain25,User,1,tailwind.config.js,https://github.com/hunain25/QuickFistAid
-192,huzzy12/portfolio,huzzy12,User,1,postcss.config.mjs,https://github.com/huzzy12/portfolio
-193,HyderYash/my-progess-tracker,HyderYash,User,1,postcss.config.mjs,https://github.com/HyderYash/my-progess-tracker
-194,iamanaskhan10/my-portfolio-nextjs,iamanaskhan10,User,1,postcss.config.mjs,https://github.com/iamanaskhan10/my-portfolio-nextjs
-195,Iambilalfaisal/Portfolio,Iambilalfaisal,User,1,tailwind.config.js,https://github.com/Iambilalfaisal/Portfolio
-196,Ianwarzai/cotd_cronjob,Ianwarzai,User,1,services/stockDataService.js,https://github.com/Ianwarzai/cotd_cronjob
-197,Ibraz94/inventory_management_system,Ibraz94,User,1,frontend/postcss.config.mjs,https://github.com/Ibraz94/inventory_management_system
-198,idrishci/DreamJob,idrishci,User,1,src/app/eslint.config.mjs,https://github.com/idrishci/DreamJob
-199,ifedolapoomoniyi/fleet-robotics,ifedolapoomoniyi,User,1,postcss.config.mjs,https://github.com/ifedolapoomoniyi/fleet-robotics
-200,jade0615/Bookme,jade0615,User,1,frontend/tailwind.config.js,https://github.com/jade0615/Bookme
-201,jamesmaccoy/betaplek,jamesmaccoy,User,1,tailwind.config.mjs,https://github.com/jamesmaccoy/betaplek
-202,Jaskaran2701/Test-1,Jaskaran2701,User,1,postcss.config.mjs,https://github.com/Jaskaran2701/Test-1
-203,jbaze/Eli-rfq-system,jbaze,User,1,rfq-app/tailwind.config.js,https://github.com/jbaze/Eli-rfq-system
-204,jbaze/borec-basket-claude,jbaze,User,1,postcss.config.mjs,https://github.com/jbaze/borec-basket-claude
-205,jbaze/prject-hejer-image-upload,jbaze,User,1,image-upload-feature-angular/tailwind.config.js,https://github.com/jbaze/prject-hejer-image-upload
-206,jesus270/Krain-MVP-v1,jesus270,User,1,apps/landing/tailwind.config.js,https://github.com/jesus270/Krain-MVP-v1
-207,Joyeta-Mondal/Sparktech-Agency-assessment,Joyeta-Mondal,User,1,postcss.config.mjs,https://github.com/Joyeta-Mondal/Sparktech-Agency-assessment
-208,Joyeta-Mondal/arklab-ai-assessment,Joyeta-Mondal,User,1,postcss.config.mjs,https://github.com/Joyeta-Mondal/arklab-ai-assessment
-209,JPChoyon/bikeBotics,JPChoyon,User,1,eslint.config.mjs,https://github.com/JPChoyon/bikeBotics
-210,jrioscloud/financial-document-analyzer,jrioscloud,User,1,frontend/postcss.config.mjs,https://github.com/jrioscloud/financial-document-analyzer
-211,JudeTejada/Quick-Links,JudeTejada,User,1,eslint.config.js,https://github.com/JudeTejada/Quick-Links
-212,JudeTejada/reactly,JudeTejada,User,1,apps/web/postcss.config.mjs,https://github.com/JudeTejada/reactly
-213,JudeTejada/project-monitoring,JudeTejada,User,1,postcss.config.mjs,https://github.com/JudeTejada/project-monitoring
-214,JudeTejada/Fragments,JudeTejada,User,1,eslint.config.mjs,https://github.com/JudeTejada/Fragments
-215,JudeTejada/jude-portfolio-v3,JudeTejada,User,1,astro.config.mjs,https://github.com/JudeTejada/jude-portfolio-v3
-216,JudeTejada/snapdocs,JudeTejada,User,1,apps/frontend/tailwind.config.js,https://github.com/JudeTejada/snapdocs
-217,Karigar-App/Karigar,Karigar-App,Organization,1,packages/ui/postcss.config.mjs,https://github.com/Karigar-App/Karigar
-218,kasunwathsala/Nextjs-Protfolio,kasunwathsala,User,1,postcss.config.mjs,https://github.com/kasunwathsala/Nextjs-Protfolio
-219,kasunwathsala/Service-marketplace,kasunwathsala,User,1,navbar-vite (3)/postcss.config.mjs,https://github.com/kasunwathsala/Service-marketplace
-220,kasunwathsala/saloon-booking-system,kasunwathsala,User,1,salon-booking-system/postcss.config.mjs,https://github.com/kasunwathsala/saloon-booking-system
-221,kasunwathsala/Caramel-Pudding-web,kasunwathsala,User,1,postcss.config.mjs,https://github.com/kasunwathsala/Caramel-Pudding-web
-222,kasunwathsala/portfolio-2026,kasunwathsala,User,1,postcss.config.mjs,https://github.com/kasunwathsala/portfolio-2026
-223,kiranmistary0697/Stratezy_lab,kiranmistary0697,User,1,tailwind.config.js,https://github.com/kiranmistary0697/Stratezy_lab
-224,Kreliannn/Document-Request-System-FRONTEND,Kreliannn,User,1,postcss.config.mjs,https://github.com/Kreliannn/Document-Request-System-FRONTEND
-225,Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND,Kreliannn,User,1,postcss.config.mjs,https://github.com/Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND
-226,Kreliannn/student-passed-rate-analysis-frontend,Kreliannn,User,1,postcss.config.mjs,https://github.com/Kreliannn/student-passed-rate-analysis-frontend
-227,Kvit-Dm/RammSound,Kvit-Dm,User,1,webpack.config.js,https://github.com/Kvit-Dm/RammSound
-228,lihiniapsara/Spotify-Clone,lihiniapsara,User,1,tailwind.config.js,https://github.com/lihiniapsara/Spotify-Clone
-229,Lithira-Sasmitha/social_app,Lithira-Sasmitha,User,1,postcss.config.mjs,https://github.com/Lithira-Sasmitha/social_app
-230,Lithira-Silva/TrueClaim---ITPM-,Lithira-Silva,User,1,client/postcss.config.mjs,https://github.com/Lithira-Silva/TrueClaim---ITPM-
-231,mab3321/Event-Seating-API---Backend,mab3321,User,1,src/server.ts,https://github.com/mab3321/Event-Seating-API---Backend
-232,MahadA456/mahad-portfolio,MahadA456,User,1,postcss.config.mjs,https://github.com/MahadA456/mahad-portfolio
-233,mahadi-zulfiker/Hishabee_Frontend_Task,mahadi-zulfiker,User,1,postcss.config.mjs,https://github.com/mahadi-zulfiker/Hishabee_Frontend_Task
-234,mahadi-zulfiker/Backend-Tour-Management-System,mahadi-zulfiker,User,1,eslint.config.mjs,https://github.com/mahadi-zulfiker/Backend-Tour-Management-System
-235,mahadi-zulfiker/crm,mahadi-zulfiker,User,1,postcss.config.mjs,https://github.com/mahadi-zulfiker/crm
-236,mahadi-zulfiker/SpaceZee,mahadi-zulfiker,User,1,postcss.config.mjs,https://github.com/mahadi-zulfiker/SpaceZee
-237,mahadi-zulfiker/REPLIQ-Limited-Task,mahadi-zulfiker,User,1,postcss.config.mjs,https://github.com/mahadi-zulfiker/REPLIQ-Limited-Task
-238,mahadi-zulfiker/mz-events-frontend,mahadi-zulfiker,User,1,postcss.config.mjs,https://github.com/mahadi-zulfiker/mz-events-frontend
-239,mahadi-zulfiker/aura-commerce-backend,mahadi-zulfiker,User,1,eslint.config.mjs,https://github.com/mahadi-zulfiker/aura-commerce-backend
-240,Maham-Liaqat/Player-Assests-Tracker,Maham-Liaqat,User,1,Player-Tracker-Backend/routes/assists.js,https://github.com/Maham-Liaqat/Player-Assests-Tracker
-241,mahi-abeysinghe/SkillSync,mahi-abeysinghe,User,1,Frontend/src/App.js,https://github.com/mahi-abeysinghe/SkillSync
-242,malikjunaidhassann/seller-panel,malikjunaidhassann,User,1,postcss.config.mjs,https://github.com/malikjunaidhassann/seller-panel
-243,malirazaansari/Protfolio_project,malirazaansari,User,1,postcss.config.mjs,https://github.com/malirazaansari/Protfolio_project
-244,Mansuro/Garden-waste,Mansuro,User,1,src/App.js,https://github.com/Mansuro/Garden-waste
-245,manuel-spec/another-portfolio,manuel-spec,User,1,postcss.config.mjs,https://github.com/manuel-spec/another-portfolio
-246,MatiasCuadra98/ai-excel,MatiasCuadra98,User,1,apps/frontend/postcss.config.mjs,https://github.com/MatiasCuadra98/ai-excel
-247,mdemong87/theamfisher-assignment,mdemong87,User,1,eslint.config.mjs,https://github.com/mdemong87/theamfisher-assignment
-248,mdnuruzzamannirob/your-capture-awards,mdnuruzzamannirob,User,1,postcss.config.mjs,https://github.com/mdnuruzzamannirob/your-capture-awards
-249,mdnuruzzamannirob/relo-website,mdnuruzzamannirob,User,1,postcss.config.mjs,https://github.com/mdnuruzzamannirob/relo-website
-250,mdnuruzzamannirob/your-capture-awards-dashboard,mdnuruzzamannirob,User,1,postcss.config.mjs,https://github.com/mdnuruzzamannirob/your-capture-awards-dashboard
-251,Mediasoft-Cie-S-A/formeditor.ms,Mediasoft-Cie-S-A,Organization,2,appconfig.js | dblayer.js,https://github.com/Mediasoft-Cie-S-A/formeditor.ms
-252,Mfahadk99/syssel-web-internal,Mfahadk99,User,1,postcss.config.mjs,https://github.com/Mfahadk99/syssel-web-internal
-253,MianHaziq/LKnight-Lms-backend,MianHaziq,User,1,src/routes/admin.routes.js,https://github.com/MianHaziq/LKnight-Lms-backend
-254,MianHaziq/LKnight-Lms,MianHaziq,User,1,postcss.config.mjs,https://github.com/MianHaziq/LKnight-Lms
-255,michelzappy/zappy-scratch-091225,michelzappy,User,1,frontend/tailwind.config.js,https://github.com/michelzappy/zappy-scratch-091225
-256,Mike-flowbiz/Flowbiz-backend,Mike-flowbiz,User,1,postcss.config.mjs,https://github.com/Mike-flowbiz/Flowbiz-backend
-257,mirzaghalib4726/committee-system-next,mirzaghalib4726,User,1,postcss.config.mjs,https://github.com/mirzaghalib4726/committee-system-next
-258,mirzaghalib4726/event_management_backend,mirzaghalib4726,User,1,eslint.config.mjs,https://github.com/mirzaghalib4726/event_management_backend
-259,mirzaghalib4726/committee-backend,mirzaghalib4726,User,1,eslint.config.mjs,https://github.com/mirzaghalib4726/committee-backend
-260,MIS-Silekta/silekta-frontend,MIS-Silekta,Organization,1,postcss.config.mjs,https://github.com/MIS-Silekta/silekta-frontend
-261,mjatin-dev/logic-zephyr,mjatin-dev,User,1,postcss.config.mjs,https://github.com/mjatin-dev/logic-zephyr
-262,MohamedH1000/ethaq_ecommerce,MohamedH1000,User,1,tailwind.config.js,https://github.com/MohamedH1000/ethaq_ecommerce
-263,MohamedH1000/philadelphia_university,MohamedH1000,User,1,postcss.config.mjs,https://github.com/MohamedH1000/philadelphia_university
-264,MohamedH1000/Mersal,MohamedH1000,User,1,postcss.config.mjs,https://github.com/MohamedH1000/Mersal
-265,MohamedH1000/cruise,MohamedH1000,User,1,postcss.config.mjs,https://github.com/MohamedH1000/cruise
-266,MohamedH1000/course,MohamedH1000,User,1,postcss.config.mjs,https://github.com/MohamedH1000/course
-267,MohamedH1000/ethaq_ecommerce_admin,MohamedH1000,User,1,tailwind.config.js,https://github.com/MohamedH1000/ethaq_ecommerce_admin
-268,Mohsin-Javed48/UDEMY-Backend-Practice-projects,Mohsin-Javed48,User,2,Section-5-Express/eslint.config.mjs | Section-7-MVC/00-starting-setup/eslint.config.mjs,https://github.com/Mohsin-Javed48/UDEMY-Backend-Practice-projects
-269,Mohsin-Javed48/nextjs-witd-oasis,Mohsin-Javed48,User,1,postcss.config.mjs,https://github.com/Mohsin-Javed48/nextjs-witd-oasis
-270,Mohsin-Javed48/connectors-nextJs,Mohsin-Javed48,User,1,postcss.config.mjs,https://github.com/Mohsin-Javed48/connectors-nextJs
-271,Mohsin-Javed48/dresscode-nextjs,Mohsin-Javed48,User,1,postcss.config.mjs,https://github.com/Mohsin-Javed48/dresscode-nextjs
-272,mohsinyzonetechnology-dev/workFlow-management,mohsinyzonetechnology-dev,User,1,client/tailwind.config.js,https://github.com/mohsinyzonetechnology-dev/workFlow-management
-273,mohsulthana/aurora-reminder-app,mohsulthana,User,1,eslint.config.mjs,https://github.com/mohsulthana/aurora-reminder-app
-274,monazahmed/Agrismart-project-,monazahmed,User,1,postcss.config.mjs,https://github.com/monazahmed/Agrismart-project-
-275,morokoli/color-chrome,morokoli,User,1,tailwind.config.js,https://github.com/morokoli/color-chrome
-276,MrSohaibAhmed/interview-assessment,MrSohaibAhmed,User,1,postcss.config.mjs,https://github.com/MrSohaibAhmed/interview-assessment
-277,MSCPerera/Job-Board-App,MSCPerera,User,1,job-board-app/postcss.config.mjs,https://github.com/MSCPerera/Job-Board-App
-278,Muhammad-Achir/nestjs-real-time-chat,Muhammad-Achir,User,1,eslint.config.mjs,https://github.com/Muhammad-Achir/nestjs-real-time-chat
-279,muhammad-tahir-sultan/rehman-fyp-nextjs-multivendor,muhammad-tahir-sultan,User,1,postcss.config.mjs,https://github.com/muhammad-tahir-sultan/rehman-fyp-nextjs-multivendor
-280,Muhammadfaizanjanjua109/frammerMotion,Muhammadfaizanjanjua109,User,1,postcss.config.mjs,https://github.com/Muhammadfaizanjanjua109/frammerMotion
-281,MunibQazi12/next-starter-template,MunibQazi12,User,1,postcss.config.mjs,https://github.com/MunibQazi12/next-starter-template
-282,musetax/Amus-fe,musetax,Organization,1,postcss.config.mjs,https://github.com/musetax/Amus-fe
-283,nasirrasheed/Deadlive,nasirrasheed,User,1,eslint.config.mjs,https://github.com/nasirrasheed/Deadlive
-284,Nathanim1919/time-lens,Nathanim1919,User,1,postcss.config.mjs,https://github.com/Nathanim1919/time-lens
-285,Nathanim1919/becoming,Nathanim1919,User,1,postcss.config.mjs,https://github.com/Nathanim1919/becoming
-286,NatyJoseDie/proyecto-nginx,NatyJoseDie,User,1,eslint.config.mjs,https://github.com/NatyJoseDie/proyecto-nginx
-287,Navoda001/Solana,Navoda001,User,1,postcss.config.mjs,https://github.com/Navoda001/Solana
-288,NEERAJ131124/pisync-fe,NEERAJ131124,User,1,postcss.config.mjs,https://github.com/NEERAJ131124/pisync-fe
-289,NexumTechnologies/E-Commerce,NexumTechnologies,Organization,1,postcss.config.mjs,https://github.com/NexumTechnologies/E-Commerce
-290,nhumayun2/Study-Hall-Project,nhumayun2,User,1,mainroute/route.config.js,https://github.com/nhumayun2/Study-Hall-Project
-291,ninjadevhub/Flood-Risk-Mapper,ninjadevhub,User,1,postcss.config.mjs,https://github.com/ninjadevhub/Flood-Risk-Mapper
-292,nipun-imesh/sample-react,nipun-imesh,User,1,postcss.config.mjs,https://github.com/nipun-imesh/sample-react
-293,noors-code/MovieHouse-api,noors-code,User,1,next.config.mjs,https://github.com/noors-code/MovieHouse-api
-294,noors-code/MovieHouse,noors-code,User,1,next.config.mjs,https://github.com/noors-code/MovieHouse
-295,orynth-dev/vite-shadcn-template,orynth-dev,Organization,1,tailwind.config.js,https://github.com/orynth-dev/vite-shadcn-template
-296,pankajkhadse/TrustBasket,pankajkhadse,User,1,postcss.config.mjs,https://github.com/pankajkhadse/TrustBasket
-297,parthvaghani/vinayaknaturals-api,parthvaghani,User,1,eslint.config.mjs,https://github.com/parthvaghani/vinayaknaturals-api
-298,pasindu7828/Sustainable-Marketting-Wastage-Management-System,pasindu7828,User,1,frontend/src/App.js,https://github.com/pasindu7828/Sustainable-Marketting-Wastage-Management-System
-299,phillipshepard1/internal-re-crm,phillipshepard1,User,1,postcss.config.mjs,https://github.com/phillipshepard1/internal-re-crm
-300,Prakhar6046/testing,Prakhar6046,User,1,tailwind.config.mjs,https://github.com/Prakhar6046/testing
-301,Prakhar6046/json,Prakhar6046,User,1,tailwind.config.mjs,https://github.com/Prakhar6046/json
-302,Prakhar6046/Feedflow-New,Prakhar6046,User,1,next.config.mjs,https://github.com/Prakhar6046/Feedflow-New
-303,Pramadu2001/ITPM_MODUS,Pramadu2001,User,1,my-app/postcss.config.mjs,https://github.com/Pramadu2001/ITPM_MODUS
-304,pratikp72/strollr-app,pratikp72,User,1,eslint.config.mjs,https://github.com/pratikp72/strollr-app
-305,pratikp72/deal-Project,pratikp72,User,1,postcss.config.mjs,https://github.com/pratikp72/deal-Project
-306,PratikRaval123/DemoTask,PratikRaval123,User,1,tailwind.config.cjs,https://github.com/PratikRaval123/DemoTask
-307,PremShakti/multi-tenet-school-profile-app,PremShakti,User,1,postcss.config.mjs,https://github.com/PremShakti/multi-tenet-school-profile-app
-308,PremShakti/Inventory-Todo-Manager,PremShakti,User,1,postcss.config.mjs,https://github.com/PremShakti/Inventory-Todo-Manager
-309,PremShakti/PanchangCalendar,PremShakti,User,1,postcss.config.mjs,https://github.com/PremShakti/PanchangCalendar
-310,Professor833/orchestrix,Professor833,User,1,frontend/tailwind.config.js,https://github.com/Professor833/orchestrix
-311,prosigns/dex-data-aggregation,prosigns,User,1,postcss.config.mjs,https://github.com/prosigns/dex-data-aggregation
-312,prudywn/GrowthProject,prudywn,User,2,frontend/next-sitemap.config.js | frontend/postcss.config.mjs,https://github.com/prudywn/GrowthProject
-313,pt67/prakash360,pt67,User,1,src/App.js,https://github.com/pt67/prakash360
-314,pt67/test,pt67,User,1,frontend/eslint.config.mjs,https://github.com/pt67/test
-315,pt67/bunapp,pt67,User,1,src/components/form.js,https://github.com/pt67/bunapp
-316,QaisarWaheed/Aluminum-POS,QaisarWaheed,User,1,eslint.config.mjs,https://github.com/QaisarWaheed/Aluminum-POS
-317,QaisarWaheed/service-connect-nest-be,QaisarWaheed,User,1,eslint.config.mjs,https://github.com/QaisarWaheed/service-connect-nest-be
-318,QaisarWaheed/aluminium-backend,QaisarWaheed,User,1,eslint.config.mjs,https://github.com/QaisarWaheed/aluminium-backend
-319,QaisarWaheed/chemtronics-backend,QaisarWaheed,User,1,eslint.config.mjs,https://github.com/QaisarWaheed/chemtronics-backend
-320,Qasim-dev/stock-tracker,Qasim-dev,User,1,postcss.config.mjs,https://github.com/Qasim-dev/stock-tracker
-321,Rachit2323/agave,Rachit2323,User,1,token/clients/js/.eslintrc.cjs,https://github.com/Rachit2323/agave
-322,Rahulkumarhavit/multi-tenant-architecture,Rahulkumarhavit,User,1,postcss.config.mjs,https://github.com/Rahulkumarhavit/multi-tenant-architecture
-323,Rahulkumarhavit/finance-advisor,Rahulkumarhavit,User,1,postcss.config.mjs,https://github.com/Rahulkumarhavit/finance-advisor
-324,Rahulkumarhavit/carmarket-place,Rahulkumarhavit,User,1,postcss.config.mjs,https://github.com/Rahulkumarhavit/carmarket-place
-325,Rahulkumarhavit/Nextjs-productivity,Rahulkumarhavit,User,1,postcss.config.mjs,https://github.com/Rahulkumarhavit/Nextjs-productivity
-326,RahulWavhale/Amazon_Clone-Flutter,RahulWavhale,User,1,server/route/auth.js,https://github.com/RahulWavhale/Amazon_Clone-Flutter
-327,rajat22999/noa-feed,rajat22999,User,1,astro.config.mjs,https://github.com/rajat22999/noa-feed
-328,rajkananirk/personal-finance-node,rajkananirk,User,1,tailwind.config.js,https://github.com/rajkananirk/personal-finance-node
-329,RanaRehman7676/my-electron-app2,RanaRehman7676,User,1,db.js,https://github.com/RanaRehman7676/my-electron-app2
-330,ranjannkumar/Chat-Application,ranjannkumar,User,1,client/.eslintrc.cjs,https://github.com/ranjannkumar/Chat-Application
-331,ranjannkumar/Food-Delivery-App,ranjannkumar,User,1,admin/.eslintrc.cjs,https://github.com/ranjannkumar/Food-Delivery-App
-332,ranjannkumar/Token-Vesting-App,ranjannkumar,User,1,postcss.config.mjs,https://github.com/ranjannkumar/Token-Vesting-App
-333,RathodDeven/danz-web,RathodDeven,User,1,postcss.config.mjs,https://github.com/RathodDeven/danz-web
-334,RazaAkmal/telehealth-assignment,RazaAkmal,User,1,eslint.config.mjs,https://github.com/RazaAkmal/telehealth-assignment
-335,RazaAkmal/frontend-test,RazaAkmal,User,1,postcss.config.mjs,https://github.com/RazaAkmal/frontend-test
-336,rejoan121615/heritage-trial-overlay,rejoan121615,User,1,postcss.config.mjs,https://github.com/rejoan121615/heritage-trial-overlay
-337,rejoan121615/website-generator,rejoan121615,User,1,packages/dashboard/postcss.config.mjs,https://github.com/rejoan121615/website-generator
-338,RinSanom/IoTWeb,RinSanom,User,1,postcss.config.mjs,https://github.com/RinSanom/IoTWeb
-339,rmcsharry/me,rmcsharry,User,1,frontend/tailwind.config.js,https://github.com/rmcsharry/me
-340,roma2023/Snoonu,roma2023,User,1,postcss.config.mjs,https://github.com/roma2023/Snoonu
-341,Romicha935/image-gallery,Romicha935,User,1,postcss.config.mjs,https://github.com/Romicha935/image-gallery
-342,Ruwanima/ella-south-star-frontend,Ruwanima,User,1,postcss.config.mjs,https://github.com/Ruwanima/ella-south-star-frontend
-343,Ruwanima/Portfolio,Ruwanima,User,1,postcss.config.mjs,https://github.com/Ruwanima/Portfolio
-344,rvmediacorp/Headshot-Portland-Official,rvmediacorp,User,1,postcss.config.mjs,https://github.com/rvmediacorp/Headshot-Portland-Official
-345,Sahl-AI/sahl-ai-iframe,Sahl-AI,Organization,1,tailwind.config.js,https://github.com/Sahl-AI/sahl-ai-iframe
-346,saifullah-max/Sound-Cloud-Downloader,saifullah-max,User,1,backend/download.js,https://github.com/saifullah-max/Sound-Cloud-Downloader
-347,saifullah-max/bublr,saifullah-max,User,1,postcss.config.mjs,https://github.com/saifullah-max/bublr
-348,saifullah-max/surfchem,saifullah-max,User,1,postcss.config.mjs,https://github.com/saifullah-max/surfchem
-349,saifullah-max/mandviwalla-mauser,saifullah-max,User,1,postcss.config.mjs,https://github.com/saifullah-max/mandviwalla-mauser
-350,SalotJay/creator-platform-worker,SalotJay,User,1,src/app.js,https://github.com/SalotJay/creator-platform-worker
-351,salwaaliakbar/my-portfolio,salwaaliakbar,User,1,postcss.config.mjs,https://github.com/salwaaliakbar/my-portfolio
-352,Sameer447/my-app,Sameer447,User,1,postcss.config.mjs,https://github.com/Sameer447/my-app
-353,samirhassen/ToDo-Realtime,samirhassen,User,1,web/client/relay.config.cjs,https://github.com/samirhassen/ToDo-Realtime
-354,sanjay10985/lead-generation-landing-page,sanjay10985,User,1,postcss.config.mjs,https://github.com/sanjay10985/lead-generation-landing-page
-355,SanjayaPrasadRajapaksha/E-Commerce,SanjayaPrasadRajapaksha,User,1,postcss.config.mjs,https://github.com/SanjayaPrasadRajapaksha/E-Commerce
-356,SanjayaPrasadRajapaksha/Blog_App,SanjayaPrasadRajapaksha,User,1,postcss.config.mjs,https://github.com/SanjayaPrasadRajapaksha/Blog_App
-357,SanjayaPrasadRajapaksha/Hotel_Booking-Admin_Panel,SanjayaPrasadRajapaksha,User,1,postcss.config.mjs,https://github.com/SanjayaPrasadRajapaksha/Hotel_Booking-Admin_Panel
-358,SanjayaPrasadRajapaksha/Todo_App,SanjayaPrasadRajapaksha,User,1,my-app/postcss.config.mjs,https://github.com/SanjayaPrasadRajapaksha/Todo_App
-359,SanjayaPrasadRajapaksha/Hotel_Booking-Blog,SanjayaPrasadRajapaksha,User,1,astro.config.mjs,https://github.com/SanjayaPrasadRajapaksha/Hotel_Booking-Blog
-360,Sawjal-sikder/faceAi-front-end,Sawjal-sikder,User,1,postcss.config.mjs,https://github.com/Sawjal-sikder/faceAi-front-end
-361,sayyamButt317/ishout,sayyamButt317,User,1,postcss.config.mjs,https://github.com/sayyamButt317/ishout
-362,sayyamButt317/hire-with-tess-frontend,sayyamButt317,User,1,postcss.config.mjs,https://github.com/sayyamButt317/hire-with-tess-frontend
-363,seemab-ahmed/eden-funded,seemab-ahmed,User,1,tailwind.config.js,https://github.com/seemab-ahmed/eden-funded
-364,seemab-ahmed/rodopi,seemab-ahmed,User,1,postcss.config.mjs,https://github.com/seemab-ahmed/rodopi
-365,seemab-ahmed/cutzclub-next,seemab-ahmed,User,1,eslint.config.mjs,https://github.com/seemab-ahmed/cutzclub-next
-366,seemab-ahmed/digital-resume,seemab-ahmed,User,1,assets/js/plugins/circle-progress.js,https://github.com/seemab-ahmed/digital-resume
-367,Senti-fi/Senti.fi,Senti-fi,User,1,frontend/postcss.config.mjs,https://github.com/Senti-fi/Senti.fi
-368,servise-east/service-east-v2,servise-east,User,1,next.config.mjs,https://github.com/servise-east/service-east-v2
-369,ShahbazRamzan/NodeTestApp,ShahbazRamzan,User,1,routes/userRoutes.js,https://github.com/ShahbazRamzan/NodeTestApp
-370,shaheeer-dev/sketchers,shaheeer-dev,User,1,postcss.config.mjs,https://github.com/shaheeer-dev/sketchers
-371,shahid538org/microrealestate,shahid538org,Organization,1,webapps/landlord/tailwind.config.js,https://github.com/shahid538org/microrealestate
-372,shani-techv1/source-app-v2,shani-techv1,User,1,postcss.config.mjs,https://github.com/shani-techv1/source-app-v2
-373,shaniPandeyTech/astro_wale,shaniPandeyTech,User,1,tailwind.config.mjs,https://github.com/shaniPandeyTech/astro_wale
-374,shayanwd/vts-nextjs,shayanwd,User,2,eslint.config.mjs | postcss.config.mjs,https://github.com/shayanwd/vts-nextjs
-375,shermuhammad786/gs-hackathon,shermuhammad786,User,1,postcss.config.mjs,https://github.com/shermuhammad786/gs-hackathon
-376,ShifaLabs/shifa,ShifaLabs,User,1,postcss.config.mjs,https://github.com/ShifaLabs/shifa
-377,Shumaim-Naseer-Kiyani/framer_project,Shumaim-Naseer-Kiyani,User,1,postcss.config.mjs,https://github.com/Shumaim-Naseer-Kiyani/framer_project
-378,Shumaim-Naseer-Kiyani/ai_landing_page,Shumaim-Naseer-Kiyani,User,1,postcss.config.mjs,https://github.com/Shumaim-Naseer-Kiyani/ai_landing_page
-379,SimalChaudhari/plusfive,SimalChaudhari,User,1,tailwind.config.js,https://github.com/SimalChaudhari/plusfive
-380,smit455/big_bazaar-store,smit455,User,1,postcss.config.mjs,https://github.com/smit455/big_bazaar-store
-381,smit455/big_bazaar-admin,smit455,User,1,postcss.config.mjs,https://github.com/smit455/big_bazaar-admin
-382,smit455/Task_manager,smit455,User,1,postcss.config.mjs,https://github.com/smit455/Task_manager
-383,Socheema/3legant,Socheema,User,1,tailwind.config.mjs,https://github.com/Socheema/3legant
-384,Socheema/bukkahut,Socheema,User,1,vite.config.ts,https://github.com/Socheema/bukkahut
-385,Socheema/ticketFlow,Socheema,User,1,tailwind.config.cjs,https://github.com/Socheema/ticketFlow
-386,Softvence-Omega-Cyber-Monk/nishant-server,Softvence-Omega-Cyber-Monk,Organization,1,eslint.config.mjs,https://github.com/Softvence-Omega-Cyber-Monk/nishant-server
-387,Softvence-Omega-Dev-Ninjas/diaz-jupiter-marine-frontend,Softvence-Omega-Dev-Ninjas,Organization,1,postcss.config.mjs,https://github.com/Softvence-Omega-Dev-Ninjas/diaz-jupiter-marine-frontend
-388,Softvence-Omega-Dev-Ninjas/alvaaro-server,Softvence-Omega-Dev-Ninjas,Organization,1,eslint.config.mjs,https://github.com/Softvence-Omega-Dev-Ninjas/alvaaro-server
-389,Softvence-Omega-Dev-Ninjas/jdadzok_server,Softvence-Omega-Dev-Ninjas,Organization,1,eslint.config.mjs,https://github.com/Softvence-Omega-Dev-Ninjas/jdadzok_server
-390,softvence-omega-future-stack/gameluke-frontend,softvence-omega-future-stack,Organization,1,postcss.config.mjs,https://github.com/softvence-omega-future-stack/gameluke-frontend
-391,softvence-omega-future-stack/lawalx_frontend,softvence-omega-future-stack,Organization,1,postcss.config.mjs,https://github.com/softvence-omega-future-stack/lawalx_frontend
-392,softvence-omega-future-stack/kilian-rodhe-last-,softvence-omega-future-stack,Organization,1,postcss.config.mjs,https://github.com/softvence-omega-future-stack/kilian-rodhe-last-
-393,softvence-omega-future-stack/huss-be,softvence-omega-future-stack,Organization,1,eslint.config.mjs,https://github.com/softvence-omega-future-stack/huss-be
-394,SoftySkills/quiz_app,SoftySkills,Organization,1,postcss.config.mjs,https://github.com/SoftySkills/quiz_app
-395,SouravDn-p/Frontend-task,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/Frontend-task
-396,SouravDn-p/NextManager-YourInventoryManager,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/NextManager-YourInventoryManager
-397,SouravDn-p/CMR,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/CMR
-398,SouravDn-p/rex-auction-server-side,SouravDn-p,User,1,index.js,https://github.com/SouravDn-p/rex-auction-server-side
-399,SouravDn-p/NestJs-Template,SouravDn-p,User,1,eslint.config.mjs,https://github.com/SouravDn-p/NestJs-Template
-400,SouravDn-p/mobile-canvas-nextjs,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/mobile-canvas-nextjs
-401,SouravDn-p/NextManager-YourInventory-Manager,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/NextManager-YourInventory-Manager
-402,SouravDn-p/PathFinder---Smarter-Admissions-Simpler-Bookings,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/PathFinder---Smarter-Admissions-Simpler-Bookings
-403,SouravDn-p/Advance-HealthCare-Next-Level-of-Smarter-Better-Health,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/Advance-HealthCare-Next-Level-of-Smarter-Better-Health
-404,SouravDn-p/Scribe-AI-Powered-Note-Taking-App,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/Scribe-AI-Powered-Note-Taking-App
-405,SouravDn-p/multi-form-transaction,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/multi-form-transaction
-406,SouravDn-p/authjs-next-authentications,SouravDn-p,User,1,postcss.config.mjs,https://github.com/SouravDn-p/authjs-next-authentications
-407,spacecode-library/nurse-nest,spacecode-library,User,1,tailwind.config.js,https://github.com/spacecode-library/nurse-nest
-408,sparktechagency/Vap-shop-Front-End-,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/Vap-shop-Front-End-
-409,sparktechagency/protippz_website,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/protippz_website
-410,sparktechagency/consult_dashboard,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/consult_dashboard
-411,sparktechagency/jonowoods-website,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/jonowoods-website
-412,sparktechagency/nskustoms_custom_game_site-2.0,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/nskustoms_custom_game_site-2.0
-413,sparktechagency/silicon-zisan-website,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/silicon-zisan-website
-414,sparktechagency/u_tee_hub,sparktechagency,Organization,1,tailwind.config.js,https://github.com/sparktechagency/u_tee_hub
-415,sparktechagency/profitable-website-v2,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/profitable-website-v2
-416,sparktechagency/faceAi-front-end,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/faceAi-front-end
-417,sparktechagency/any-job-dashboard,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/any-job-dashboard
-418,sparktechagency/anyjob-web,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/anyjob-web
-419,sparktechagency/betopia-website,sparktechagency,Organization,1,postcss.config.mjs,https://github.com/sparktechagency/betopia-website
-420,splinxplanet/splinx-planet-backend,splinxplanet,User,1,index.js,https://github.com/splinxplanet/splinx-planet-backend
-421,Storaboy11/meerge,Storaboy11,User,2,api/routes/auth.js | postcss.config.mjs,https://github.com/Storaboy11/meerge
-422,SumaiyaNishat/ticket-booking-platform-server,SumaiyaNishat,User,1,index.js,https://github.com/SumaiyaNishat/ticket-booking-platform-server
-423,syed-zaeem/fyp-frontend,syed-zaeem,User,1,Project Frontend/tailwind.config.js,https://github.com/syed-zaeem/fyp-frontend
-424,tactionsoft/app-cost-frontend,tactionsoft,User,1,src/App.js,https://github.com/tactionsoft/app-cost-frontend
-425,talhamajid02/chat-app,talhamajid02,User,1,frontend/.eslintrc.cjs,https://github.com/talhamajid02/chat-app
-426,tanushbhootra576/game,tanushbhootra576,User,1,postcss.config.mjs,https://github.com/tanushbhootra576/game
-427,tanushbhootra576/turbo-happiness,tanushbhootra576,User,1,postcss.config.mjs,https://github.com/tanushbhootra576/turbo-happiness
-428,tanushbhootra576/MoodSync,tanushbhootra576,User,1,App.js,https://github.com/tanushbhootra576/MoodSync
-429,tanushbhootra576/Bionary-Website-Challenge-and-final,tanushbhootra576,User,1,bionary_website/tailwind.config.js,https://github.com/tanushbhootra576/Bionary-Website-Challenge-and-final
-430,tanushka1726/react_next,tanushka1726,User,1,postcss.config.mjs,https://github.com/tanushka1726/react_next
-431,TechSolutionor98/graba2z,TechSolutionor98,User,1,website/backend/routes/payments.js,https://github.com/TechSolutionor98/graba2z
-432,teresagrobecker/pensio_consortia,teresagrobecker,User,1,frontend/postcss.config.mjs,https://github.com/teresagrobecker/pensio_consortia
-433,The-Extra-Project/Extra_surface_repo,The-Extra-Project,Organization,1,frontend/postcss.config.mjs,https://github.com/The-Extra-Project/Extra_surface_repo
-434,theeurbanlegend/Hackathon-Submission,theeurbanlegend,User,1,client/postcss.config.mjs,https://github.com/theeurbanlegend/Hackathon-Submission
-435,TheFlexLab/NodeJs-Best-Starter-Template,TheFlexLab,User,1,src/routes/authRoutes.js,https://github.com/TheFlexLab/NodeJs-Best-Starter-Template
-436,Tiewasters99/AI_Law_Wizard,Tiewasters99,User,1,postcss.config.mjs,https://github.com/Tiewasters99/AI_Law_Wizard
-437,TimothyBabatu13/Stampchain,TimothyBabatu13,User,1,stamp-chain/postcss.config.mjs,https://github.com/TimothyBabatu13/Stampchain
-438,TimothyBabatu13/TokenMind,TimothyBabatu13,User,1,token-mind/postcss.config.mjs,https://github.com/TimothyBabatu13/TokenMind
-439,tokenbot-org/token-contracts,tokenbot-org,Organization,1,hardhat.config.js,https://github.com/tokenbot-org/token-contracts
-440,TranDoanKhoe/Velvere,TranDoanKhoe,User,5,src/components_bonus/my-tab/postcss.config.mjs | src/components_bonus/my-app/postcss.config.mjs | src/components_bonus/my-select/postcss.config.mjs | src/components_bonus/my-button/postcss.config.mjs | src/components_bonus/my-calendar/postcss.config.mjs,https://github.com/TranDoanKhoe/Velvere
-441,tricodenetwork/lock-up,tricodenetwork,Organization,1,frontend/postcss.config.mjs,https://github.com/tricodenetwork/lock-up
-442,trobits/trobits-frontend,trobits,User,1,postcss.config.mjs,https://github.com/trobits/trobits-frontend
-443,um8r/bridge-master-fyp,um8r,User,1,postcss.config.mjs,https://github.com/um8r/bridge-master-fyp
-444,umarabid123/Raise-Your-Hack,umarabid123,User,1,frontend/postcss.config.mjs,https://github.com/umarabid123/Raise-Your-Hack
-445,umarabid123/The_INTERNET_OF_AGENTS_HACKATHON,umarabid123,User,1,frontend/postcss.config.mjs,https://github.com/umarabid123/The_INTERNET_OF_AGENTS_HACKATHON
-446,Umbrelabs-Projects/Hostella-superAdmin,Umbrelabs-Projects,Organization,1,postcss.config.mjs,https://github.com/Umbrelabs-Projects/Hostella-superAdmin
-447,Umbrelabs-Projects/Hostella-admin,Umbrelabs-Projects,Organization,1,postcss.config.mjs,https://github.com/Umbrelabs-Projects/Hostella-admin
-448,Umbrelabs-Projects/Hostella-stu,Umbrelabs-Projects,Organization,1,postcss.config.mjs,https://github.com/Umbrelabs-Projects/Hostella-stu
-449,Umbrelabs-Projects/Procobiz,Umbrelabs-Projects,Organization,1,postcss.config.mjs,https://github.com/Umbrelabs-Projects/Procobiz
-450,umrasghar/heygen-demo,umrasghar,User,1,postcss.config.mjs,https://github.com/umrasghar/heygen-demo
-451,Usamahafiz8/ios-refferal-to-clipboard,Usamahafiz8,User,1,postcss.config.cjs,https://github.com/Usamahafiz8/ios-refferal-to-clipboard
-452,Usamahafiz8/CCMB,Usamahafiz8,User,1,.eslintrc.cjs,https://github.com/Usamahafiz8/CCMB
-453,usman-174/VidSpark,usman-174,User,1,client/tailwind.config.js,https://github.com/usman-174/VidSpark
-454,usman-174/form-pdf,usman-174,User,1,postcss.config.mjs,https://github.com/usman-174/form-pdf
-455,UsmanKhan172014/stock-market-tickers,UsmanKhan172014,User,1,next.config.mjs,https://github.com/UsmanKhan172014/stock-market-tickers
-456,UzairAhmedDahraj/clickup-nextjs-demo,UzairAhmedDahraj,User,1,postcss.config.mjs,https://github.com/UzairAhmedDahraj/clickup-nextjs-demo
-457,UzairOrganization/allTask,UzairOrganization,Organization,1,postcss.config.mjs,https://github.com/UzairOrganization/allTask
-458,VALENSAPP/coin_backend,VALENSAPP,User,1,eslint.config.mjs,https://github.com/VALENSAPP/coin_backend
-459,vellum-labs/cexplorer-api,vellum-labs,Organization,1,packages/cexplorer-api/.eslintrc.cjs,https://github.com/vellum-labs/cexplorer-api
-460,Victorola-coder/tewo,Victorola-coder,User,1,tailwind.config.js,https://github.com/Victorola-coder/tewo
-461,vkrms/wizard,vkrms,User,1,postcss.config.mjs,https://github.com/vkrms/wizard
-462,Vladyslav0060/gdocs-clone,Vladyslav0060,User,1,server/routes/auth.js,https://github.com/Vladyslav0060/gdocs-clone
-463,Vladyslav0060/autopartner,Vladyslav0060,User,1,postcss.config.mjs,https://github.com/Vladyslav0060/autopartner
-464,VplayProCrypto/mvp_vercel,VplayProCrypto,Organization,1,tailwind.config.js,https://github.com/VplayProCrypto/mvp_vercel
-465,vrunda310/AIA-VEGA-Frontend,vrunda310,User,1,frontend/postcss.config.mjs,https://github.com/vrunda310/AIA-VEGA-Frontend
-466,wahab3913/kalibar,wahab3913,User,1,postcss.config.mjs,https://github.com/wahab3913/kalibar
-467,wahab3913/kalibar-m2,wahab3913,User,1,postcss.config.mjs,https://github.com/wahab3913/kalibar-m2
-468,wahab3913/kalibar-manger1,wahab3913,User,1,postcss.config.mjs,https://github.com/wahab3913/kalibar-manger1
-469,Wasee-Ur-Rehman/DarziXpress,Wasee-Ur-Rehman,User,1,client/tailwind.config.js,https://github.com/Wasee-Ur-Rehman/DarziXpress
-470,wasi2320/ctk-new,wasi2320,User,1,postcss.config.mjs,https://github.com/wasi2320/ctk-new
-471,web-ghoul/Portfolio,web-ghoul,User,1,postcss.config.mjs,https://github.com/web-ghoul/Portfolio
-472,web-ghoul/movie-app,web-ghoul,User,1,tailwind.config.js,https://github.com/web-ghoul/movie-app
-473,webprogramminghack/b3-practice-31,webprogramminghack,User,1,postcss.config.mjs,https://github.com/webprogramminghack/b3-practice-31
-474,webprogramminghack/b3-practice-30,webprogramminghack,User,1,postcss.config.mjs,https://github.com/webprogramminghack/b3-practice-30
-475,WeerasingheMSC/ASMS_Frontend,WeerasingheMSC,User,1,asms_frontend/postcss.config.mjs,https://github.com/WeerasingheMSC/ASMS_Frontend
-476,WeOwnAiAgents-Hackerhouse/WeOwnAiAgent,WeOwnAiAgents-Hackerhouse,Organization,1,postcss.config.mjs,https://github.com/WeOwnAiAgents-Hackerhouse/WeOwnAiAgent
-477,WeOwnNetwork/EthDenver-submission,WeOwnNetwork,Organization,1,apps/web/postcss.config.mjs,https://github.com/WeOwnNetwork/EthDenver-submission
-478,WimpyvL/Zappy-Health-Dashboard,WimpyvL,User,1,postcss.config.mjs,https://github.com/WimpyvL/Zappy-Health-Dashboard
-479,wolfstudiosai/frontend_wolfstudios,wolfstudiosai,User,1,next.config.mjs,https://github.com/wolfstudiosai/frontend_wolfstudios
-480,wolfstudiosai/braxx-frontend-v2,wolfstudiosai,User,1,postcss.config.mjs,https://github.com/wolfstudiosai/braxx-frontend-v2
-481,Yassin-Younis/bypass-in-app-browser,Yassin-Younis,User,1,next.config.mjs,https://github.com/Yassin-Younis/bypass-in-app-browser
-482,zaheerahmad92001/pettro,zaheerahmad92001,User,1,postcss.config.mjs,https://github.com/zaheerahmad92001/pettro
-483,Zentaurios/stable-monitor,Zentaurios,User,1,postcss.config.mjs,https://github.com/Zentaurios/stable-monitor
+#,Repository,Owner,Owner Type,Stars,Forks,Infected Files,File Paths,Description,Repo URL
+1,Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform,Codechef-VITC-Student-Chapter,User,6,11,1,Client/postcss.config.mjs,,https://github.com/Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform
+2,Victorola-coder/tewo,Victorola-coder,User,9,6,1,tailwind.config.js,"tewosimi boboyi, ebi n pami",https://github.com/Victorola-coder/tewo
+3,Atik203/Scholar-Flow,Atik203,User,4,4,1,apps/frontend/postcss.config.mjs,"ScholarFlow is a SaaS platform designed for researchers, students, professors, and academic teams to Upload, organize, and review research papers with collections, annotations, search, and team collaboration in a shared research library",https://github.com/Atik203/Scholar-Flow
+4,Kreliannn/Document-Request-System-FRONTEND,Kreliannn,User,8,1,1,postcss.config.mjs,"A web-based system that allows residents to request barangay documents online without visiting the barangay hall. Residents can track their request status, receive email notifications, and view request history. The barangay admin can manage requests, update statuses, and track transaction history.",https://github.com/Kreliannn/Document-Request-System-FRONTEND
+5,coderkhalide/Anti-Detect-Browser,coderkhalide,User,2,4,1,src/renderer/tailwind.config.js,,https://github.com/coderkhalide/Anti-Detect-Browser
+6,WeerasingheMSC/ASMS_Frontend,WeerasingheMSC,User,1,4,1,asms_frontend/postcss.config.mjs,"Full-stack Automobile Service Time Logging & Appointment System built with Next.js, TypeScript, TailwindCSS, and Ant Design for the frontend. Includes customer and employee portals, real-time service tracking, appointment booking, time logging, and containerized deployment.",https://github.com/WeerasingheMSC/ASMS_Frontend
+7,fsdteam8/n_Krypted-frontend,fsdteam8,User,0,4,1,postcss.config.mjs,,https://github.com/fsdteam8/n_Krypted-frontend
+8,tanushbhootra576/Bionary-Website-Challenge-and-final,tanushbhootra576,User,4,2,1,bionary_website/tailwind.config.js,,https://github.com/tanushbhootra576/Bionary-Website-Challenge-and-final
+9,sparktechagency/Vap-shop-Front-End-,sparktechagency,User,7,0,1,postcss.config.mjs,"VapeShopMaps – A B2B social and e-commerce platform connecting users, stores, brands, and wholesalers with real-time social features and advanced SEO optimization.",https://github.com/sparktechagency/Vap-shop-Front-End-
+10,Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND,Kreliannn,User,7,0,1,postcss.config.mjs, A web app that use Ai to turn pdf files into Q&A type Reviewer. user can customize the generated output before saving. User can Review and Take Customizable  Quiz using that saved ai gererated Reviewer,https://github.com/Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND
+11,MIS-Silekta/silekta-frontend,MIS-Silekta,User,1,3,1,postcss.config.mjs,This is the frontend repository of the silekta company for the MIS module.,https://github.com/MIS-Silekta/silekta-frontend
+12,tanushbhootra576/collegeConnect,tanushbhootra576,User,5,1,1,postcss.config.mjs,,https://github.com/tanushbhootra576/collegeConnect
+13,brown2020/ikigaifinder,brown2020,User,4,1,1,postcss.config.mjs,,https://github.com/brown2020/ikigaifinder
+14,Kreliannn/commision_portfolio,Kreliannn,User,6,0,1,postcss.config.mjs,,https://github.com/Kreliannn/commision_portfolio
+15,coderkhalide/Trading-Journal,coderkhalide,User,4,1,1,postcss.config.mjs,"Professional trading journal to track, analyze and improve your trading performance across different systems and timeframes.",https://github.com/coderkhalide/Trading-Journal
+16,tanushbhootra576/weather,tanushbhootra576,User,4,1,1,postcss.config.mjs,hackathon project,https://github.com/tanushbhootra576/weather
+17,Kreliannn/student-passed-rate-analysis-frontend,Kreliannn,User,5,0,1,postcss.config.mjs,,https://github.com/Kreliannn/student-passed-rate-analysis-frontend
+18,Kreliannn/pharmacy-management-frontend,Kreliannn,User,5,0,1,postcss.config.mjs,,https://github.com/Kreliannn/pharmacy-management-frontend
+19,Kreliannn/Employee-management-frontend,Kreliannn,User,5,0,1,postcss.config.mjs,,https://github.com/Kreliannn/Employee-management-frontend
+20,Kreliannn/e-commerce-frontend,Kreliannn,User,5,0,1,postcss.config.mjs,,https://github.com/Kreliannn/e-commerce-frontend
+21,umarabid123/The_INTERNET_OF_AGENTS_HACKATHON,umarabid123,User,1,2,1,frontend/postcss.config.mjs,,https://github.com/umarabid123/The_INTERNET_OF_AGENTS_HACKATHON
+22,ahmadraza382/FinanceAi,ahmadraza382,User,3,1,1,tailwind.config.js,Finance Ai Coach ,https://github.com/ahmadraza382/FinanceAi
+23,tanushbhootra576/turbo-happiness,tanushbhootra576,User,4,0,1,postcss.config.mjs,,https://github.com/tanushbhootra576/turbo-happiness
+24,shaheeer-dev/sketchers,shaheeer-dev,User,0,2,1,postcss.config.mjs,,https://github.com/shaheeer-dev/sketchers
+25,UzairOrganization/allTask,UzairOrganization,User,0,2,1,postcss.config.mjs,,https://github.com/UzairOrganization/allTask
+26,tanushbhootra576/game,tanushbhootra576,User,4,0,1,postcss.config.mjs,,https://github.com/tanushbhootra576/game
+27,FSDTeam-SAA/nico41278-frontend,FSDTeam-SAA,User,0,2,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/nico41278-frontend
+28,tanushbhootra576/GridSaga,tanushbhootra576,User,4,0,1,postcss.config.mjs,,https://github.com/tanushbhootra576/GridSaga
+29,senulahesara/devkit,senulahesara,User,2,1,1,postcss.config.mjs,"Essential tools, blazing-fast performance, and offline-ready features-built to streamline your workflow and keep you focused on what matters: writing great code.",https://github.com/senulahesara/devkit
+30,tanushbhootra576/week3-forms-and-inputs,tanushbhootra576,User,4,0,1,postcss.config.mjs,,https://github.com/tanushbhootra576/week3-forms-and-inputs
+31,tanushbhootra576/PW-app,tanushbhootra576,User,4,0,1,postcss.config.mjs,,https://github.com/tanushbhootra576/PW-app
+32,tanushbhootra576/RESTRO,tanushbhootra576,User,4,0,1,tailwind.config.js,,https://github.com/tanushbhootra576/RESTRO
+33,tanushbhootra576/MoodSync,tanushbhootra576,User,4,0,1,App.js,,https://github.com/tanushbhootra576/MoodSync
+34,Amanbanti/Capstone,Amanbanti,User,1,1,1,frontend/postcss.config.mjs,The Capstone Project is a culminating academic and practical experience for students in both the Software Engineering (SE) and Computer Science and Engineering (CSE) programs.,https://github.com/Amanbanti/Capstone
+35,FSDTeam-SAA/cstrat_frontend,FSDTeam-SAA,User,1,1,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/cstrat_frontend
+36,ShifaLabs/shifa,ShifaLabs,User,1,1,1,postcss.config.mjs,"Shefa is a web-based telemedicine platform that enables patients to consult verified doctors through real-time in-app video calls, receive digital prescriptions, and manage their healthcare remotely in a secure and professional environment. This is a deployable, production-grade system, not a demo or academic mock-up.",https://github.com/ShifaLabs/shifa
+37,SouravDn-p/mobile-canvas-nextjs,SouravDn-p,User,1,1,1,postcss.config.mjs,"MobileCanvas is a modern, full-stack e-commerce platform focused on selling gadgets and mobile devices. Built with Next.js, Redux Toolkit, and MongoDB, it offers a secure, responsive, and seamless shopping experience for users and powerful management tools for admins.",https://github.com/SouravDn-p/mobile-canvas-nextjs
+38,SoftySkills/quiz_app,SoftySkills,User,3,0,1,postcss.config.mjs,,https://github.com/SoftySkills/quiz_app
+39,RinSanom/IoTWeb,RinSanom,User,1,1,1,postcss.config.mjs,,https://github.com/RinSanom/IoTWeb
+40,kanchana404/Google-bussiness-api-Get-reviews-and-Reply-reviews,kanchana404,User,1,1,1,postcss.config.mjs,,https://github.com/kanchana404/Google-bussiness-api-Get-reviews-and-Reply-reviews
+41,Salman1205/MailAssist,Salman1205,User,1,1,1,postcss.config.mjs,"AI-powered customer support platform with Gmail integration, smart ticketing, automated responses, Shopify integration, and real-time team collaboration",https://github.com/Salman1205/MailAssist
+42,dawahanigeria-team/rayyan-server,dawahanigeria-team,User,3,0,1,eslint.config.mjs,Rayyan App Server,https://github.com/dawahanigeria-team/rayyan-server
+43,Yassin-Younis/bypass-in-app-browser,Yassin-Younis,User,3,0,1,next.config.mjs," Bypass in-app browsers from social media apps like Instagram, Facebook, TikTok, and more. Send users to their native browser when they click on your social media ads to improve engagement, accurate tracking, and boost conversions.",https://github.com/Yassin-Younis/bypass-in-app-browser
+44,Lithira-Silva/TrueClaim---ITPM-,Lithira-Silva,User,2,0,1,client/postcss.config.mjs,"TrueClaim — A smart claim management system developed as an ITPM project at SLIIT (Year 3, Semester 2). Built with the MERN stack to streamline and automate the insurance claim process with accuracy and efficiency.",https://github.com/Lithira-Silva/TrueClaim---ITPM-
+45,maaz-bin-hassan/sahoolat-web-new,maaz-bin-hassan,User,2,0,1,postcss.config.mjs,,https://github.com/maaz-bin-hassan/sahoolat-web-new
+46,Pramadu2001/ITPM_MODUS,Pramadu2001,User,0,1,1,my-app/postcss.config.mjs,3rd year 2nd semester Information and  technology project management project which is MODUS learning platfrom ,https://github.com/Pramadu2001/ITPM_MODUS
+47,FSDTeam-SAA/sahara_53,FSDTeam-SAA,User,0,1,1,postcss.config.mjs,"Build a Story Time is an AI-powered platform that lets users create personalized storybooks using their own voice and faces as characters. It transforms storytelling into a magical, interactive, and deeply personal experience.",https://github.com/FSDTeam-SAA/sahara_53
+48,abimtad/upload_file,abimtad,User,0,1,1,postcss.config.mjs,,https://github.com/abimtad/upload_file
+49,FSDTeam-SAA/lowready-frontend,FSDTeam-SAA,User,0,1,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/lowready-frontend
+50,Addis-Career/Frontend,Addis-Career,User,0,1,1,postcss.config.mjs,,https://github.com/Addis-Career/Frontend
+51,anilgoswamistartbitsolutions/travel-platform,anilgoswamistartbitsolutions,User,0,1,3,sites/holidaydeals/postcss.config.mjs | travel_template/package/postcss.config.mjs | travel_template/old/postcss.config.mjs,,https://github.com/anilgoswamistartbitsolutions/travel-platform
+52,etrainermis/mineduc-Form,etrainermis,User,0,1,1,postcss.config.mjs,EAC World Kiswahili Language Day Celebrations Forum,https://github.com/etrainermis/mineduc-Form
+53,AhsanalyOfficial/ahsan_portfolio,AhsanalyOfficial,User,0,1,1,postcss.config.mjs,,https://github.com/AhsanalyOfficial/ahsan_portfolio
+54,HevenDev/rmw-new-design,HevenDev,User,0,1,1,postcss.config.mjs,,https://github.com/HevenDev/rmw-new-design
+55,FSDTeam-SAA/brazen-kits,FSDTeam-SAA,User,0,1,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/brazen-kits
+56,FSDTeam-SAA/Igghy-dashboard,FSDTeam-SAA,User,0,1,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/Igghy-dashboard
+57,anilgoswamistartbitsolutions/travel-payload-sites,anilgoswamistartbitsolutions,User,0,1,2,sites/holidaydeals/postcss.config.mjs | sites/luxurytravels/postcss.config.mjs,,https://github.com/anilgoswamistartbitsolutions/travel-payload-sites
+58,FlowBondTech/danz-miniapps,FlowBondTech,User,0,1,2,danz-main/postcss.config.mjs | daily-danz/postcss.config.mjs,,https://github.com/FlowBondTech/danz-miniapps
+59,dhruvmalik007/solana-colossum-hackathon,dhruvmalik007,User,0,1,2,apps/web/postcss.config.mjs | packages/ui/postcss.config.mjs,building a prediction marketplace for the thematic investment platform for sustainable investment portfolios,https://github.com/dhruvmalik007/solana-colossum-hackathon
+60,Tiewasters99/AI_Law_Wizard,Tiewasters99,User,0,1,1,postcss.config.mjs,,https://github.com/Tiewasters99/AI_Law_Wizard
+61,BrennansWave-com/brennanswave,BrennansWave-com,User,0,1,1,postcss.config.mjs,,https://github.com/BrennansWave-com/brennanswave
+62,coderkhalide/scalping-trading-tools,coderkhalide,User,0,1,1,postcss.config.mjs,"Configure and grade your trading entries with weighted factors, individual factor grading, bonus points, and letter grades",https://github.com/coderkhalide/scalping-trading-tools
+63,monazahmed/Agrismart-project-,monazahmed,User,0,1,1,postcss.config.mjs,,https://github.com/monazahmed/Agrismart-project-
+64,FlowBondTech/danz-web,FlowBondTech,User,0,1,1,postcss.config.mjs,,https://github.com/FlowBondTech/danz-web
+65,Gowreesh-VT/SherlockIT,Gowreesh-VT,User,0,1,1,postcss.config.mjs,,https://github.com/Gowreesh-VT/SherlockIT
+66,webprogramminghack/b3-practice-30,webprogramminghack,User,0,1,1,postcss.config.mjs,,https://github.com/webprogramminghack/b3-practice-30
+67,Salman1205/Mail-Assist-CRM,Salman1205,User,2,0,1,postcss.config.mjs,,https://github.com/Salman1205/Mail-Assist-CRM
+68,AbdulwahidHusein/Shipper-chat,AbdulwahidHusein,User,2,0,1,frontend/postcss.config.mjs,,https://github.com/AbdulwahidHusein/Shipper-chat
+69,QualifyAI/qualify-frontend,QualifyAI,User,0,1,1,postcss.config.mjs,,https://github.com/QualifyAI/qualify-frontend
+70,michelzappy/zappy-scratch-091225,michelzappy,User,0,1,1,frontend/tailwind.config.js,,https://github.com/michelzappy/zappy-scratch-091225
+71,Ali-Hamas/Learn_Hub,Ali-Hamas,User,0,1,1,frontend/tailwind.config.js,"LearnHub - Multi-Instructor Learning Platform with FastAPI, React, MongoDB, Stripe Payments, and AI Tutor",https://github.com/Ali-Hamas/Learn_Hub
+72,VALENSAPP/coin_backend,VALENSAPP,User,0,1,1,eslint.config.mjs,Backend Repository.,https://github.com/VALENSAPP/coin_backend
+73,QaisarWaheed/Aluminum-POS,QaisarWaheed,User,0,1,1,eslint.config.mjs,,https://github.com/QaisarWaheed/Aluminum-POS
+74,FSDTeam-SAA/ftfdesignco-backend,FSDTeam-SAA,User,0,1,1,src/router/index.js,,https://github.com/FSDTeam-SAA/ftfdesignco-backend
+75,Abdulbasit219/UPSkaleAI,Abdulbasit219,User,1,0,1,postcss.config.mjs,UP SKale AI APP for students (learner) and (Earners) (FYP Project),https://github.com/Abdulbasit219/UPSkaleAI
+76,Gamage-Recruiters-406/Rent_a_Car,Gamage-Recruiters-406,User,1,0,1,frontend/postcss.config.mjs,,https://github.com/Gamage-Recruiters-406/Rent_a_Car
+77,Satyam3002/nextauth,Satyam3002,User,1,0,1,postcss.config.mjs,,https://github.com/Satyam3002/nextauth
+78,ahmadraza382/Hospital-management-system,ahmadraza382,User,1,0,1,postcss.config.mjs,,https://github.com/ahmadraza382/Hospital-management-system
+79,AKDebug-UX/challengePR,AKDebug-UX,User,1,0,1,postcss.config.mjs,,https://github.com/AKDebug-UX/challengePR
+80,Ruwanima/ella-south-star-frontend,Ruwanima,User,1,0,1,postcss.config.mjs,,https://github.com/Ruwanima/ella-south-star-frontend
+81,Umbrelabs-Projects/Procobiz,Umbrelabs-Projects,User,1,0,1,postcss.config.mjs,,https://github.com/Umbrelabs-Projects/Procobiz
+82,The-Extra-Project/Extra_surface_repo,The-Extra-Project,User,1,0,1,frontend/postcss.config.mjs,deployment version of the Laurent's version for Extra-surface.,https://github.com/The-Extra-Project/Extra_surface_repo
+83,ahmadraza382/Luxeurs-Shopping-Store,ahmadraza382,User,1,0,1,postcss.config.mjs,,https://github.com/ahmadraza382/Luxeurs-Shopping-Store
+84,ahmadraza382/Portfolio,ahmadraza382,User,1,0,1,postcss.config.mjs,,https://github.com/ahmadraza382/Portfolio
+85,Ayesha-Siddiqui1234/katy-youth-hackathon-2025-dev-post-,Ayesha-Siddiqui1234,User,1,0,1,frontend/postcss.config.mjs,our team participated in katy yoth hackathon 2025 and we are building a fully functional website weith integrated chatbot i would be something like career counselor which guide students for their career path,https://github.com/Ayesha-Siddiqui1234/katy-youth-hackathon-2025-dev-post-
+86,WimpyvL/Zappy-Health-Dashboard,WimpyvL,User,1,0,1,postcss.config.mjs,,https://github.com/WimpyvL/Zappy-Health-Dashboard
+87,ifedolapoomoniyi/fleet-robotics,ifedolapoomoniyi,User,1,0,1,postcss.config.mjs,,https://github.com/ifedolapoomoniyi/fleet-robotics
+88,muhammad-tahir-sultan/rehman-fyp-nextjs-multivendor,muhammad-tahir-sultan,User,1,0,1,postcss.config.mjs,,https://github.com/muhammad-tahir-sultan/rehman-fyp-nextjs-multivendor
+89,Automobile-System/frontend,Automobile-System,User,1,0,1,postcss.config.mjs,,https://github.com/Automobile-System/frontend
+90,vkrms/wizard,vkrms,User,1,0,1,postcss.config.mjs,react multi-step form training project,https://github.com/vkrms/wizard
+91,Atik203/VocabPrep,Atik203,User,1,0,1,frontend/postcss.config.mjs,"A modern, focused web application to help you build and master English vocabulary through interactive learning, practice sessions, and progress tracking.",https://github.com/Atik203/VocabPrep
+92,web-ghoul/Portfolio,web-ghoul,User,1,0,1,postcss.config.mjs,"it is including my projects, my experiences, my certificates, my contact.",https://github.com/web-ghoul/Portfolio
+93,AbdulwahidHusein/ai-tools-directory,AbdulwahidHusein,User,1,0,1,postcss.config.mjs,,https://github.com/AbdulwahidHusein/ai-tools-directory
+94,AhmadRazaKhokhar1/resturants-app,AhmadRazaKhokhar1,User,1,0,1,postcss.config.mjs,,https://github.com/AhmadRazaKhokhar1/resturants-app
+95,ishivamgaur/Ap-news-next-js,ishivamgaur,User,1,0,1,postcss.config.mjs,"AP News is a Next.js–based news application that delivers categorized news content such as politics, sports, technology, entertainment, and live updates with fast performance, SEO optimization, and server-side rendering.",https://github.com/ishivamgaur/Ap-news-next-js
+96,amMubbasher/cleannami.ceenami-old,amMubbasher,User,1,0,1,postcss.config.mjs,,https://github.com/amMubbasher/cleannami.ceenami-old
+97,AbdulwahidHusein/crawler-dashboard,AbdulwahidHusein,User,1,0,1,postcss.config.mjs,,https://github.com/AbdulwahidHusein/crawler-dashboard
+98,VplayProCrypto/mvp_vercel,VplayProCrypto,User,1,0,1,tailwind.config.js,Repositiory of phase 1 mvp,https://github.com/VplayProCrypto/mvp_vercel
+99,SouravDn-p/RexAuction,SouravDn-p,User,1,0,1,tailwind.config.js,"A real-time auction web application built for live bidding experiences, combining advanced features like instant updates, smart bidding, and real-time communication between users.",https://github.com/SouravDn-p/RexAuction
+100,AKDebug-UX/interactive-tv-app,AKDebug-UX,User,1,0,1,tailwind.config.js,,https://github.com/AKDebug-UX/interactive-tv-app
+101,usman-174/VidSpark,usman-174,User,1,0,1,client/tailwind.config.js,,https://github.com/usman-174/VidSpark
+102,NatyJoseDie/proyecto-nginx,NatyJoseDie,User,1,0,1,eslint.config.mjs,,https://github.com/NatyJoseDie/proyecto-nginx
+103,AKDebug-UX/DoneWithIt,AKDebug-UX,User,1,0,1,App.js,,https://github.com/AKDebug-UX/DoneWithIt
+104,dhruvmalik007/forensics-board,dhruvmalik007,User,0,0,1,postcss.config.mjs,,https://github.com/dhruvmalik007/forensics-board
+105,Rahulkumarhavit/ProStore-Ecommerce,Rahulkumarhavit,User,0,0,1,postcss.config.mjs,,https://github.com/Rahulkumarhavit/ProStore-Ecommerce
+106,Bart3kL/shopify-components,Bart3kL,User,0,0,1,polaris-components/postcss.config.mjs,,https://github.com/Bart3kL/shopify-components
+107,mjatin-dev/logic-zephyr,mjatin-dev,User,0,0,1,postcss.config.mjs,,https://github.com/mjatin-dev/logic-zephyr
+108,umrasghar/heygen-demo,umrasghar,User,0,0,1,postcss.config.mjs,,https://github.com/umrasghar/heygen-demo
+109,thanhdanh111/challenge,thanhdanh111,User,0,0,2,Problem-2/postcss.config.mjs | Problem-3/postcss.config.mjs,,https://github.com/thanhdanh111/challenge
+110,hamza-nafasat/rentin-frontend,hamza-nafasat,User,0,0,1,postcss.config.mjs,,https://github.com/hamza-nafasat/rentin-frontend
+111,rejoan121615/ClientOps,rejoan121615,User,0,0,1,frontend/postcss.config.mjs,"ClientOps is a full-stack internal operations dashboard designed for agencies and small businesses to manage clients, projects, team members, and workflows securely.",https://github.com/rejoan121615/ClientOps
+112,SouravDn-p/CMR,SouravDn-p,User,0,0,1,postcss.config.mjs,,https://github.com/SouravDn-p/CMR
+113,EmanDeveloper/EasyTech,EmanDeveloper,User,0,0,1,postcss.config.mjs,,https://github.com/EmanDeveloper/EasyTech
+114,addis-ale/25-5-clock,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/25-5-clock
+115,MSCPerera/Job-Board-App,MSCPerera,User,0,0,1,job-board-app/postcss.config.mjs,,https://github.com/MSCPerera/Job-Board-App
+116,Nathanim1919/nextjs-project,Nathanim1919,User,0,0,1,postcss.config.mjs,,https://github.com/Nathanim1919/nextjs-project
+117,TimothyBabatu13/AegisHealth-Smart,TimothyBabatu13,User,0,0,1,aegis-health-smart/postcss.config.mjs,,https://github.com/TimothyBabatu13/AegisHealth-Smart
+118,Senti-fi/Senti.fi,Senti-fi,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/Senti-fi/Senti.fi
+119,Zentaurios/stable-monitor,Zentaurios,User,0,0,1,postcss.config.mjs,,https://github.com/Zentaurios/stable-monitor
+120,SouravDn-p/Frontend-task,SouravDn-p,User,0,0,1,postcss.config.mjs,,https://github.com/SouravDn-p/Frontend-task
+121,Storaboy11/meerge,Storaboy11,User,0,0,1,postcss.config.mjs,,https://github.com/Storaboy11/meerge
+122,ahmedghonim/esraa,ahmedghonim,User,0,0,1,postcss.config.mjs,,https://github.com/ahmedghonim/esraa
+123,vrunda310/AIA-VEGA-Frontend,vrunda310,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/vrunda310/AIA-VEGA-Frontend
+124,emmanueldavidson96/popular_saas_product_landing_page,emmanueldavidson96,User,0,0,1,postcss.config.mjs,,https://github.com/emmanueldavidson96/popular_saas_product_landing_page
+125,pratikp72/deal-Project,pratikp72,User,0,0,1,postcss.config.mjs,,https://github.com/pratikp72/deal-Project
+126,Al-amin07/file_sure,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/file_sure
+127,waris-ansar/finstar,waris-ansar,User,0,0,1,postcss.config.mjs,,https://github.com/waris-ansar/finstar
+128,MianHaziq/LKnight-Lms,MianHaziq,User,0,0,1,postcss.config.mjs,,https://github.com/MianHaziq/LKnight-Lms
+129,pankajkhadse/TrustBasket,pankajkhadse,User,0,0,1,postcss.config.mjs,,https://github.com/pankajkhadse/TrustBasket
+130,adnaan-2/content-generation,adnaan-2,User,0,0,1,postcss.config.mjs,,https://github.com/adnaan-2/content-generation
+131,malikjunaidhassann/seller-panel,malikjunaidhassann,User,0,0,1,postcss.config.mjs,,https://github.com/malikjunaidhassann/seller-panel
+132,mdnuruzzamannirob/your-capture-awards-dashboard,mdnuruzzamannirob,User,0,0,1,postcss.config.mjs,,https://github.com/mdnuruzzamannirob/your-capture-awards-dashboard
+133,Minahil48/NY-caffine,Minahil48,User,0,0,1,postcss.config.mjs,All your cravings in one place,https://github.com/Minahil48/NY-caffine
+134,FrazKhan1/dev-team-chat,FrazKhan1,User,0,0,1,postcss.config.mjs,,https://github.com/FrazKhan1/dev-team-chat
+135,jrioscloud/financial-document-analyzer,jrioscloud,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/jrioscloud/financial-document-analyzer
+136,seemab-ahmed/rodopi,seemab-ahmed,User,0,0,1,postcss.config.mjs,,https://github.com/seemab-ahmed/rodopi
+137,JudeTejada/digital-pods,JudeTejada,User,0,0,1,postcss.config.mjs,,https://github.com/JudeTejada/digital-pods
+138,msuhels/RapidProject-Pos-System,msuhels,User,0,0,1,postcss.config.mjs,,https://github.com/msuhels/RapidProject-Pos-System
+139,Al-amin07/project_5_frontend,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/project_5_frontend
+140,sparktechagency/nskustoms_custom_game_site-2.0,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/nskustoms_custom_game_site-2.0
+141,abdullah2310ishaq/afronaut,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/afronaut
+142,Jaskaran2701/Test-1,Jaskaran2701,User,0,0,1,postcss.config.mjs,,https://github.com/Jaskaran2701/Test-1
+143,Deepanshu7-bit/nugen-interns,Deepanshu7-bit,User,0,0,1,postcss.config.mjs,,https://github.com/Deepanshu7-bit/nugen-interns
+144,saifullah-max/bublr,saifullah-max,User,0,0,1,postcss.config.mjs,,https://github.com/saifullah-max/bublr
+145,softvence-omega-future-stack/gameluke-frontend,softvence-omega-future-stack,User,0,0,1,postcss.config.mjs,,https://github.com/softvence-omega-future-stack/gameluke-frontend
+146,Meet2054/automa8x-production-new,Meet2054,User,0,0,1,postcss.config.mjs,,https://github.com/Meet2054/automa8x-production-new
+147,bharatbrovitech/india-to-germany,bharatbrovitech,User,0,0,1,postcss.config.mjs,,https://github.com/bharatbrovitech/india-to-germany
+148,PremShakti/PanchangCalendar,PremShakti,User,0,0,1,postcss.config.mjs,,https://github.com/PremShakti/PanchangCalendar
+149,Pa-ppy/Checkout,Pa-ppy,User,0,0,1,postcss.config.mjs,,https://github.com/Pa-ppy/Checkout
+150,Atif-Hameed/als-admin,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/als-admin
+151,Dawit212119/Devodemy,Dawit212119,User,0,0,1,postcss.config.mjs," Build an LMS using  Nextjs, React, Stripe, Mux, next app router, Prisma, Strip,  Mysql, Docker, AWS Lambda, , Redux Toolkit, Tailwind CSS, Shadcn, TypeScript, Zod, aws s3,aws CloudFront,Clerk,",https://github.com/Dawit212119/Devodemy
+152,SouravDn-p/NextManager-YourInventoryManager,SouravDn-p,User,0,0,1,postcss.config.mjs,"Next.js Inventory Manager A full-stack Inventory Management System built with Next.js 14 App Router, Tailwind CSS, MongoDB, and Redux Toolkit (RTK Query). This app supports both social authentication via NextAuth.js (Google, GitHub) and traditional email/password login using JWT.",https://github.com/SouravDn-p/NextManager-YourInventoryManager
+153,ranjannkumar/Token-Vesting-App,ranjannkumar,User,0,0,1,postcss.config.mjs,,https://github.com/ranjannkumar/Token-Vesting-App
+154,Usamahafiz8/fetchdetails,Usamahafiz8,User,0,0,1,postcss.config.mjs,,https://github.com/Usamahafiz8/fetchdetails
+155,freelancework00700/CRM-test-task,freelancework00700,User,0,0,1,postcss.config.mjs,,https://github.com/freelancework00700/CRM-test-task
+156,NexumTechnologies/E-Commerce,NexumTechnologies,User,0,0,1,postcss.config.mjs,,https://github.com/NexumTechnologies/E-Commerce
+157,ahmadraza382/APIs-integration,ahmadraza382,User,0,0,1,postcss.config.mjs,Get data From Apis and just for practice and rough,https://github.com/ahmadraza382/APIs-integration
+158,akashmuhammadabrrar/Resume-builder-NextTypescript,akashmuhammadabrrar,User,0,0,1,postcss.config.mjs,,https://github.com/akashmuhammadabrrar/Resume-builder-NextTypescript
+159,abimtad/Customer-feedback,abimtad,User,0,0,1,postcss.config.mjs,,https://github.com/abimtad/Customer-feedback
+160,Umbrelabs-Projects/Hostella-superAdmin,Umbrelabs-Projects,User,0,0,1,postcss.config.mjs,This repo is for those who will register admins ,https://github.com/Umbrelabs-Projects/Hostella-superAdmin
+161,SanjayaPrasadRajapaksha/Blog_App,SanjayaPrasadRajapaksha,User,0,0,1,postcss.config.mjs,,https://github.com/SanjayaPrasadRajapaksha/Blog_App
+162,MunibQazi12/next-starter-template,MunibQazi12,User,0,0,1,postcss.config.mjs,,https://github.com/MunibQazi12/next-starter-template
+163,PremShakti/multi-tenet-school-profile-app,PremShakti,User,0,0,1,postcss.config.mjs,,https://github.com/PremShakti/multi-tenet-school-profile-app
+164,mirzaghalib4726/committee-system-next,mirzaghalib4726,User,0,0,1,postcss.config.mjs,,https://github.com/mirzaghalib4726/committee-system-next
+165,ChiraniSiriwardhana/Spirit11,ChiraniSiriwardhana,User,0,0,1,postcss.config.mjs,A secure and user-friendly authentication system,https://github.com/ChiraniSiriwardhana/Spirit11
+166,FSDTeam-SAA/admin-dashboard-gman,FSDTeam-SAA,User,0,0,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/admin-dashboard-gman
+167,developerdesigner18/Frontend-Task,developerdesigner18,User,0,0,1,postcss.config.mjs,,https://github.com/developerdesigner18/Frontend-Task
+168,noors-code/Account-Settings,noors-code,User,0,0,1,postcss.config.mjs,,https://github.com/noors-code/Account-Settings
+169,finom/vovk-hello-world,finom,User,0,0,1,postcss.config.mjs,Vovk.ts Hello World App,https://github.com/finom/vovk-hello-world
+170,Yashpreetrana4790/Bestvocabulary_platform,Yashpreetrana4790,User,0,0,1,postcss.config.mjs,Vocab learning website,https://github.com/Yashpreetrana4790/Bestvocabulary_platform
+171,Atif-Hameed/unsigned-admin,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/unsigned-admin
+172,sparktechagency/protippz_website,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/protippz_website
+173,saifullah-max/mandviwalla-mauser,saifullah-max,User,0,0,1,postcss.config.mjs,,https://github.com/saifullah-max/mandviwalla-mauser
+174,Navoda001/Solana,Navoda001,User,0,0,1,postcss.config.mjs,,https://github.com/Navoda001/Solana
+175,wolfstudiosai/braxx-frontend-v2,wolfstudiosai,User,0,0,1,postcss.config.mjs,,https://github.com/wolfstudiosai/braxx-frontend-v2
+176,cywasay/neorecruits-,cywasay,User,0,0,1,postcss.config.mjs,,https://github.com/cywasay/neorecruits-
+177,FlowRMS/flow-connect-frontend-new,FlowRMS,User,0,0,1,postcss.config.mjs,FlowConnect Frontend Application,https://github.com/FlowRMS/flow-connect-frontend-new
+178,Anthem-InfoTech-Pvt-Ltd/dashboards,Anthem-InfoTech-Pvt-Ltd,User,0,0,1,postcss.config.mjs,,https://github.com/Anthem-InfoTech-Pvt-Ltd/dashboards
+179,raoarafat/steelh-website,raoarafat,User,0,0,1,postcss.config.mjs,,https://github.com/raoarafat/steelh-website
+180,Qasim-dev/stock-tracker,Qasim-dev,User,0,0,1,postcss.config.mjs,,https://github.com/Qasim-dev/stock-tracker
+181,teresagrobecker/pensio_consortia,teresagrobecker,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/teresagrobecker/pensio_consortia
+182,umarabid123/Raise-Your-Hack,umarabid123,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/umarabid123/Raise-Your-Hack
+183,WeOwnAiAgents-Hackerhouse/WeOwnAiAgent,WeOwnAiAgents-Hackerhouse,User,0,0,1,postcss.config.mjs,"building the ultimate orchestration agent orchestration platform which is sovereign, tokenomics driven and build for web3 community . Contribution for ethdenver hackathon. ",https://github.com/WeOwnAiAgents-Hackerhouse/WeOwnAiAgent
+184,Karigar-App/Karigar,Karigar-App,User,0,0,1,packages/ui/postcss.config.mjs,,https://github.com/Karigar-App/Karigar
+185,dhruvmalik007/xrpl_haks_hackathon_project,dhruvmalik007,User,0,0,1,postcss.config.mjs,XRPL hack competition submission: developing RAG agent framework for price monitoring and market making of impact certificates,https://github.com/dhruvmalik007/xrpl_haks_hackathon_project
+186,addis-ale/EGA,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/EGA
+187,addis-ale/free_code_camp_task_01,addis-ale,User,0,0,1,postcss.config.mjs,Free codecamp front end libraries certification task ,https://github.com/addis-ale/free_code_camp_task_01
+188,addis-ale/gd-landing-page,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/gd-landing-page
+189,Al-amin07/purple-cat-client,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/purple-cat-client
+190,Al-amin07/apparel-trade-bd,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/apparel-trade-bd
+191,Al-amin07/hyshin,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/hyshin
+192,Al-amin07/web-programming-lab,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/web-programming-lab
+193,sparktechagency/silicon-zisan-website,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/silicon-zisan-website
+194,mdnuruzzamannirob/relo-website,mdnuruzzamannirob,User,0,0,1,postcss.config.mjs,,https://github.com/mdnuruzzamannirob/relo-website
+195,FSDTeam-SAA/hinkel-Website,FSDTeam-SAA,User,0,0,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/hinkel-Website
+196,FSDTeam-SAA/iwmsadvisors,FSDTeam-SAA,User,0,0,1,postcss.config.mjs,,https://github.com/FSDTeam-SAA/iwmsadvisors
+197,Harsimran-Nugen/assignment,Harsimran-Nugen,User,0,0,1,postcss.config.mjs,,https://github.com/Harsimran-Nugen/assignment
+198,cto-varun/user-crud-design-nextjs,cto-varun,User,0,0,1,postcss.config.mjs,,https://github.com/cto-varun/user-crud-design-nextjs
+199,Aman-scripts/NugenEmployabilityTest,Aman-scripts,User,0,0,1,postcss.config.mjs,,https://github.com/Aman-scripts/NugenEmployabilityTest
+200,akashstwt/inventory-management-majorproject,akashstwt,User,0,0,1,client/postcss.config.mjs,,https://github.com/akashstwt/inventory-management-majorproject
+201,akashstwt/TheGitcode,akashstwt,User,0,0,1,gitcodeweb/postcss.config.mjs,,https://github.com/akashstwt/TheGitcode
+202,Atif-Hameed/ALS-Panel,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/ALS-Panel
+203,umarabid123/store-forge,umarabid123,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/umarabid123/store-forge
+204,addis-ale/discord,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/discord
+205,addis-ale/hirecards-prod,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/hirecards-prod
+206,addis-ale/ega_updated,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/ega_updated
+207,addis-ale/group-match,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/group-match
+208,Umbrelabs-Projects/Hostella-admin,Umbrelabs-Projects,User,0,0,1,postcss.config.mjs,Hostella admin platform ,https://github.com/Umbrelabs-Projects/Hostella-admin
+209,Umbrelabs-Projects/Hostella-stu,Umbrelabs-Projects,User,0,0,1,postcss.config.mjs,Hostella student hostel booking platform,https://github.com/Umbrelabs-Projects/Hostella-stu
+210,SanjayaPrasadRajapaksha/Hotel_Booking-Admin_Panel,SanjayaPrasadRajapaksha,User,0,0,1,postcss.config.mjs,,https://github.com/SanjayaPrasadRajapaksha/Hotel_Booking-Admin_Panel
+211,SanjayaPrasadRajapaksha/Todo_App,SanjayaPrasadRajapaksha,User,0,0,1,my-app/postcss.config.mjs,,https://github.com/SanjayaPrasadRajapaksha/Todo_App
+212,PremShakti/Inventory-Todo-Manager,PremShakti,User,0,0,1,postcss.config.mjs,,https://github.com/PremShakti/Inventory-Todo-Manager
+213,iwb25-412-vertex-prime/apigateway-v1,iwb25-412-vertex-prime,User,0,0,1,userportal/postcss.config.mjs,"User Portal + Management Layer | Quota management, Rule enforcement, API key validation.",https://github.com/iwb25-412-vertex-prime/apigateway-v1
+214,fsdteam8/lowready-dashboard,fsdteam8,User,0,0,1,postcss.config.mjs,,https://github.com/fsdteam8/lowready-dashboard
+215,badhon252/shift-scheduler,badhon252,User,0,0,1,postcss.config.mjs,Build to streamline the shift scheduler,https://github.com/badhon252/shift-scheduler
+216,fsdteam8/stevenar77-dashboard,fsdteam8,User,0,0,1,postcss.config.mjs,,https://github.com/fsdteam8/stevenar77-dashboard
+217,Atif-Hameed/unsigned-frontend,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/unsigned-frontend
+218,Atif-Hameed/social-admin,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/social-admin
+219,Atif-Hameed/cybenty,Atif-Hameed,User,0,0,1,postcss.config.mjs,,https://github.com/Atif-Hameed/cybenty
+220,anthemnandani/ai,anthemnandani,User,0,0,1,postcss.config.mjs,,https://github.com/anthemnandani/ai
+221,Cloudrika/cloudrika-web,Cloudrika,User,0,0,2,packages/ui/postcss.config.mjs | apps/email-portal/next.config.mjs,,https://github.com/Cloudrika/cloudrika-web
+222,sparktechagency/consult_dashboard,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/consult_dashboard
+223,mijanConnect/the-piegeon-hub-website,mijanConnect,User,0,0,1,postcss.config.mjs,,https://github.com/mijanConnect/the-piegeon-hub-website
+224,sparktechagency/jonowoods-website,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/jonowoods-website
+225,Button-20/juzbuild,Button-20,User,0,0,1,postcss.config.mjs,,https://github.com/Button-20/juzbuild
+226,HyderYash/my-progess-tracker,HyderYash,User,0,0,1,postcss.config.mjs,,https://github.com/HyderYash/my-progess-tracker
+227,Softvence-Omega-Dev-Ninjas/diaz-jupiter-marine-frontend,Softvence-Omega-Dev-Ninjas,User,0,0,1,postcss.config.mjs,,https://github.com/Softvence-Omega-Dev-Ninjas/diaz-jupiter-marine-frontend
+228,MohamedH1000/course,MohamedH1000,User,0,0,1,postcss.config.mjs,,https://github.com/MohamedH1000/course
+229,nipun-imesh/sample-react,nipun-imesh,User,0,0,1,postcss.config.mjs,,https://github.com/nipun-imesh/sample-react
+230,sayyamButt317/ishout,sayyamButt317,User,0,0,1,postcss.config.mjs,,https://github.com/sayyamButt317/ishout
+231,rvmediacorp/Headshot-Portland-Official,rvmediacorp,User,0,0,1,postcss.config.mjs,,https://github.com/rvmediacorp/Headshot-Portland-Official
+232,Sawjal-sikder/faceAi-front-end,Sawjal-sikder,User,0,0,1,postcss.config.mjs,,https://github.com/Sawjal-sikder/faceAi-front-end
+233,SanjayaPrasadRajapaksha/E-Commerce,SanjayaPrasadRajapaksha,User,0,0,1,postcss.config.mjs,,https://github.com/SanjayaPrasadRajapaksha/E-Commerce
+234,Rahulkumarhavit/multi-tenant-architecture,Rahulkumarhavit,User,0,0,1,postcss.config.mjs,,https://github.com/Rahulkumarhavit/multi-tenant-architecture
+235,Mohsin-Javed48/connectors-nextJs,Mohsin-Javed48,User,0,0,1,postcss.config.mjs,,https://github.com/Mohsin-Javed48/connectors-nextJs
+236,Axxi3/hennery,Axxi3,User,0,0,1,postcss.config.mjs,,https://github.com/Axxi3/hennery
+237,UzairAhmedDahraj/clickup-nextjs-demo,UzairAhmedDahraj,User,0,0,1,postcss.config.mjs,,https://github.com/UzairAhmedDahraj/clickup-nextjs-demo
+238,Mike-flowbiz/Flowbiz-backend,Mike-flowbiz,User,0,0,1,postcss.config.mjs,"Backend API for FlowBiz – Node.js, PostgreSQL, JWT, PDF service",https://github.com/Mike-flowbiz/Flowbiz-backend
+239,phillipshepard1/internal-re-crm,phillipshepard1,User,0,0,1,postcss.config.mjs,,https://github.com/phillipshepard1/internal-re-crm
+240,mahadi-zulfiker/mz-events-frontend,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,"A modern, responsive, and feature-rich frontend for the Events & Activities Platform, built with Next.js 14 and Tailwind CSS. This application provides a seamless experience for users to discover events, hosts to manage their listings, and admins to oversee the platform.",https://github.com/mahadi-zulfiker/mz-events-frontend
+241,fareed-aslam/capitalkv,fareed-aslam,User,0,0,1,CapitalKV-AI-master/frontend/postcss.config.mjs,,https://github.com/fareed-aslam/capitalkv
+242,sparktechagency/profitable-website-v2,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/profitable-website-v2
+243,TimothyBabatu13/Stampchain,TimothyBabatu13,User,0,0,1,stamp-chain/postcss.config.mjs,,https://github.com/TimothyBabatu13/Stampchain
+244,iamanaskhan10/my-portfolio-nextjs,iamanaskhan10,User,0,0,1,postcss.config.mjs,,https://github.com/iamanaskhan10/my-portfolio-nextjs
+245,MatiasCuadra98/ai-excel,MatiasCuadra98,User,0,0,1,apps/frontend/postcss.config.mjs,,https://github.com/MatiasCuadra98/ai-excel
+246,manuel-spec/another-portfolio,manuel-spec,User,0,0,1,postcss.config.mjs,,https://github.com/manuel-spec/another-portfolio
+247,kasunwathsala/Nextjs-Protfolio,kasunwathsala,User,0,0,1,postcss.config.mjs,"A vibrant, modern, and fully responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features stunning gradient designs, smooth animations, and a colorful UI that showcases your projects and skills in an eye-catching way.",https://github.com/kasunwathsala/Nextjs-Protfolio
+248,shayanwd/vts-nextjs,shayanwd,User,0,0,2,postcss.config.mjs | eslint.config.mjs,,https://github.com/shayanwd/vts-nextjs
+249,JudeTejada/reactly,JudeTejada,User,0,0,1,apps/web/postcss.config.mjs,,https://github.com/JudeTejada/reactly
+250,musetax/Amus-fe,musetax,User,0,0,1,postcss.config.mjs,,https://github.com/musetax/Amus-fe
+251,fyunusa/video-tool,fyunusa,User,0,0,1,postcss.config.mjs,,https://github.com/fyunusa/video-tool
+252,TranDoanKhoe/Velvere,TranDoanKhoe,User,0,0,5,src/components_bonus/my-tab/postcss.config.mjs | src/components_bonus/my-app/postcss.config.mjs | src/components_bonus/my-select/postcss.config.mjs | src/components_bonus/my-button/postcss.config.mjs | src/components_bonus/my-calendar/postcss.config.mjs,,https://github.com/TranDoanKhoe/Velvere
+253,cywasay/leaders,cywasay,User,0,0,1,leaders-admin/postcss.config.mjs,,https://github.com/cywasay/leaders
+254,TimothyBabatu13/TokenMind,TimothyBabatu13,User,0,0,1,token-mind/postcss.config.mjs,Smart AI brain for tokens,https://github.com/TimothyBabatu13/TokenMind
+255,shani-techv1/source-app-v2,shani-techv1,User,0,0,1,postcss.config.mjs,,https://github.com/shani-techv1/source-app-v2
+256,Mfahadk99/syssel-web-internal,Mfahadk99,User,0,0,1,postcss.config.mjs,,https://github.com/Mfahadk99/syssel-web-internal
+257,Nathanim1919/time-lens,Nathanim1919,User,0,0,1,postcss.config.mjs,,https://github.com/Nathanim1919/time-lens
+258,addis-ale/wetruck-shipper,addis-ale,User,0,0,1,postcss.config.mjs,,https://github.com/addis-ale/wetruck-shipper
+259,Romicha935/image-gallery,Romicha935,User,0,0,1,postcss.config.mjs,,https://github.com/Romicha935/image-gallery
+260,Ali-Hamas/Todo-App,Ali-Hamas,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/Ali-Hamas/Todo-App
+261,MohamedH1000/philadelphia_university,MohamedH1000,User,0,0,1,postcss.config.mjs,,https://github.com/MohamedH1000/philadelphia_university
+262,saifullah-max/surfchem,saifullah-max,User,0,0,1,postcss.config.mjs,,https://github.com/saifullah-max/surfchem
+263,ahnaafarafee/bionic-seven,ahnaafarafee,User,0,0,2,postcss.config.mjs | eslint.config.mjs,Official website of Bionic 7 - Biomedical Engineering batch 7 of Islamic University,https://github.com/ahnaafarafee/bionic-seven
+264,malirazaansari/Protfolio_project,malirazaansari,User,0,0,1,postcss.config.mjs,My Personal Protfolio,https://github.com/malirazaansari/Protfolio_project
+265,ayanmal1k/DragoPump,ayanmal1k,User,0,0,1,postcss.config.mjs,Solana token Site,https://github.com/ayanmal1k/DragoPump
+266,Shumaim-Naseer-Kiyani/framer_project,Shumaim-Naseer-Kiyani,User,0,0,1,postcss.config.mjs,,https://github.com/Shumaim-Naseer-Kiyani/framer_project
+267,prosigns/dex-data-aggregation,prosigns,User,0,0,1,postcss.config.mjs,,https://github.com/prosigns/dex-data-aggregation
+268,MrSohaibAhmed/interview-assessment,MrSohaibAhmed,User,0,0,1,postcss.config.mjs,,https://github.com/MrSohaibAhmed/interview-assessment
+269,roma2023/Snoonu,roma2023,User,0,0,1,postcss.config.mjs,,https://github.com/roma2023/Snoonu
+270,Mohsin-Javed48/nextjs-witd-oasis,Mohsin-Javed48,User,0,0,1,postcss.config.mjs,,https://github.com/Mohsin-Javed48/nextjs-witd-oasis
+271,kasunwathsala/Caramel-Pudding-web,kasunwathsala,User,0,0,1,postcss.config.mjs,"A premium e-commerce platform for caramel pudding sales built with Next.js and shadcn/ui.  Features a full shopping experience with product catalog, shopping cart, checkout, and responsive  design. Ready for payment integration and scaling with your own database backend.",https://github.com/kasunwathsala/Caramel-Pudding-web
+272,mahadi-zulfiker/crm,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,"A full-stack, role-based Recruitment Management System designed to streamline hiring workflows for organizations and HR teams.",https://github.com/mahadi-zulfiker/crm
+273,humayun506034/ReviewHub-Client,humayun506034,User,0,0,1,postcss.config.mjs,,https://github.com/humayun506034/ReviewHub-Client
+274,brianonbased-dev/BaseAppShop,brianonbased-dev,User,0,0,1,postcss.config.mjs,Brian Shopify store for Base App,https://github.com/brianonbased-dev/BaseAppShop
+275,sanjay10985/lead-generation-landing-page,sanjay10985,User,0,0,1,postcss.config.mjs,,https://github.com/sanjay10985/lead-generation-landing-page
+276,Rahulkumarhavit/finance-advisor,Rahulkumarhavit,User,0,0,1,postcss.config.mjs,,https://github.com/Rahulkumarhavit/finance-advisor
+277,ayanmal1k/Sol-Market,ayanmal1k,User,0,0,1,postcss.config.mjs,,https://github.com/ayanmal1k/Sol-Market
+278,sparktechagency/faceAi-front-end,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/faceAi-front-end
+279,Mohsin-Javed48/dresscode-nextjs,Mohsin-Javed48,User,0,0,1,postcss.config.mjs,,https://github.com/Mohsin-Javed48/dresscode-nextjs
+280,sparktechagency/any-job-dashboard,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/any-job-dashboard
+281,sparktechagency/anyjob-web,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/anyjob-web
+282,Hriday-paul/anyjob-wellcome,Hriday-paul,User,0,0,1,postcss.config.mjs,,https://github.com/Hriday-paul/anyjob-wellcome
+283,a-belard/rayyan,a-belard,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/a-belard/rayyan
+284,kasunwathsala/Service-marketplace,kasunwathsala,User,0,0,1,navbar-vite (3)/postcss.config.mjs," A comprehensive full-stack web application that connects customers with  service providers across multiple categories including one-day services,  contract-based work, and part-time opportunities.",https://github.com/kasunwathsala/Service-marketplace
+285,kasunwathsala/saloon-booking-system,kasunwathsala,User,0,0,1,salon-booking-system/postcss.config.mjs,"A modern, responsive salon booking website built with Next.js and React. This comprehensive beauty salon management system features service listings, stylist profiles, multi-step appointment booking, customer testimonials, and contact management.",https://github.com/kasunwathsala/saloon-booking-system
+286,Nathanim1919/becoming,Nathanim1919,User,0,0,1,postcss.config.mjs,,https://github.com/Nathanim1919/becoming
+287,Adithyahewage/portfolio_website,Adithyahewage,User,0,0,1,postcss.config.mjs,,https://github.com/Adithyahewage/portfolio_website
+288,Ali-Hamas/Website-Todo,Ali-Hamas,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/Ali-Hamas/Website-Todo
+289,MohamedH1000/Mersal,MohamedH1000,User,0,0,1,postcss.config.mjs,,https://github.com/MohamedH1000/Mersal
+290,MohamedH1000/cruise,MohamedH1000,User,0,0,1,postcss.config.mjs,,https://github.com/MohamedH1000/cruise
+291,kasunwathsala/portfolio-2026,kasunwathsala,User,0,0,1,postcss.config.mjs,,https://github.com/kasunwathsala/portfolio-2026
+292,mahadi-zulfiker/SpaceZee,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live website,https://github.com/mahadi-zulfiker/SpaceZee
+293,mahadi-zulfiker/REPLIQ-Limited-Task,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live Link,https://github.com/mahadi-zulfiker/REPLIQ-Limited-Task
+294,softvence-omega-future-stack/lawalx_frontend,softvence-omega-future-stack,User,0,0,1,postcss.config.mjs,,https://github.com/softvence-omega-future-stack/lawalx_frontend
+295,softvence-omega-future-stack/kilian-rodhe-last-,softvence-omega-future-stack,User,0,0,1,postcss.config.mjs,,https://github.com/softvence-omega-future-stack/kilian-rodhe-last-
+296,ahmadraza382/E-commerce-website,ahmadraza382,User,0,0,1,postcss.config.mjs,,https://github.com/ahmadraza382/E-commerce-website
+297,Rahulkumarhavit/carmarket-place,Rahulkumarhavit,User,0,0,1,postcss.config.mjs,,https://github.com/Rahulkumarhavit/carmarket-place
+298,Rahulkumarhavit/Nextjs-productivity,Rahulkumarhavit,User,0,0,1,postcss.config.mjs,,https://github.com/Rahulkumarhavit/Nextjs-productivity
+299,tanushka1726/react_next,tanushka1726,User,0,0,1,postcss.config.mjs,"Reader Website is a modern, responsive web application built using Next.js and TypeScript, designed to showcase and explore books with a smooth user experience. It features dynamic routing, reusable components, and is fully deployed for public access. Ideal for readers, book enthusiasts, or content platforms looking for an interactive reading.",https://github.com/tanushka1726/react_next
+300,Sameer447/O2_app,Sameer447,User,0,0,1,postcss.config.mjs,,https://github.com/Sameer447/O2_app
+301,dmytro-chushko/portfolio-dev-dc,dmytro-chushko,User,0,0,1,postcss.config.mjs,,https://github.com/dmytro-chushko/portfolio-dev-dc
+302,Axxi3/ladyfoxx,Axxi3,User,0,0,1,postcss.config.mjs,,https://github.com/Axxi3/ladyfoxx
+303,Vladyslav0060/autopartner,Vladyslav0060,User,0,0,1,postcss.config.mjs,,https://github.com/Vladyslav0060/autopartner
+304,PremShakti/jewelry-kiosk,PremShakti,User,0,0,1,postcss.config.mjs,,https://github.com/PremShakti/jewelry-kiosk
+305,theeurbanlegend/Hackathon-Submission,theeurbanlegend,User,0,0,1,client/postcss.config.mjs,,https://github.com/theeurbanlegend/Hackathon-Submission
+306,SouravDn-p/NextManager-YourInventory-Manager,SouravDn-p,User,0,0,1,postcss.config.mjs,"Next.js Inventory Manager A full-stack Inventory Management System built with Next.js 14 App Router, Tailwind CSS, MongoDB, and Redux Toolkit (RTK Query). This app supports both social authentication via NextAuth.js (Google, GitHub) and traditional email/password login using JWT.",https://github.com/SouravDn-p/NextManager-YourInventory-Manager
+307,abdullah2310ishaq/zeebuddy,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/zeebuddy
+308,WeOwnNetwork/EthDenver-submission,WeOwnNetwork,User,0,0,1,apps/web/postcss.config.mjs,Building the #FedArch orchestration infra client with onchain agent registry. submission for ETHDenver 2026 hackathon,https://github.com/WeOwnNetwork/EthDenver-submission
+309,JudeTejada/project-monitoring,JudeTejada,User,0,0,1,postcss.config.mjs,,https://github.com/JudeTejada/project-monitoring
+310,salwaaliakbar/my-portfolio,salwaaliakbar,User,0,0,1,postcss.config.mjs,,https://github.com/salwaaliakbar/my-portfolio
+311,abdullah2310ishaq/company,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/company
+312,wahab3913/kalibar-manger1,wahab3913,User,0,0,1,postcss.config.mjs,,https://github.com/wahab3913/kalibar-manger1
+313,ninjadevhub/Flood-Risk-Mapper,ninjadevhub,User,0,0,1,postcss.config.mjs,,https://github.com/ninjadevhub/Flood-Risk-Mapper
+314,trobits/trobits-frontend,trobits,User,0,0,1,postcss.config.mjs,,https://github.com/trobits/trobits-frontend
+315,Shumaim-Naseer-Kiyani/ai_landing_page,Shumaim-Naseer-Kiyani,User,0,0,1,postcss.config.mjs,,https://github.com/Shumaim-Naseer-Kiyani/ai_landing_page
+316,ChiraniSiriwardhana/Portfolio,ChiraniSiriwardhana,User,0,0,1,postcss.config.mjs,,https://github.com/ChiraniSiriwardhana/Portfolio
+317,sparktechagency/betopia-website,sparktechagency,User,0,0,1,postcss.config.mjs,,https://github.com/sparktechagency/betopia-website
+318,carrantal/frontend,carrantal,User,0,0,1,postcss.config.mjs,,https://github.com/carrantal/frontend
+319,Nathanim1919/atlas,Nathanim1919,User,0,0,1,postcss.config.mjs,,https://github.com/Nathanim1919/atlas
+320,asadullah-kazmi/syncspace,asadullah-kazmi,User,0,0,1,frontend/postcss.config.mjs,"A real-time collaboration platform built with Next.js, WebSockets, and CRDTs (Yjs), enabling multi-user document editing with conflict-free state synchronization and low-latency updates.",https://github.com/asadullah-kazmi/syncspace
+321,usman-174/form-pdf,usman-174,User,0,0,1,postcss.config.mjs,,https://github.com/usman-174/form-pdf
+322,evenwalser/FinalPaperclipPro,evenwalser,User,0,0,1,postcss.config.mjs,For Hetal to move to Paperclip Vercel,https://github.com/evenwalser/FinalPaperclipPro
+323,huzzy12/portfolio,huzzy12,User,0,0,1,postcss.config.mjs,My portfolio website,https://github.com/huzzy12/portfolio
+324,Sameer447/my-app,Sameer447,User,0,0,1,postcss.config.mjs,,https://github.com/Sameer447/my-app
+325,wahab3913/kalibar,wahab3913,User,0,0,1,postcss.config.mjs,,https://github.com/wahab3913/kalibar
+326,sybotstackdev/Portfolio,sybotstackdev,User,0,0,1,postcss.config.mjs,,https://github.com/sybotstackdev/Portfolio
+327,NEERAJ131124/pisync-fe,NEERAJ131124,User,0,0,1,postcss.config.mjs,,https://github.com/NEERAJ131124/pisync-fe
+328,RazaAkmal/frontend-test,RazaAkmal,User,0,0,1,postcss.config.mjs,,https://github.com/RazaAkmal/frontend-test
+329,kasunwathsala/Loomistore,kasunwathsala,User,0,0,1,postcss.config.mjs,,https://github.com/kasunwathsala/Loomistore
+330,FlowRMSLabs/flowdemandwebsite,FlowRMSLabs,User,0,0,1,postcss.config.mjs,,https://github.com/FlowRMSLabs/flowdemandwebsite
+331,um8r/bridge-master-fyp,um8r,User,0,0,1,postcss.config.mjs,,https://github.com/um8r/bridge-master-fyp
+332,RathodDeven/danz-web,RathodDeven,User,0,0,1,postcss.config.mjs,,https://github.com/RathodDeven/danz-web
+333,Gowreesh-VT/OnlyFoundersV2,Gowreesh-VT,User,0,0,1,postcss.config.mjs,,https://github.com/Gowreesh-VT/OnlyFoundersV2
+334,garrycha/test-job,garrycha,User,0,0,1,postcss.config.mjs,,https://github.com/garrycha/test-job
+335,wasi2320/ctk-new,wasi2320,User,0,0,1,postcss.config.mjs,,https://github.com/wasi2320/ctk-new
+336,sayyamButt317/hire-with-tess-frontend,sayyamButt317,User,0,0,1,postcss.config.mjs,,https://github.com/sayyamButt317/hire-with-tess-frontend
+337,Al-amin07/bigso_app,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/bigso_app
+338,shermuhammad786/gs-hackathon,shermuhammad786,User,0,0,1,postcss.config.mjs,,https://github.com/shermuhammad786/gs-hackathon
+339,smit455/big_bazaar-store,smit455,User,0,0,1,postcss.config.mjs,,https://github.com/smit455/big_bazaar-store
+340,jbaze/borec-basket-claude,jbaze,User,0,0,1,postcss.config.mjs,,https://github.com/jbaze/borec-basket-claude
+341,Al-amin07/project-9-client,Al-amin07,User,0,0,3,postcss.config.mjs | tailwind.config.js | eslint.config.mjs,,https://github.com/Al-amin07/project-9-client
+342,farihulrouf/orcx_fe,farihulrouf,User,0,0,1,postcss.config.mjs,,https://github.com/farihulrouf/orcx_fe
+343,wahab3913/kalibar-m2,wahab3913,User,0,0,1,postcss.config.mjs,,https://github.com/wahab3913/kalibar-m2
+344,finom/realtime-kanban,finom,User,0,0,1,postcss.config.mjs,,https://github.com/finom/realtime-kanban
+345,rejoan121615/heritage-trial-overlay,rejoan121615,User,0,0,1,postcss.config.mjs,,https://github.com/rejoan121615/heritage-trial-overlay
+346,Ruwanima/Portfolio,Ruwanima,User,0,0,1,postcss.config.mjs,,https://github.com/Ruwanima/Portfolio
+347,Lithira-Sasmitha/social_app,Lithira-Sasmitha,User,0,0,1,postcss.config.mjs,,https://github.com/Lithira-Sasmitha/social_app
+348,coderkhalide/selorax-canvas,coderkhalide,User,0,0,1,apps/canvas-v2/postcss.config.mjs,,https://github.com/coderkhalide/selorax-canvas
+349,Button-20/juzbuild-background-processor,Button-20,User,0,0,1,templates/homely/postcss.config.mjs,,https://github.com/Button-20/juzbuild-background-processor
+350,Muhammadfaizanjanjua109/frammerMotion,Muhammadfaizanjanjua109,User,0,0,1,postcss.config.mjs,,https://github.com/Muhammadfaizanjanjua109/frammerMotion
+351,AHAdd40451/task-sheet,AHAdd40451,User,0,0,1,postcss.config.mjs,,https://github.com/AHAdd40451/task-sheet
+352,zaheerahmad92001/pettro,zaheerahmad92001,User,0,0,1,postcss.config.mjs,pettro for petLovers,https://github.com/zaheerahmad92001/pettro
+353,MahadA456/mahad-portfolio,MahadA456,User,0,0,1,postcss.config.mjs,,https://github.com/MahadA456/mahad-portfolio
+354,Joyeta-Mondal/Sparktech-Agency-assessment,Joyeta-Mondal,User,0,0,1,postcss.config.mjs,,https://github.com/Joyeta-Mondal/Sparktech-Agency-assessment
+355,webprogramminghack/b3-practice-31,webprogramminghack,User,0,0,1,postcss.config.mjs,,https://github.com/webprogramminghack/b3-practice-31
+356,Adithyahewage/Salon-demo,Adithyahewage,User,0,0,1,postcss.config.mjs,Demo project for a salon client,https://github.com/Adithyahewage/Salon-demo
+357,akashstwt/eth-global-cryptowiki,akashstwt,User,0,0,1,postcss.config.mjs,,https://github.com/akashstwt/eth-global-cryptowiki
+358,Gowreesh-VT/AWS-Web-Dev,Gowreesh-VT,User,0,0,1,postcss.config.mjs,,https://github.com/Gowreesh-VT/AWS-Web-Dev
+359,dynamicdreamz1/startup-voyager,dynamicdreamz1,User,0,0,1,postcss.config.mjs,,https://github.com/dynamicdreamz1/startup-voyager
+360,farhanmasood-se/live-docs,farhanmasood-se,User,0,0,1,postcss.config.mjs,,https://github.com/farhanmasood-se/live-docs
+361,dmytro-chushko/form-editor,dmytro-chushko,User,0,0,1,postcss.config.mjs,"A Next.js application for building, publishing, and collecting submissions for custom forms. It includes an authenticated admin area with a drag-and-drop editor and a public-facing form experience.",https://github.com/dmytro-chushko/form-editor
+362,Sameer447/launchpad-incubator-backend,Sameer447,User,0,0,1,postcss.config.mjs,,https://github.com/Sameer447/launchpad-incubator-backend
+363,SouravDn-p/Advance-HealthCare-Next-Level-of-Smarter-Better-Health,SouravDn-p,User,0,0,1,postcss.config.mjs,"Advanced Healthcare Service   || A complete all-in-one digital healthcare platform offering online consultations, secure health records, e-prescriptions, smart symptom evaluation, and personalized patient care — all from one seamless web experience.",https://github.com/SouravDn-p/Advance-HealthCare-Next-Level-of-Smarter-Better-Health
+364,SouravDn-p/Scribe-AI-Powered-Note-Taking-App,SouravDn-p,User,0,0,1,postcss.config.mjs,,https://github.com/SouravDn-p/Scribe-AI-Powered-Note-Taking-App
+365,SouravDn-p/multi-form-transaction,SouravDn-p,User,0,0,1,postcss.config.mjs,A Short Transaction Demo Platform,https://github.com/SouravDn-p/multi-form-transaction
+366,SouravDn-p/authjs-next-authentications,SouravDn-p,User,0,0,1,postcss.config.mjs,,https://github.com/SouravDn-p/authjs-next-authentications
+367,abdullah2310ishaq/qudrat,abdullah2310ishaq,User,0,0,1,admin-panel/postcss.config.mjs,,https://github.com/abdullah2310ishaq/qudrat
+368,SouravDn-p/PathFinder---Smarter-Admissions-Simpler-Bookings,SouravDn-p,User,0,0,1,postcss.config.mjs,"PathFinder – Smarter Admissions, Simpler Bookings  A full-stack Next.js app for college admission bookings. Features include college search, admission forms, reviews, profile management, and JWT-based authentication.",https://github.com/SouravDn-p/PathFinder---Smarter-Admissions-Simpler-Bookings
+369,abdullah2310ishaq/resposive-doctor-websote,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/resposive-doctor-websote
+370,abdullah2310ishaq/ecommerce_jewellery_store,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/ecommerce_jewellery_store
+371,Al-amin07/pioneer,Al-amin07,User,0,0,1,postcss.config.mjs,,https://github.com/Al-amin07/pioneer
+372,smit455/big_bazaar-admin,smit455,User,0,0,1,postcss.config.mjs,,https://github.com/smit455/big_bazaar-admin
+373,smit455/Task_manager,smit455,User,0,0,1,postcss.config.mjs,,https://github.com/smit455/Task_manager
+374,dhruvmalik007/Stratavault,dhruvmalik007,User,0,0,2,apps/web/postcss.config.mjs | packages/ui/postcss.config.mjs,application for the Ethglobal Hackmoney 2026 submission: Building the Agent experience platform to invest effortlessly in Prediction markets,https://github.com/dhruvmalik007/Stratavault
+375,finom/blok,finom,User,0,0,1,postcss.config.mjs,,https://github.com/finom/blok
+376,rejoan121615/website-generator,rejoan121615,User,0,0,1,packages/dashboard/postcss.config.mjs,,https://github.com/rejoan121615/website-generator
+377,abdullah2310ishaq/personal-portfolio,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/personal-portfolio
+378,Joyeta-Mondal/arklab-ai-assessment,Joyeta-Mondal,User,0,0,1,postcss.config.mjs,,https://github.com/Joyeta-Mondal/arklab-ai-assessment
+379,Adithyahewage/Gym-demo,Adithyahewage,User,0,0,1,postcss.config.mjs,Demo project for gym client,https://github.com/Adithyahewage/Gym-demo
+380,Gowreesh-VT/VITopoly,Gowreesh-VT,User,0,0,1,postcss.config.mjs,,https://github.com/Gowreesh-VT/VITopoly
+381,BhavikPatel-dreamz/wove-gift-portal,BhavikPatel-dreamz,User,0,0,1,postcss.config.mjs,,https://github.com/BhavikPatel-dreamz/wove-gift-portal
+382,BhavikPatel-dreamz/DynamicDreamz-AIagent-Demos,BhavikPatel-dreamz,User,0,0,1,postcss.config.mjs,,https://github.com/BhavikPatel-dreamz/DynamicDreamz-AIagent-Demos
+383,farhanmasood-se/slack-clone,farhanmasood-se,User,0,0,1,postcss.config.mjs,"Collaborate with your team using real-time messaging, rich text editing, and emoji support in this Slack-like app built with Next.js, Convex, and Shadcn UI.",https://github.com/farhanmasood-se/slack-clone
+384,GARAGE-POS/nextjs_test,GARAGE-POS,User,0,0,1,postcss.config.mjs,,https://github.com/GARAGE-POS/nextjs_test
+385,Socheema/clot,Socheema,User,0,0,1,postcss.config.mjs, Shop the best fashion products with Clot,https://github.com/Socheema/clot
+386,Shumaim-Naseer-Kiyani/project1,Shumaim-Naseer-Kiyani,User,0,0,1,postcss.config.mjs,,https://github.com/Shumaim-Naseer-Kiyani/project1
+387,Muhammad-Hammad-Abbasi/next.js-hackathon,Muhammad-Hammad-Abbasi,User,0,0,1,postcss.config.mjs,hackathon of figma web design.,https://github.com/Muhammad-Hammad-Abbasi/next.js-hackathon
+388,Germs31/small-traslator-ai,Germs31,User,0,0,1,postcss.config.mjs,,https://github.com/Germs31/small-traslator-ai
+389,prudywn/GrowthProject,prudywn,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/prudywn/GrowthProject
+390,BhavikPatel-dreamz/Homeopathway,BhavikPatel-dreamz,User,0,0,1,postcss.config.mjs,Homeopathway,https://github.com/BhavikPatel-dreamz/Homeopathway
+391,FaizaFarooq23/photo-gallery,FaizaFarooq23,User,0,0,1,postcss.config.mjs,,https://github.com/FaizaFarooq23/photo-gallery
+392,dbankston2409/Sober-Deck,dbankston2409,User,0,0,1,postcss.config.mjs,,https://github.com/dbankston2409/Sober-Deck
+393,mahadi-zulfiker/Nextjs-Prisma-Portfolio-Frontend,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live website,https://github.com/mahadi-zulfiker/Nextjs-Prisma-Portfolio-Frontend
+394,digitalschool-tech/tech-static,digitalschool-tech,User,0,0,1,postcss.config.mjs,,https://github.com/digitalschool-tech/tech-static
+395,seemab-ahmed/blockdag,seemab-ahmed,User,0,0,1,postcss.config.mjs,,https://github.com/seemab-ahmed/blockdag
+396,abdullah2310ishaq/zee-admin,abdullah2310ishaq,User,0,0,1,postcss.config.mjs,,https://github.com/abdullah2310ishaq/zee-admin
+397,lnbglondoncoin/lnbglondon,lnbglondoncoin,User,0,0,1,postcss.config.mjs,,https://github.com/lnbglondoncoin/lnbglondon
+398,ahmadraza382/Ferrano,ahmadraza382,User,0,0,1,postcss.config.mjs,,https://github.com/ahmadraza382/Ferrano
+399,JPChoyon/bikeBotics,JPChoyon,User,0,0,2,postcss.config.mjs | eslint.config.mjs,,https://github.com/JPChoyon/bikeBotics
+400,Anas-Ali-3673/caa-interface,Anas-Ali-3673,User,0,0,1,postcss.config.mjs,,https://github.com/Anas-Ali-3673/caa-interface
+401,akashstwt/fleek,akashstwt,User,0,0,1,postcss.config.mjs,,https://github.com/akashstwt/fleek
+402,wolfstudiosai/havocker,wolfstudiosai,User,0,0,1,postcss.config.mjs,,https://github.com/wolfstudiosai/havocker
+403,mdemong87/theamfisher-assignment,mdemong87,User,0,0,2,postcss.config.mjs | eslint.config.mjs,,https://github.com/mdemong87/theamfisher-assignment
+404,eftakhar-491/L-2_B-6-Assignment-4-frontend,eftakhar-491,User,0,0,1,postcss.config.mjs,,https://github.com/eftakhar-491/L-2_B-6-Assignment-4-frontend
+405,mohsulthana/yc-directory-nextjs,mohsulthana,User,0,0,1,postcss.config.mjs,,https://github.com/mohsulthana/yc-directory-nextjs
+406,deepaksh798/dashboard-second,deepaksh798,User,0,0,1,postcss.config.mjs,,https://github.com/deepaksh798/dashboard-second
+407,mahadi-zulfiker/Hishabee_Frontend_Task,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live Site,https://github.com/mahadi-zulfiker/Hishabee_Frontend_Task
+408,Ibraz94/inventory_management_system,Ibraz94,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/Ibraz94/inventory_management_system
+409,mdnuruzzamannirob/your-capture-awards,mdnuruzzamannirob,User,0,0,1,postcss.config.mjs,,https://github.com/mdnuruzzamannirob/your-capture-awards
+410,Germs31/expense-tracking,Germs31,User,0,0,1,postcss.config.mjs,,https://github.com/Germs31/expense-tracking
+411,Adharshms/builder,Adharshms,User,0,0,2,postcss.config.mjs | eslint.config.mjs,,https://github.com/Adharshms/builder
+412,Nathanim1919/Avaitor-game,Nathanim1919,User,0,0,1,client/postcss.config.mjs,,https://github.com/Nathanim1919/Avaitor-game
+413,tricodenetwork/lock-up,tricodenetwork,User,0,0,1,frontend/postcss.config.mjs,,https://github.com/tricodenetwork/lock-up
+414,saifullah-max/Navo-1,saifullah-max,User,0,0,1,postcss.config.mjs,,https://github.com/saifullah-max/Navo-1
+415,kanchana404/web,kanchana404,User,0,0,1,postcss.config.mjs,,https://github.com/kanchana404/web
+416,kanchana404/kaidenz-clothing,kanchana404,User,0,0,1,postcss.config.mjs,,https://github.com/kanchana404/kaidenz-clothing
+417,Muhammad-Hammad-Abbasi/persnol_portfolio_2,Muhammad-Hammad-Abbasi,User,0,0,1,postcss.config.mjs,persnal_portfolio,https://github.com/Muhammad-Hammad-Abbasi/persnol_portfolio_2
+418,Salman1205/MailAssists-CRM,Salman1205,User,0,0,1,postcss.config.mjs,,https://github.com/Salman1205/MailAssists-CRM
+419,SouravDn-p/Innovative-task-sd246,SouravDn-p,User,0,0,1,postcss.config.mjs,A taskEarn website,https://github.com/SouravDn-p/Innovative-task-sd246
+420,mahadi-zulfiker/PH-Job-Task-Web-Instructor,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live website,https://github.com/mahadi-zulfiker/PH-Job-Task-Web-Instructor
+421,mahadi-zulfiker/Raintor-Job-Task,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live website,https://github.com/mahadi-zulfiker/Raintor-Job-Task
+422,mahadi-zulfiker/SparkTech-Job-Task,mahadi-zulfiker,User,0,0,1,postcss.config.mjs,Live Site,https://github.com/mahadi-zulfiker/SparkTech-Job-Task
+423,seemab-ahmed/oradentclinic-website,seemab-ahmed,User,0,0,1,postcss.config.mjs,,https://github.com/seemab-ahmed/oradentclinic-website
+424,AhmadRazaKhokhar1/url-shortner-frontend,AhmadRazaKhokhar1,User,0,0,1,postcss.config.mjs,,https://github.com/AhmadRazaKhokhar1/url-shortner-frontend
+425,Sahl-AI/sahl-ai-iframe,Sahl-AI,User,0,0,1,tailwind.config.js,This contains the demo react app to test iframe approach,https://github.com/Sahl-AI/sahl-ai-iframe
+426,nipun-imesh/Fly-connects-web-FN,nipun-imesh,User,0,0,1,tailwind.config.js,,https://github.com/nipun-imesh/Fly-connects-web-FN
+427,Barosz30/Portfolio,Barosz30,User,0,0,1,tailwind.config.js,,https://github.com/Barosz30/Portfolio
+428,dawahanigeria-team/domainping,dawahanigeria-team,User,0,0,1,frontend/tailwind.config.js,,https://github.com/dawahanigeria-team/domainping
+429,shahid538org/microrealestate,shahid538org,User,0,0,1,webapps/landlord/tailwind.config.js,,https://github.com/shahid538org/microrealestate
+430,web-ghoul/movie-app,web-ghoul,User,0,0,1,tailwind.config.js,,https://github.com/web-ghoul/movie-app
+431,Dawit212119/DMS,Dawit212119,User,0,0,1,client/tailwind.config.js,"Nextjs,express,prisma",https://github.com/Dawit212119/DMS
+432,Al-amin07/project_4_frontend,Al-amin07,User,0,0,1,tailwind.config.js,,https://github.com/Al-amin07/project_4_frontend
+433,zeeshanrafiqrana/metropolis-arena-frontend,zeeshanrafiqrana,User,0,0,1,tailwind.config.js,Metropolis Arena Interactive Event Seating Map — Front-End Take-Home Task,https://github.com/zeeshanrafiqrana/metropolis-arena-frontend
+434,Wasee-Ur-Rehman/DarziXpress,Wasee-Ur-Rehman,User,0,0,1,client/tailwind.config.js,Online Tailor & Clothing Alteration Service,https://github.com/Wasee-Ur-Rehman/DarziXpress
+435,Flitzinteractive/FlitzSpace,Flitzinteractive,User,0,0,1,client/tailwind.config.js,,https://github.com/Flitzinteractive/FlitzSpace
+436,addygeek/Walmart-Inventory-Clearance-Optimizer,addygeek,User,0,0,1,frontend/tailwind.config.js,"Smart inventory and expiry management dashboard for retail stores like Walmart — detect, track, and optimize clearance items with urgency scoring and role-based access.",https://github.com/addygeek/Walmart-Inventory-Clearance-Optimizer
+437,Iambilalfaisal/Portfolio,Iambilalfaisal,User,0,0,1,tailwind.config.js,My portfolio,https://github.com/Iambilalfaisal/Portfolio
+438,malikjunaidhassann/updated-calcos-frontend,malikjunaidhassann,User,0,0,1,tailwind.config.js,,https://github.com/malikjunaidhassann/updated-calcos-frontend
+439,SimalChaudhari/plusfive,SimalChaudhari,User,0,0,1,tailwind.config.js,plusfive,https://github.com/SimalChaudhari/plusfive
+440,Hassam-01/Forsit-task,Hassam-01,User,0,0,1,tailwind.config.js,,https://github.com/Hassam-01/Forsit-task
+441,orynth-dev/vite-shadcn-template,orynth-dev,User,0,0,1,tailwind.config.js,,https://github.com/orynth-dev/vite-shadcn-template
+442,shahvezjumani/chat_app,shahvezjumani,User,0,0,1,tailwind.config.js,,https://github.com/shahvezjumani/chat_app
+443,hunain25/QuickFistAid,hunain25,User,0,0,1,tailwind.config.js,,https://github.com/hunain25/QuickFistAid
+444,FlowBondTech/egator,FlowBondTech,User,0,0,1,apps/web/tailwind.config.js,AIeGator - AI-powered event aggregation engine (ETHDenver via Luma),https://github.com/FlowBondTech/egator
+445,cyhammad/rapid-appliances-repairs,cyhammad,User,0,0,1,tailwind.config.js,,https://github.com/cyhammad/rapid-appliances-repairs
+446,MohamedH1000/ethaq_ecommerce_admin,MohamedH1000,User,0,0,1,tailwind.config.js,,https://github.com/MohamedH1000/ethaq_ecommerce_admin
+447,acanaveras/autonomous_5g_slicing,acanaveras,User,0,0,1,NeMo-Agent-Toolkit-UI/tailwind.config.js,New repository for troubleshooting,https://github.com/acanaveras/autonomous_5g_slicing
+448,Gethmi-Rathnayaka/Aventude,Gethmi-Rathnayaka,User,0,0,1,session001-fe/tailwind.config.js,,https://github.com/Gethmi-Rathnayaka/Aventude
+449,Atik203/My-Anime-Client,Atik203,User,0,0,1,tailwind.config.js,,https://github.com/Atik203/My-Anime-Client
+450,lihiniapsara/Spotify-Clone,lihiniapsara,User,0,0,1,tailwind.config.js,,https://github.com/lihiniapsara/Spotify-Clone
+451,dhruvmalik007/small-case_preEthDelhi,dhruvmalik007,User,0,0,1,apps/web/tailwind.config.js,submission for the EthGlobal Delhi hackathon ,https://github.com/dhruvmalik007/small-case_preEthDelhi
+452,jbaze/Eli-rfq-system,jbaze,User,0,0,1,rfq-app/tailwind.config.js,,https://github.com/jbaze/Eli-rfq-system
+453,DamikaDeshan/FaceDetectionClient,DamikaDeshan,User,0,0,1,tailwind.config.js,,https://github.com/DamikaDeshan/FaceDetectionClient
+454,morokoli/color-chrome,morokoli,User,0,0,1,tailwind.config.js,,https://github.com/morokoli/color-chrome
+455,rmcsharry/me,rmcsharry,User,0,0,1,frontend/tailwind.config.js,My portfolio,https://github.com/rmcsharry/me
+456,JudeTejada/snapdocs,JudeTejada,User,0,0,1,apps/frontend/tailwind.config.js,,https://github.com/JudeTejada/snapdocs
+457,mohsinyzonetechnology-dev/workFlow-management,mohsinyzonetechnology-dev,User,0,0,1,client/tailwind.config.js,,https://github.com/mohsinyzonetechnology-dev/workFlow-management
+458,anilgoswamistartbitsolutions/bolt-novel-merry,anilgoswamistartbitsolutions,User,0,0,1,tailwind.config.js,,https://github.com/anilgoswamistartbitsolutions/bolt-novel-merry
+459,spacecode-library/nurse-nest,spacecode-library,User,0,0,1,tailwind.config.js,,https://github.com/spacecode-library/nurse-nest
+460,jesus270/Krain-MVP-v1,jesus270,User,0,0,1,apps/landing/tailwind.config.js,,https://github.com/jesus270/Krain-MVP-v1
+461,01aksh/jobPilotFrontend,01aksh,User,0,0,1,tailwind.config.js,"ReactJS, TailwindCSS,Typescript",https://github.com/01aksh/jobPilotFrontend
+462,kiranmistary0697/Stratezy_lab,kiranmistary0697,User,0,0,1,tailwind.config.js,,https://github.com/kiranmistary0697/Stratezy_lab
+463,sparktechagency/u_tee_hub,sparktechagency,User,0,0,1,tailwind.config.js,,https://github.com/sparktechagency/u_tee_hub
+464,aviel9552/plusfive-frontend,aviel9552,User,0,0,1,tailwind.config.js,plusfive-frontend,https://github.com/aviel9552/plusfive-frontend
+465,MohamedH1000/ethaq_ecommerce,MohamedH1000,User,0,0,1,tailwind.config.js,,https://github.com/MohamedH1000/ethaq_ecommerce
+466,Enigma-Incorporated-Ltd/N0DE-Website,Enigma-Incorporated-Ltd,User,0,0,2,tailwind.config.js | src/tailwind.config.js,,https://github.com/Enigma-Incorporated-Ltd/N0DE-Website
+467,FSDTeam-SAA/AMES_Investment_new,FSDTeam-SAA,User,0,0,1,tailwind.config.js,,https://github.com/FSDTeam-SAA/AMES_Investment_new
+468,amit-biswas-1992/joykoly-test-app,amit-biswas-1992,User,0,0,1,tailwind.config.js,"React Native Joykoly Academy App with Dashboard, Exams, and API Integration",https://github.com/amit-biswas-1992/joykoly-test-app
+469,seemab-ahmed/eden-funded,seemab-ahmed,User,0,0,1,tailwind.config.js,,https://github.com/seemab-ahmed/eden-funded
+470,Professor833/orchestrix,Professor833,User,0,0,1,frontend/tailwind.config.js,AI workflow Automation Platform,https://github.com/Professor833/orchestrix
+471,rajkananirk/personal-finance-node,rajkananirk,User,0,0,1,tailwind.config.js,,https://github.com/rajkananirk/personal-finance-node
+472,Ali-Hamas/AI-Learn-Hub,Ali-Hamas,User,0,0,1,frontend/tailwind.config.js,Premium AI Learning Platform - AI LearnHub,https://github.com/Ali-Hamas/AI-Learn-Hub
+473,gSimani/ConcordBroker,gSimani,User,0,0,2,apps/web/tailwind.config.js | backups/apps_web_before_master_/tailwind.config.js,Extract CRE and  Residential information ,https://github.com/gSimani/ConcordBroker
+474,Frontier-tech-consulting/olas-mcp-application-workflow,Frontier-tech-consulting,User,0,0,1,docs/tailwind.config.js,This consist of the corresponding UI mockup workflow regarding the Olas ecosystem (for letting users run the MCP application for doing onchain interactions).,https://github.com/Frontier-tech-consulting/olas-mcp-application-workflow
+475,syed-zaeem/fyp-frontend,syed-zaeem,User,0,0,1,Project Frontend/tailwind.config.js,This is the frontend for the FYP.,https://github.com/syed-zaeem/fyp-frontend
+476,developerDesinger/Scrapping-Dashboard-Frontend,developerDesinger,User,0,0,1,tailwind.config.js,Frontend for the Scrapping Dashboard app.,https://github.com/developerDesinger/Scrapping-Dashboard-Frontend
+477,jade0615/Bookme,jade0615,User,0,0,1,frontend/tailwind.config.js,,https://github.com/jade0615/Bookme
+478,jbaze/prject-hejer-image-upload,jbaze,User,0,0,1,image-upload-feature-angular/tailwind.config.js,,https://github.com/jbaze/prject-hejer-image-upload
+479,Atik203/Quiz-Taker-Client,Atik203,User,0,0,1,tailwind.config.js,,https://github.com/Atik203/Quiz-Taker-Client
+480,dhruvmalik007/smallcase_defi,dhruvmalik007,User,0,0,1,apps/web/tailwind.config.js,submission for the EthGlobal Delhi hackathon project : Building thematic industry based mutual funds composed of various defi portfolios  ,https://github.com/dhruvmalik007/smallcase_defi
+481,Ali-Hamas/VPS-Error,Ali-Hamas,User,0,0,1,frontend/tailwind.config.js,,https://github.com/Ali-Hamas/VPS-Error
+482,Atik203/My-Anime-Server,Atik203,User,0,0,1,eslint.config.mjs,,https://github.com/Atik203/My-Anime-Server
+483,Al-amin07/ci-cd,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/ci-cd
+484,parthvaghani/vinayaknaturals-api,parthvaghani,User,0,0,1,eslint.config.mjs,,https://github.com/parthvaghani/vinayaknaturals-api
+485,Success0452/NestAssessment,Success0452,User,0,0,1,eslint.config.mjs,,https://github.com/Success0452/NestAssessment
+486,arif1101/AadilPay-backend,arif1101,User,0,0,1,eslint.config.mjs,,https://github.com/arif1101/AadilPay-backend
+487,pratikp72/strollr-app,pratikp72,User,0,0,1,eslint.config.mjs,,https://github.com/pratikp72/strollr-app
+488,anilgoswamistartbitsolutions/firebasebase-auth-and-store,anilgoswamistartbitsolutions,User,0,0,1,eslint.config.mjs,,https://github.com/anilgoswamistartbitsolutions/firebasebase-auth-and-store
+489,Logixbuilttech/payload_posts,Logixbuilttech,User,0,0,1,eslint.config.mjs,,https://github.com/Logixbuilttech/payload_posts
+490,JudeTejada/Fragments,JudeTejada,User,0,0,1,eslint.config.mjs,,https://github.com/JudeTejada/Fragments
+491,mohsulthana/aurora-reminder-app,mohsulthana,User,0,0,1,eslint.config.mjs,subscription reminder,https://github.com/mohsulthana/aurora-reminder-app
+492,pt67/test,pt67,User,0,0,1,frontend/eslint.config.mjs,,https://github.com/pt67/test
+493,Mohsin-Javed48/UDEMY-Backend-Practice-projects,Mohsin-Javed48,User,0,0,2,Section-7-MVC/00-starting-setup/eslint.config.mjs | Section-5-Express/eslint.config.mjs,,https://github.com/Mohsin-Javed48/UDEMY-Backend-Practice-projects
+494,Al-amin07/project_5_backend,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/project_5_backend
+495,Al-amin07/backend_danyel_new,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/backend_danyel_new
+496,Softvence-Omega-Dev-Ninjas/vic_pec_server_app,Softvence-Omega-Dev-Ninjas,User,0,0,1,eslint.config.mjs,,https://github.com/Softvence-Omega-Dev-Ninjas/vic_pec_server_app
+497,SouravDn-p/NestJs-Backend-Practice,SouravDn-p,User,0,0,1,eslint.config.mjs,,https://github.com/SouravDn-p/NestJs-Backend-Practice
+498,Softvence-Omega-Dev-Ninjas/jdadzok_server,Softvence-Omega-Dev-Ninjas,User,0,0,1,eslint.config.mjs,,https://github.com/Softvence-Omega-Dev-Ninjas/jdadzok_server
+499,seemab-ahmed/cutzclub-next,seemab-ahmed,User,0,0,1,eslint.config.mjs,,https://github.com/seemab-ahmed/cutzclub-next
+500,QaisarWaheed/service-connect-nest-be,QaisarWaheed,User,0,0,1,eslint.config.mjs,,https://github.com/QaisarWaheed/service-connect-nest-be
+501,SouravDn-p/NestJs-Template,SouravDn-p,User,0,0,1,eslint.config.mjs,A Nest Js backend server with latest features,https://github.com/SouravDn-p/NestJs-Template
+502,Binary-Mindz/agimtula_server,Binary-Mindz,User,0,0,1,eslint.config.mjs,,https://github.com/Binary-Mindz/agimtula_server
+503,Muhammad-Achir/nestjs-real-time-chat,Muhammad-Achir,User,0,0,1,eslint.config.mjs,,https://github.com/Muhammad-Achir/nestjs-real-time-chat
+504,arif1101/nextNest,arif1101,User,0,0,1,eslint.config.mjs,,https://github.com/arif1101/nextNest
+505,mirzaghalib4726/event_management_backend,mirzaghalib4726,User,0,0,1,eslint.config.mjs,,https://github.com/mirzaghalib4726/event_management_backend
+506,Arman8957/zenith-be,Arman8957,User,0,0,1,eslint.config.mjs,,https://github.com/Arman8957/zenith-be
+507,dev-muneeb-1520/nest-js-quiz-manager,dev-muneeb-1520,User,0,0,1,server/eslint.config.mjs,,https://github.com/dev-muneeb-1520/nest-js-quiz-manager
+508,Softvence-Omega-Dev-Ninjas/alvaaro-server,Softvence-Omega-Dev-Ninjas,User,0,0,1,eslint.config.mjs,,https://github.com/Softvence-Omega-Dev-Ninjas/alvaaro-server
+509,213020aumc/nestjs-basics,213020aumc,User,0,0,1,eslint.config.mjs,"Starter repository for practicing NestJS fundamentals including project setup, routing, and API building.",https://github.com/213020aumc/nestjs-basics
+510,gmhridu/bicycle-assignment-ph,gmhridu,User,0,0,1,eslint.config.mjs,,https://github.com/gmhridu/bicycle-assignment-ph
+511,Anas-Ali-3673/CAA,Anas-Ali-3673,User,0,0,1,eslint.config.mjs,,https://github.com/Anas-Ali-3673/CAA
+512,noors-code/swarrpay-backend,noors-code,User,0,0,1,eslint.config.mjs,,https://github.com/noors-code/swarrpay-backend
+513,mahadi-zulfiker/aura-commerce-backend,mahadi-zulfiker,User,0,0,1,eslint.config.mjs,"A comprehensive NestJS backend API for the Aura Commerce e-commerce platform, featuring multi-vendor support, complete order management, payment processing with Stripe, and advanced analytics.",https://github.com/mahadi-zulfiker/aura-commerce-backend
+514,Arman8957/husss-be,Arman8957,User,0,0,1,eslint.config.mjs,,https://github.com/Arman8957/husss-be
+515,Abd-elrahmann/profit-backend,Abd-elrahmann,User,0,0,1,eslint.config.mjs,,https://github.com/Abd-elrahmann/profit-backend
+516,nasirrasheed/Deadlive,nasirrasheed,User,0,0,1,eslint.config.mjs,,https://github.com/nasirrasheed/Deadlive
+517,Softvence-Omega-Cyber-Monk/nishant-server,Softvence-Omega-Cyber-Monk,User,0,0,1,eslint.config.mjs,,https://github.com/Softvence-Omega-Cyber-Monk/nishant-server
+518,idrishci/DreamJob,idrishci,User,0,0,1,src/app/eslint.config.mjs,,https://github.com/idrishci/DreamJob
+519,arif1101/TripSphere-server,arif1101,User,0,0,1,eslint.config.mjs,,https://github.com/arif1101/TripSphere-server
+520,mahadi-zulfiker/Backend-Tour-Management-System,mahadi-zulfiker,User,0,0,1,eslint.config.mjs,,https://github.com/mahadi-zulfiker/Backend-Tour-Management-System
+521,arjunkhetia/NestJS-PostgreSQL-Project,arjunkhetia,User,0,0,1,eslint.config.mjs,NestJS + PostgreSQL - Template,https://github.com/arjunkhetia/NestJS-PostgreSQL-Project
+522,Al-amin07/backend_template,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/backend_template
+523,RazaAkmal/telehealth-assignment,RazaAkmal,User,0,0,1,eslint.config.mjs,,https://github.com/RazaAkmal/telehealth-assignment
+524,dev-muneeb-1520/restraunt-management-app-backend,dev-muneeb-1520,User,0,0,1,eslint.config.mjs,"Scalable backend for a Restaurant Management App built with NestJS, Prisma, and PostgreSQL. Supports authentication, menu, orders, tables, and role-based access.",https://github.com/dev-muneeb-1520/restraunt-management-app-backend
+525,Al-amin07/nest-template,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/nest-template
+526,Al-amin07/purple-cat-server,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/purple-cat-server
+527,QaisarWaheed/aluminium-backend,QaisarWaheed,User,0,0,1,eslint.config.mjs,,https://github.com/QaisarWaheed/aluminium-backend
+528,QaisarWaheed/chemtronics-backend,QaisarWaheed,User,0,0,1,eslint.config.mjs,,https://github.com/QaisarWaheed/chemtronics-backend
+529,SouravDn-p/chatApp-backend,SouravDn-p,User,0,0,1,eslint.config.mjs,,https://github.com/SouravDn-p/chatApp-backend
+530,mirzaghalib4726/committee-backend,mirzaghalib4726,User,0,0,1,eslint.config.mjs,,https://github.com/mirzaghalib4726/committee-backend
+531,softvence-omega-future-stack/huss-be,softvence-omega-future-stack,User,0,0,1,eslint.config.mjs,,https://github.com/softvence-omega-future-stack/huss-be
+532,arjunkhetia/NestJS-MongoDB-Project,arjunkhetia,User,0,0,1,eslint.config.mjs,NestJS + MongoDB - Template,https://github.com/arjunkhetia/NestJS-MongoDB-Project
+533,arjunkhetia/NestJS-Swagger-Project,arjunkhetia,User,0,0,1,eslint.config.mjs,NestJS + Swagger - Template,https://github.com/arjunkhetia/NestJS-Swagger-Project
+534,arjunkhetia/NestJS-Enterprise-Project,arjunkhetia,User,0,0,1,eslint.config.mjs,NestJS Enterprise Server - Template,https://github.com/arjunkhetia/NestJS-Enterprise-Project
+535,Al-amin07/carstore_backend,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/carstore_backend
+536,Al-amin07/bigso_backend,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/bigso_backend
+537,Al-amin07/file_sure_backend,Al-amin07,User,0,0,1,eslint.config.mjs,,https://github.com/Al-amin07/file_sure_backend
+538,Anees201173/MoreApp_Backend,Anees201173,User,0,0,1,src/app.js,,https://github.com/Anees201173/MoreApp_Backend
+539,jbaze/defi-task,jbaze,User,0,0,1,src/App.js,,https://github.com/jbaze/defi-task
+540,SalotJay/creator-platform-worker,SalotJay,User,0,0,1,src/app.js,,https://github.com/SalotJay/creator-platform-worker
+541,KolaganiReeha/ksense-healthcare-assessment,KolaganiReeha,User,0,0,1,src/App.js,,https://github.com/KolaganiReeha/ksense-healthcare-assessment
+542,pt67/prakash360,pt67,User,0,0,1,src/App.js,,https://github.com/pt67/prakash360
+543,Mansuro/Garden-waste,Mansuro,User,0,0,1,src/App.js,,https://github.com/Mansuro/Garden-waste
+544,BhavikPatel-dreamz/Products-filters-react,BhavikPatel-dreamz,User,0,0,1,src/App.js,,https://github.com/BhavikPatel-dreamz/Products-filters-react
+545,tactionsoft/app-cost-frontend,tactionsoft,User,0,0,1,src/App.js,,https://github.com/tactionsoft/app-cost-frontend
+546,Reactongraph/digital-signature-pad,Reactongraph,User,0,0,1,src/App.js,,https://github.com/Reactongraph/digital-signature-pad
+547,mahi-abeysinghe/SkillSync,mahi-abeysinghe,User,0,0,1,Frontend/src/App.js,,https://github.com/mahi-abeysinghe/SkillSync
+548,pasindu7828/Sustainable-Marketting-Wastage-Management-System,pasindu7828,User,0,0,1,frontend/src/App.js,,https://github.com/pasindu7828/Sustainable-Marketting-Wastage-Management-System
+549,KolaganiReeha/weatherApp,KolaganiReeha,User,0,0,1,src/App.js,"A responsive weather application built with React, OpenWeatherMap API, axios, and Bootstrap.",https://github.com/KolaganiReeha/weatherApp
+550,KolaganiReeha/quickCart,KolaganiReeha,User,0,0,1,src/App.js,A Shopping App,https://github.com/KolaganiReeha/quickCart
+551,servise-east/service-east-v2,servise-east,User,0,0,1,next.config.mjs,,https://github.com/servise-east/service-east-v2
+552,UsmanKhan172014/stock-market-tickers,UsmanKhan172014,User,0,0,1,next.config.mjs,Stock Market Tickers list in JSON,https://github.com/UsmanKhan172014/stock-market-tickers
+553,Prakhar6046/Feedflow-New,Prakhar6046,User,0,0,1,next.config.mjs,,https://github.com/Prakhar6046/Feedflow-New
+554,AronWebSolutionPVTLTD/cycle-races-frontend,AronWebSolutionPVTLTD,User,0,0,1,next.config.mjs,,https://github.com/AronWebSolutionPVTLTD/cycle-races-frontend
+555,noors-code/MovieHouse-api,noors-code,User,0,0,1,next.config.mjs,,https://github.com/noors-code/MovieHouse-api
+556,durlav-bose/sdi-lead-discovery,durlav-bose,User,0,0,1,next.config.mjs,,https://github.com/durlav-bose/sdi-lead-discovery
+557,dev1scaleupally/july-nextjs-fastify-task,dev1scaleupally,User,0,0,2,frontend/next.config.mjs | backend/src/routes/index.js,,https://github.com/dev1scaleupally/july-nextjs-fastify-task
+558,wolfstudiosai/frontend_wolfstudios,wolfstudiosai,User,0,0,1,next.config.mjs,https://wolf-studios-frontend.vercel.app/,https://github.com/wolfstudiosai/frontend_wolfstudios
+559,AmazingAsim/nextdeals,AmazingAsim,User,0,0,1,next.config.mjs,,https://github.com/AmazingAsim/nextdeals
+560,Button-20/perfume-showcase,Button-20,User,0,0,1,next.config.mjs,,https://github.com/Button-20/perfume-showcase
+561,noors-code/MovieHouse,noors-code,User,0,0,1,next.config.mjs,,https://github.com/noors-code/MovieHouse
+562,splinxplanet/splinx-planet-backend,splinxplanet,User,0,0,1,index.js,"Backend app for splinx-planent mobile apps. Build with Node.js, Express, MongoDB, JWT,  and 💖💖",https://github.com/splinxplanet/splinx-planet-backend
+563,SouravDn-p/rex-auction-server-side,SouravDn-p,User,0,0,1,index.js,,https://github.com/SouravDn-p/rex-auction-server-side
+564,AmazingAsim/kabutar,AmazingAsim,User,0,0,1,index.js,,https://github.com/AmazingAsim/kabutar
+565,SumaiyaNishat/ticket-booking-platform-server,SumaiyaNishat,User,0,0,1,index.js,,https://github.com/SumaiyaNishat/ticket-booking-platform-server

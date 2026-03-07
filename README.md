@@ -1,17 +1,25 @@
-# Threat Report: PolinRider campaign using `rmcej%otb%` Obfuscated JS Payload
+# PolinRider: DPRK threat actor implants malware in 560 GitHub repositories 
 
-**Date:** 2026-03-07  
-**Research:** [OpenSourceMalware.com](https://opensourcemalware.com)  
-**Query:** [`rmcej%otb%` on GitHub Code Search](https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code)  
+**Date:** 2026-03-07
+**Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
+**Query:** [`rmcej%otb%` on GitHub Code Search](https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code)
 **Severity:** High — active supply chain infection across 483 public repositories
 
 ---
 
-## Summary
+## Technical Details
 
-A malicious obfuscated JavaScript payload identified by the string `rmcej%otb%` has been found injected into legitimate JavaScript config files across **483 public GitHub repositories** belonging to **283 unique owners** (243 individual users, 40 organisations).
+The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered an ongoing campaign
+A threat actor
+
+
+## Scope of Attack
+
+A malicious obfuscated JavaScript payload identified by the string `rmcej%otb%` has been found injected into legitimate JavaScript config files across **560 public GitHub repositories** belonging to **301 unique owners**.
 
 The payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.
+
+> **Data note:** GitHub's code search API caps results at 1,000 per query. This dataset was collected by running one query per known infected filename via `gh search code`, then deduplicating. `index.js` returned no results from the search run. Additional filenames may yield further affected repos.
 
 ---
 
@@ -19,39 +27,26 @@ The payload is appended to the end of real project config files — silently, af
 
 | Metric | Count |
 |--------|-------|
-| Total GitHub search results | 482 (API cap: 500 returned) |
-| Unique repositories infected | 483 |
-| Unique owners affected | 283 |
-| — Individual users | 243 |
-| — Organisations | 40 |
+| Unique repositories infected | 565 |
+| Unique owners affected | 303 |
+| Total stars across infected repos | 179 |
+| Total forks across infected repos | 87 |
+| Total followers across affected owners | 2,475 |
 
 ---
 
 ## Infected File Types
 
-The payload was found in the following file types, ordered by frequency:
+| File | Occurrences |
+|------|------------:|
+| `postcss.config.mjs` | 416 |
+| `tailwind.config.js` | 71 |
+| `eslint.config.mjs` | 67 |
+| `next.config.mjs` | 13 |
+| `App.js` | 13 |
+| `app.js` | 2 |
 
-| File | Count |
-|------|-------|
-| `postcss.config.mjs` | 303 |
-| `tailwind.config.js` | 57 |
-| `eslint.config.mjs` | 52 |
-| `next.config.mjs` | 12 |
-| `App.js` | 8 |
-| `.eslintrc.cjs` | 6 |
-| `index.js` | 6 |
-| `astro.config.mjs` | 5 |
-| `tailwind.config.mjs` | 5 |
-| `auth.js` | 3 |
-| `tailwind.config.cjs` | 2 |
-| `postcss.config.cjs` | 2 |
-| `webpack.config.js` | 2 |
-| `server.js` | 2 |
-| `config.js` | 2 |
-| `index.ts` | 1 |
-| *(other)* | ~9 |
-
-The dominance of `postcss.config.mjs` (303 of 483 repos, ~63%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+The dominance of `postcss.config.mjs` (416 of 560 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
 
 ---
 
@@ -92,7 +87,7 @@ The second-stage payload (partially decoded) performs network callbacks, file sy
 
 - Character-shuffle cipher with hardcoded numeric seeds
 - `global['!']` aliasing of `require` to evade static analysis
-- Large whitespace block before payload to hide it below the visible editor viewport
+- Large horizontal whitespace block (100+ spaces) before injected payload to hide it below the visible editor viewport
 - Multi-stage loading — each stage decodes and executes the next
 - Legitimate file content preserved in full to avoid breaking the project build
 
@@ -102,7 +97,7 @@ The second-stage payload (partially decoded) performs network callbacks, file sy
 
 Given that:
 
-1. `postcss.config.mjs` accounts for 63% of infections
+1. `postcss.config.mjs` accounts for 74% of infections
 2. Affected repos span a wide range of unrelated projects and owners
 3. The injection appears automated and consistent across all files
 4. The file content before the payload is always legitimate and valid
@@ -117,19 +112,41 @@ Possible package categories to investigate:
 
 ---
 
-## Affected Repositories (Sample)
+## Outreach Prioritisation
 
-The full list of 483 repos is in `affected_repos.csv`. A representative sample:
+The full CSVs are sorted by impact for triage.
 
-| Repository | Owner | Type | Infected File |
-|------------|-------|------|---------------|
-| `brown2020/ikigaifinder` | brown2020 | User | `postcss.config.mjs` |
-| `Victorola-coder/tewo` | Victorola-coder | User | `tailwind.config.js` |
-| `dawahanigeria-team/rayyan-server` | dawahanigeria-team | Org | `eslint.config.mjs` |
-| `addis-ale/better-auth-level` | addis-ale | User | `src/index.ts` |
-| `PratikRaval123/DemoTask` | PratikRaval123 | User | `tailwind.config.cjs` |
+### Top Repos by Stars + Forks
 
-Full data: see `affected_repos.csv` and `affected_users.csv`.
+| Repository | Stars | Forks | Infected File |
+|------------|------:|------:|---------------|
+| `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
+| `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
+| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
+| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
+| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
+| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
+| `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
+| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
+| `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
+| `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
+
+### Top Owners by Follower Count
+
+| Owner | Followers | Repos Affected |
+|-------|----------:|---------------:|
+| `coderkhalide` | 349 | 4 |
+| `finom` | 172 | 3 |
+| `sparktechagency` | 130 | 12 |
+| `Victorola-coder` | 121 | 1 |
+| `dhruvmalik007` | 87 | 6 |
+| `a-belard` | 43 | 1 |
+| `Muhammadfaizanjanjua109` | 39 | 1 |
+| `Nathanim1919` | 38 | 5 |
+| `kanchana404` | 33 | 3 |
+| `AKDebug-UX` | 30 | 3 |
+
+> **Priority targets:** `sparktechagency` (130 followers, 12 repos) is the highest-volume owner. `coderkhalide` (349 followers, 4 repos) has the widest direct reach.
 
 ---
 
@@ -192,13 +209,30 @@ rule rmcej_otb_payload {
 
 ---
 
+## Data Collection
+
+Data was collected using the GitHub Code Search API via `gh search code`, running one query per infected filename to work around the 1,000-result-per-query cap. Results were deduplicated by repository full name.
+
+| Filename searched | Results |
+|-------------------|--------:|
+| `postcss.config.mjs` | 416 |
+| `tailwind.config.js` | 71 |
+| `eslint.config.mjs` | 67 |
+| `App.js` | 15 |
+| `next.config.mjs` | 13 |
+| `index.js` | 6 |
+| **Total (pre-dedup)** | **588** |
+| **Unique repos** | **565** |
+
+---
+
 ## Files
 
 | File | Description |
 |------|-------------|
 | `rmcej-otb-threat-report.md` | This report |
-| `affected_repos.csv` | All 483 affected repositories with owner, type, file paths, and URLs |
-| `affected_users.csv` | All 283 affected owners with repo counts and links |
+| `affected_repos.csv` | All 565 affected repositories with owner, stars, forks, file paths, and URLs — sorted by stars+forks descending |
+| `affected_users.csv` | All 303 affected owners with follower count, public repo count, and affected repo links — sorted by followers descending |
 
 ---
 
