@@ -1,17 +1,14 @@
-# PolinRider: DPRK threat actor implants malware in 560 GitHub repositories
+# PolinRider: DPRK threat actor implants malware in 565 GitHub repositories
 
-**Date:** 2026-03-07
-**Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
-**Query:** [`rmcej%otb%` on GitHub Code Search](https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code)
-**Severity:** High — active supply chain infection across 483 public repositories
+- **Date:** 2026-03-07
+- **Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
+- **Severity:** High — active supply chain infection across 565 public repositories
 
 ---
 
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
-## Technical Details
-
-The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **560 public GitHub repositories** belonging to **301 unique owners**. 
+The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **565 public GitHub repositories** belonging to **301 unique owners**. 
 
 The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.
 
@@ -832,5 +829,7 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 - OpenSourceMalware.com: https://opensourcemalware.com
 
 ---
+
+**Query:** [`rmcej%otb%` on GitHub Code Search](https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code)
 
 *Research conducted using the GitHub Code Search API. Data collected 2026-03-07.*
