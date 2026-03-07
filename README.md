@@ -1,12 +1,12 @@
 # PolinRider: DPRK threat actor implants malware in 565 GitHub repositories
 
+![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
+
 - **Date:** 2026-03-07
 - **Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
 - **Severity:** High — active supply chain infection across 565 public repositories
 
 ---
-
-![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **565 public GitHub repositories** belonging to **301 unique owners**. 
 
