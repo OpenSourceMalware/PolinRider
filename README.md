@@ -3,7 +3,6 @@
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 - **Date:** 2026-03-07
-- **Research:** [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider)
 - **Severity:** CRITICAL — active supply chain infection across 565 public repositories
 
 ---
@@ -68,6 +67,8 @@ This final payload is a sophisticated **blockchain-based dead drop resolver** th
    - Detached process execution (survives parent termination)
 
 ### List of Compromised Repositories
+
+All 565 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider).
 
 | #   | Repository                                                             | Owner                         | Owner Type   | Stars | Forks | Infected Files | File Paths                                                                                                                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                               | Repo URL                                                                                  |
 |-----|------------------------------------------------------------------------|-------------------------------|--------------|-------|-------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
