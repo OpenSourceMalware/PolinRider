@@ -9,10 +9,9 @@
 
 The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **565 public GitHub repositories** belonging to **301 unique owners**. 
 
-The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.
+The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.  Even worse, this threat actor has used the same technique to craft malicious NPM packages as well. 
 
 This attack has been enormously successful, with one compromised open source project, Neutralinojs spreading the malware to hundreds of its users and contributors.  Neutralinojs is a very popular project with 8400 stars, 495 forks, and dozens of active contributors.  This is the power of this type of attack, as the threat isn't limited to just the initial GitHub repositories, but extends to all the other projects that use that open source.
-
 
 The OpenSourceMalware team has attributed this campaign to the DPRK, and the threat actor PolinRider is a known Lazarus group contributor with connections to "Contagious Interview" and "TasksJacker" campaigns.
 
@@ -35,7 +34,7 @@ This campaign is growing quickly with the total number of compromised repositori
 
 ## Malware Summary
 
-PolinRider ultimately delivers a new version of the DPRK Beavertail malware. The initial payload is a mass-compromise backdoor/infostealer that injects an identical obfuscated JavaScript payload into legitimate developers' repositories. The payload is appended after whitespace padding to common config files (postcss.config.mjs, eslint.config.mjs, tailwind.config.js, etc.) so it executes automatically when build tools import the module. It uses a multi-layer string shuffling deobfuscation routine with the unique signature ("rmcej%otb%",2857687) and function name _$_1e42, ultimately constructing and eval'ing the final payload at runtime.
+PolinRider delivers a multi-stage payload, that culminates in a new version of the DPRK Beavertail malware. The initial payload is a mass-compromise backdoor/infostealer that injects an identical obfuscated JavaScript payload into legitimate developers' repositories. The payload is appended after whitespace padding to common config files (postcss.config.mjs, eslint.config.mjs, tailwind.config.js, etc.) so it executes automatically when build tools import the module. It uses a multi-layer string shuffling deobfuscation routine with the unique signature ("rmcej%otb%",2857687) and function name _$_1e42, ultimately constructing and eval'ing the final payload at runtime.
 
 This final payload is a sophisticated **blockchain-based dead drop resolver** that uses immutable blockchain transactions as Command & Control (C2) infrastructure. The malware fetches encrypted JavaScript payloads from blockchain accounts (TRON, Aptos, and BSC), decrypts them using XOR encryption, and executes them via `eval()`. This technique makes the C2 infrastructure virtually impossible to take down since blockchain data is immutable.
 
@@ -653,6 +652,24 @@ All 565 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?s
 | `app.js` | 2 |
 
 The dominance of `postcss.config.mjs` (416 of 565 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+
+---
+
+## Malicious NPM Packages
+
+![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
+
+The threat actor has published two NPM packages so far that we know about:  
+
+- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
+- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
+
+![NPM Packages](images/PolinRider-campaign-npm-author.png)
+
+The tailwind-autoanimation package uses the same exact technique of appending the malicious JavaScript payload onto the end of the entrypoint file src/index.js:
+
+
+![NPM Payload](images/PolinRider-campaign-npm-malicious-code.png)
 
 ---
 
