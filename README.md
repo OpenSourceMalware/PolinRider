@@ -3,8 +3,8 @@
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 - **Date:** 2026-03-07
-- **Research:** [OpenSourceMalware.com](https://opensourcemalware.com)
-- **Severity:** High — active supply chain infection across 565 public repositories
+- **Research:** [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider)
+- **Severity:** CRITICAL — active supply chain infection across 565 public repositories
 
 ---
 
@@ -618,7 +618,7 @@ This campaign is growing quickly with the total number of compromised repositori
 | `App.js` | 13 |
 | `app.js` | 2 |
 
-The dominance of `postcss.config.mjs` (416 of 560 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+The dominance of `postcss.config.mjs` (416 of 565 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
 
 ---
 
