@@ -16,14 +16,14 @@ This attack has been enormously successful, with one compromised open source pro
 The OpenSourceMalware team has attributed this campaign to the DPRK, and the threat actor PolinRider is a known Lazarus group contributor with connections to "Contagious Interview" and "TasksJacker" campaigns.
 
 ### Impact Statistics
-This campaign is growing quickly, with the total number of compromised repositories growing from 116 two days ago, to **634 public GitHub repositories** belonging to **337 unique owners** as of the publishing of this blog (March 8, 2026).
+This campaign is growing quickly, with the total number of compromised repositories growing from 116 two days ago, to **675 public GitHub repositories** belonging to **352 unique owners** as of the publishing of this blog (March 8, 2026).
 
 | Metric | Count |
 |--------|-------|
-| Unique repositories infected | 634 |
-| Unique owners affected | 336 |
-| — Individual users | 292 |
-| — Organisations | 44 |
+| Unique repositories infected | 675 |
+| Unique owners affected | 352 |
+| — Individual users | 305 |
+| — Organisations | 47 |
 
 ![GitHub Repos Compromised](./images/PolinRider-campaign-combined-github-downloads.png)
 
@@ -42,6 +42,10 @@ This campaign is growing quickly, with the total number of compromised repositor
 - Add YARA/regex rule for `rmcej%otb%` to static analysis pipelines
 - Flag packages with postinstall scripts that write to project root config files
 - Cross-reference affected repo owners against recently published npm packages
+
+### Check for PolinRider with OSM script
+
+Our team has written a bash script that will check your local system for compromise.  At the end of this blog post you can find out more.
 
 ---
 
@@ -85,13 +89,16 @@ This final payload is a sophisticated **blockchain-based dead drop resolver** th
 | File | Occurrences |
 |------|------------:|
 | `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 71 |
-| `eslint.config.mjs` | 67 |
-| `next.config.mjs` | 13 |
+| `tailwind.config.js` | 84 |
+| `eslint.config.mjs` | 60 |
+| `postcss.config.js` | 13 |
 | `App.js` | 13 |
-| `app.js` | 2 |
+| `next.config.mjs` | 12 |
+| `index.js` | 6 |
+| `astro.config.mjs` | 6 |
+| `tailwind.config.mjs` | 5 |
 
-The dominance of `postcss.config.mjs` (416 of 634 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+The dominance of `postcss.config.mjs` (416 of 675 repos, ~62%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
 
 ---
 
@@ -260,13 +267,16 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | Filename searched | Results |
 |-------------------|--------:|
 | `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 71 |
-| `eslint.config.mjs` | 67 |
-| `App.js` | 15 |
-| `next.config.mjs` | 13 |
+| `tailwind.config.js` | 84 |
+| `eslint.config.mjs` | 60 |
+| `App.js` | 13 |
+| `postcss.config.js` | 13 |
+| `next.config.mjs` | 12 |
 | `index.js` | 6 |
-| **Total (pre-dedup)** | **588** |
-| **Unique repos** | **634** |
+| `astro.config.mjs` | 6 |
+| Other config files | 81 |
+| **Total (pre-dedup)** | **700** |
+| **Unique repos** | **675** |
 
 ---
 
@@ -275,8 +285,8 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | File | Description |
 |------|-------------|
 | `README.md` | This report |
-| `affected_repos.csv` | All 634 affected repositories — organisations first, then users, each sorted by stars+forks descending |
-| `affected_users.csv` | All 336 affected owners — organisations first, then users, each sorted by followers descending |
+| `affected_repos.csv` | All 675 affected repositories — organisations first, then users, each sorted by stars+forks descending |
+| `affected_users.csv` | All 352 affected owners — organisations first, then users, each sorted by followers descending |
 
 ---
 
@@ -294,21 +304,21 @@ The full CSVs are sorted by impact for triage.
 |------------|------:|------:|---------------|
 | `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
 | `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
-| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
-| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
-| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
-| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
 | `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
-| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
+| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
 | `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
 | `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
+| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `tailwind.config.js` |
+| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `tailwind.config.js` |
+| `tanushbhootra576/collegeConnect` | 5 | 1 | `postcss.config.mjs` |
+| `Kreliannn/commision_portfolio` | 6 | 0 | `postcss.config.mjs` |
 
 #### Top Organisations by Followers
 
 | Organisation | Followers | Repos Affected |
 |--------------|----------:|---------------:|
 | `sparktechagency` | 130 | 12 |
-| `FSDTeam-SAA` | 21 | 11 |
+| `FSDTeam-SAA` | 21 | 12 |
 | `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
 | `Codechef-VITC-Student-Chapter` | 17 | 1 |
 | `softvence-omega-future-stack` | 11 | 4 |
@@ -316,27 +326,27 @@ The full CSVs are sorted by impact for triage.
 | `etrainermis` | 7 | 1 |
 | `tricodenetwork` | 7 | 1 |
 | `Binary-Mindz` | 6 | 1 |
-| `FlowBondTech` | 3 | 3 |
+| `Gamage-Recruiters-406` | 5 | 1 |
 
 #### Top Individual Users by Followers
 
 | User | Followers | Repos Affected |
 |------|----------:|---------------:|
 | `coderkhalide` | 349 | 4 |
-| `finom` | 172 | 3 |
+| `finom` | 172 | 4 |
 | `Victorola-coder` | 121 | 1 |
 | `dhruvmalik007` | 87 | 6 |
+| `saif72437` | 57 | 2 |
 | `a-belard` | 43 | 1 |
 | `Muhammadfaizanjanjua109` | 39 | 1 |
 | `Nathanim1919` | 38 | 5 |
 | `kanchana404` | 33 | 3 |
-| `AKDebug-UX` | 30 | 3 |
-| `web-ghoul` | 29 | 2 |
+| `AKDebug-UX` | 30 | 4 |
 
-> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
+> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 12 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
 
 ---
-### All Compromised Repositories as of March 7, 2026
+### All Compromised Repositories as of March 8, 2026
 
 | # | Repository | Owner | Owner Type | Stars | Forks | Infected Files | File Paths | Description | Repo URL |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -961,7 +971,7 @@ The full CSVs are sorted by impact for triage.
 | 619 | ShahbazRamzan/NodeTestApp | ShahbazRamzan | User | 0 | 0 | 1 | routes/userRoutes.js |  | https://github.com/ShahbazRamzan/NodeTestApp |
 | 620 | shaniPandeyTech/astro_wale | shaniPandeyTech | User | 0 | 0 | 1 | astro.config.mjs |  | https://github.com/shaniPandeyTech/astro_wale |
 | 621 | Socheema/3legant | Socheema | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/Socheema/3legant |
-| 622 | Socheema/bukkahut | Socheema | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/Socheema/bukkahut |
+| 622 | Socheema/bukkahut | Socheema | User | 0 | 0 | 2 | postcss.config.mjs \| vite.config.ts | An overhaul of bukka website | https://github.com/Socheema/bukkahut |
 | 623 | Socheema/ticketFlow | Socheema | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/Socheema/ticketFlow |
 | 624 | talhamajid02/chat-app | talhamajid02 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/talhamajid02/chat-app |
 | 625 | tanushbhootra576/PWA_RESTRO | tanushbhootra576 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/tanushbhootra576/PWA_RESTRO |
@@ -974,6 +984,91 @@ The full CSVs are sorted by impact for triage.
 | 632 | Vladyslav0060/gdocs-clone | Vladyslav0060 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/Vladyslav0060/gdocs-clone |
 | 633 | web-ghoul/AlCazar | web-ghoul | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/web-ghoul/AlCazar |
 | 634 | ZekiKobe/lege-api | ZekiKobe | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/ZekiKobe/lege-api |
+| 635 | addis-ale/My-portfolio | addis-ale | User | 2 | 0 | 1 | tailwind.config.js | Here is my portfolio using reactjs | https://github.com/addis-ale/My-portfolio |
+| 636 | addygeek/Passkey-Passwordless-Authentication-System | addygeek | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/addygeek/Passkey-Passwordless-Authentication-System |
+| 637 | AiProject2025/abdul-instant-price-poc | AiProject2025 | Organization | 0 | 0 | 1 | postcss.config.js |  | https://github.com/AiProject2025/abdul-instant-price-poc |
+| 638 | akashstwt/kunal_project | akashstwt | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/akashstwt/kunal_project |
+| 639 | akashstwt/vayuxi | akashstwt | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/akashstwt/vayuxi |
+| 640 | alwahid786/domotics | alwahid786 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/alwahid786/domotics |
+| 641 | duckatgit/test-task | duckatgit | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/duckatgit/test-task |
+| 642 | EmanDeveloper/crud_main_nextjs | EmanDeveloper | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/EmanDeveloper/crud_main_nextjs |
+| 643 | ihek130/BigMotionStudio | ihek130 | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/ihek130/BigMotionStudio |
+| 644 | ihek130/PetWellBot | ihek130 | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/ihek130/PetWellBot |
+| 645 | jbaze/clarity-cover | jbaze | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/jbaze/clarity-cover |
+| 646 | malikjunaidhassann/portfolio2 | malikjunaidhassann | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/malikjunaidhassann/portfolio2 |
+| 647 | MangoIT-Solutions/invoice_generator | MangoIT-Solutions | Organization | 0 | 0 | 1 | postcss.config.js |  | https://github.com/MangoIT-Solutions/invoice_generator |
+| 648 | MohamedH1000/investment | MohamedH1000 | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/MohamedH1000/investment |
+| 649 | MrSohaibAhmed/TFT-Product- | MrSohaibAhmed | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/MrSohaibAhmed/TFT-Product- |
+| 650 | rakibwebdev23/baby-shop | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/baby-shop |
+| 651 | rakibwebdev23/disaster-management-client | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/disaster-management-client |
+| 652 | rakibwebdev23/doctors-clinic-client | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/doctors-clinic-client |
+| 653 | rakibwebdev23/donation-help | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/donation-help |
+| 654 | rakibwebdev23/kicks | rakibwebdev23 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/rakibwebdev23/kicks |
+| 655 | rakibwebdev23/products-management-app | rakibwebdev23 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/rakibwebdev23/products-management-app |
+| 656 | rakibwebdev23/real_estate | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/real_estate |
+| 657 | rakibwebdev23/rick-and-morty-project | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/rick-and-morty-project |
+| 658 | rakibwebdev23/storage-management-system-client | rakibwebdev23 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/rakibwebdev23/storage-management-system-client |
+| 659 | rakibwebdev23/video-editor | rakibwebdev23 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/rakibwebdev23/video-editor |
+| 660 | S7AWKAT/ClubGrub | S7AWKAT | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/S7AWKAT/ClubGrub |
+| 661 | sagar-dalwala999/AmazonResellerFlow | sagar-dalwala999 | User | 0 | 0 | 1 | postcss.config.js |  | https://github.com/sagar-dalwala999/AmazonResellerFlow |
+| 662 | saif72437/linkedin-post-editor | saif72437 | User | 4 | 0 | 1 | tailwind.config.js |  | https://github.com/saif72437/linkedin-post-editor |
+| 663 | saif72437/medium-clone | saif72437 | User | 5 | 0 | 1 | tailwind.config.js | Medium Clone built with Next.js Tailwind CSS & Sanity | https://github.com/saif72437/medium-clone |
+| 664 | Superlearn1/school-signup-central | Superlearn1 | User | 0 | 1 | 1 | postcss.config.js |  | https://github.com/Superlearn1/school-signup-central |
+| 665 | zafarnajmi1/FWRD | zafarnajmi1 | User | 0 | 0 | 1 | babel.config.js |  | https://github.com/zafarnajmi1/FWRD |
+| 666 | zaheerahmad92001/777wallets | zaheerahmad92001 | User | 0 | 0 | 1 | tailwind.config.js |  | https://github.com/zaheerahmad92001/777wallets |
+| 667 | zaheerahmad92001/customerApp | zaheerahmad92001 | User | 0 | 0 | 1 | babel.config.js |  | https://github.com/zaheerahmad92001/customerApp |
+| 668 | zaheerahmad92001/saloon | zaheerahmad92001 | User | 0 | 0 | 1 | babel.config.js |  | https://github.com/zaheerahmad92001/saloon |
+| 669 | DaviBarros/vscode | DaviBarros | User | 0 | 0 | 1 | eslint.config.js | Visual Studio Code | https://github.com/DaviBarros/vscode |
+| 670 | dletterio1/qwen-code | dletterio1 | User | 0 | 0 | 1 | packages/vscode-ide-companion/tailwind.config.js | Qwen Code is a coding agent that lives in the digital world. | https://github.com/dletterio1/qwen-code |
+| 671 | masar-edu/masar-forum | masar-edu | Organization | 0 | 0 | 1 | ui/.eslintrc.js | A Q&A platform software for teams at any scales. | https://github.com/masar-edu/masar-forum |
+| 672 | addis-ale/better-auth-level | addis-ale | User | 0 | 0 | 1 | src/index.ts |  | https://github.com/addis-ale/better-auth-level |
+| 673 | Frontier-tech-consulting/cross-chain-sdk | Frontier-tech-consulting | Organization | 0 | 0 | 1 | jest.config.js |  | https://github.com/Frontier-tech-consulting/cross-chain-sdk |
+| 674 | Ankur-ongraph/rails | Ankur-ongraph | User | 0 | 0 | 1 | eslint.config.mjs | Ruby on Rails | https://github.com/Ankur-ongraph/rails |
+| 675 | abuzarsaleem/Rasterex-Web-Viewer | abuzarsaleem | User | 0 | 0 | 2 | webpack.config.js (x2) | Rasterex Web-Viewer Source Code (Angular) | https://github.com/abuzarsaleem/Rasterex-Web-Viewer |
+
+---
+
+## Check for infections with polinrider-scanner.sh script
+
+**What does the polinrider-scanner.sh script do?**
+
+| Artifact | Description |
+|---|---|
+| Infected config files | `postcss.config.mjs`, `postcss.config.js`, `tailwind.config.js`, `eslint.config.mjs`, `next.config.mjs`, `next.config.ts`, `babel.config.js` containing PolinRider signatures |
+| `temp_auto_push.bat` | Propagation script that amends and force-pushes commits |
+| `config.bat` | Hidden orchestrator script |
+| `.gitignore` injection | `config.bat` entry added to hide the orchestrator |
+| Git reflog anomalies | Amended commits consistent with PolinRider behavior (flagged only alongside other findings) |
+
+### Signatures
+
+- **Primary**: `("rmcej%otb%",2857687)`
+- **Secondary**: `global['!']='8-270-2';var _$_1e42=`
+
+## Exit Codes
+
+| Code | Meaning |
+|---|---|
+| `0` | No infections found |
+| `1` | Infections found |
+| `2` | Error (invalid path, etc.) |
+
+## Platform Support
+
+- macOS (bash 3.2+)
+- Linux
+- Windows (Git Bash / WSL)
+
+## Remediation
+
+If infections are found:
+
+1. Remove the obfuscated payload from the end of infected config files (everything after the legitimate config, starting with `global['!']`)
+2. Delete `temp_auto_push.bat` and `config.bat` if present
+3. Remove `config.bat` from `.gitignore`
+4. Check your npm global packages and VS Code extensions for the initial dropper
+5. Force-push clean versions to GitHub
+6. Report findings to [opensourcemalware.com](https://opensourcemalware.com)
 
 ---
 
