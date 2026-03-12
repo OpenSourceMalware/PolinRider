@@ -21,6 +21,7 @@ set -u
 
 VERSION="1.0"
 VERBOSE=0
+JS_ALL=0
 SCAN_DIR=""
 
 # PolinRider signatures
@@ -62,18 +63,20 @@ print_banner() {
 }
 
 print_usage() {
-    printf "Usage: %s [--verbose] [directory]\n" "$0"
+    printf "Usage: %s [--verbose] [--js-all] [directory]\n" "$0"
     printf "\n"
     printf "Scans git repositories for PolinRider malware artifacts.\n"
     printf "\n"
     printf "Options:\n"
     printf "  --verbose    Show detailed output for each repository\n"
+    printf "  --js-all     Scan all .js files (not just known config files)\n"
     printf "  --help       Show this help message\n"
     printf "\n"
     printf "Examples:\n"
     printf "  %s                          # Scan current directory\n" "$0"
     printf "  %s /path/to/projects        # Scan specific directory\n" "$0"
     printf "  %s --verbose ~/projects     # Verbose scan\n" "$0"
+    printf "  %s --js-all ~/projects      # Scan all .js files\n" "$0"
 }
 
 log_verbose() {
@@ -107,6 +110,29 @@ scan_repo() {
         fi
     done
     IFS="$old_ifs"
+
+    # If --js-all, scan all .js files in the repo for signatures
+    if [ "$JS_ALL" -eq 1 ]; then
+        while IFS= read -r jsfile; do
+            if [ -f "$jsfile" ]; then
+                local relpath="${jsfile#${repo_dir}/}"
+                # Skip node_modules and .git
+                case "$relpath" in
+                    node_modules/*|.git/*) continue ;;
+                esac
+                log_verbose "Checking $relpath"
+                if grep -qF "$PRIMARY_SIG" "$jsfile" 2>/dev/null; then
+                    findings="${findings}  ${RED}-${RESET} ${BOLD}${relpath}${RESET}: PolinRider payload detected (primary signature)\n"
+                    finding_count=$((finding_count + 1))
+                elif grep -qF "$SECONDARY_SIG" "$jsfile" 2>/dev/null; then
+                    findings="${findings}  ${RED}-${RESET} ${BOLD}${relpath}${RESET}: PolinRider payload detected (secondary signature)\n"
+                    finding_count=$((finding_count + 1))
+                fi
+            fi
+        done <<JSEOF
+$(find "$repo_dir" -name "*.js" -type f -not -path "*/node_modules/*" -not -path "*/.git/*" 2>/dev/null)
+JSEOF
+    fi
 
     # Check for temp_auto_push.bat
     if [ -f "${repo_dir}/temp_auto_push.bat" ]; then
@@ -160,6 +186,10 @@ while [ $# -gt 0 ]; do
     case "$1" in
         --verbose)
             VERBOSE=1
+            shift
+            ;;
+        --js-all)
+            JS_ALL=1
             shift
             ;;
         --help|-h)
