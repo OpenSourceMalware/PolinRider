@@ -29,7 +29,7 @@ PRIMARY_SIG='("rmcej%otb%",2857687)'
 SECONDARY_SIG="global['!']='8-270-2';var _\$_1e42="
 
 # Config files targeted by PolinRider
-CONFIG_FILES="postcss.config.mjs postcss.config.js tailwind.config.js eslint.config.mjs next.config.mjs next.config.ts babel.config.js"
+CONFIG_FILES="postcss.config.mjs postcss.config.js tailwind.config.js eslint.config.mjs next.config.mjs next.config.ts babel.config.js jest.config.js"
 
 # Colors (disabled if not a terminal)
 RED=""
