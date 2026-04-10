@@ -14,6 +14,10 @@ This incident response guide covers Windows-specific persistence mechanisms and 
 
 ---
 
+## Background
+
+The OpenSourceMalware team was approached by several people who had been compromised by the PolinRider DPRK campaign.  We realized that we hadn't done a good job of explaining to people who had been compromised how to do incident response on their local machines.  This blog post aims to fix that.
+
 ## Windows Persistence Mechanisms
 
 ### 1. File System Persistence Locations
