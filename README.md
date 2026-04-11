@@ -3,7 +3,8 @@
 ![PolinRider Threat Campaign](images/PolinRider-banner-image-smaller.jpg)
 
 - **Date:** 2026-03-07
-- **Severity:** CRITICAL — active supply chain infection across hundreds public repositories
+- **Last updated:** 2026-04-11 — see [April 10–11 Update](#april-10-update) below
+- **Severity:** CRITICAL — active supply chain infection across **1,950+** public repositories, confirmed operational merger with the TasksJacker / Contagious Interview cluster
 
 ---
 
@@ -16,16 +17,56 @@ This attack has been enormously successful, with one compromised open source pro
 The OpenSourceMalware team has attributed this campaign to the DPRK, and the threat actor PolinRider is a known Lazarus group contributor with connections to "Contagious Interview" and "TasksJacker" campaigns.
 
 ### Impact Statistics
-This campaign is growing quickly, with the total number of compromised repositories growing from 116 two days ago, to **675 public GitHub repositories** belonging to **352 unique owners** as of the publishing of this blog (March 8, 2026).
 
-| Metric | Count |
-|--------|-------|
-| Unique repositories infected | 675 |
-| Unique owners affected | 352 |
-| — Individual users | 305 |
-| — Organisations | 47 |
+This campaign has grown dramatically since first publication. As of **2026-04-11**, the OSM team has confirmed **1,951 public GitHub repositories** belonging to **1,047 unique owners** are compromised. This is a **2.9× increase** in the five weeks since the original publish date (Mar 8: 675 repos / 352 owners).
+
+| Metric | Mar 8 (initial) | Apr 11 (latest) | Δ |
+|--------|---------------:|----------------:|---:|
+| Unique repositories infected | 675 | **1,951** | **+1,276** |
+| Unique owners affected | 352 | **1,047** | +695 |
+| — Individual users | 305 | ~930 | +625 |
+| — Organisations | 47 | ~117 | +70 |
+| Distinct obfuscator variants observed | 1 (`rmcej%otb%`) | **2** (`rmcej%otb%` + `Cot%3t=shtP`) | +1 |
+| Distinct injection vectors confirmed | 1 (config file) | **4** (config file, `.vscode/tasks.json`, fake `.woff2` font, malicious npm dep) | +3 |
+| Distinct C2 subdomains documented | 1 (`260120.vercel.app`) | **6+** (see [C2 Infrastructure](#c2-infrastructure-indicators-of-compromise)) | +5 |
+| Known weaponized take-home templates | 0 | **2+** (ShoeVista, StakingGame) | +2 |
 
 ![GitHub Repos Compromised](./images/PolinRider-campaign-combined-github-downloads.png)
+
+---
+
+## April 10–11 Update
+
+In a follow-up hunt started 2026-04-10 and continued into 2026-04-11, the OSM team made several major findings:
+
+1. **The campaign has more than doubled** in 5 weeks. Cross-engine enumeration via GitHub Code Search and Sourcegraph (with refinement past the API's 1000-result cap — see methodology below) surfaced **1,556 unique compromised repos** in our v3 master on day one. A round-2 hunt on day two added another **215 new repos** via npm-package-name pivots, VS Code tasks.json / cloud-provider pivots, and the newly-discovered `default-configuration.vercel.app` C2 subdomain. After deduping against the existing `affected_repos.csv` corpus, the true known scope is now **1,951 unique victim repos / 1,047 unique owners**.
+
+2. **A new variant has been observed.** PolinRider has rotated all unique fingerprints of its obfuscator while preserving the architecture. The new variant uses signature marker `Cot%3t=shtP` (was `rmcej%otb%`), shuffle seed `1111436` (was `2857687`), secondary seed `3896884` (was `2667686`), and decoder function name `MDy` (was `_$_1e42`). This rotation appears to be an evasion response to the published [`rmcej_otb_payload` YARA rule](#yara-rule-suggested). Both variants are currently active in the wild. See [New Variant: Cot%3t=shtP](#new-variant-cot3tshtp) below.
+
+3. **The threat actor is re-infecting earlier victims.** At least one victim repo (`HassanHabibTahir/testclient`) contains markers from BOTH variants in different files, indicating the actor's tooling is re-running against previously-compromised hosts and injecting the new obfuscator.
+
+4. **PolinRider and TasksJacker have operationally merged.** We now have direct evidence that the same threat actor is running both the config-file injection and the `.vscode/tasks.json` curl-to-shell infection vector against the same victim population. 22 of the 101 `temp_auto_push.bat` propagation-script victims also have malicious `.vscode/tasks.json` files, and multiple weaponized take-home / fake-interview template projects have been identified — see [Weaponized Take-Home Templates](#weaponized-take-home-templates) below. OSM is consolidating the two clusters under `#polinrider` going forward.
+
+5. **Two weaponized take-home test projects identified**: **ShoeVista** (a fake Tailwind e-commerce assessment that ships with malicious `tailwindcss-style-animate ^1.1.6` in `client/package.json`) and **StakingGame** (a fake blockchain / VS Code automation project identified by the UUID `e9b53a7c-2342-4b15-b02d-bd8b8f6a03f9` in tasks.json). At least 46 + 42 developers attempted these tests and were compromised. Part of the Contagious Interview lure playbook.
+
+6. **Five new C2 subdomains discovered** that are being used in `.vscode/tasks.json` `curl | bash` payloads, all hosted on Vercel:
+   - `default-configuration.vercel.app` (most-used, ~106 victim references)
+   - `vscode-settings-bootstrap.vercel.app`
+   - `vscode-settings-config.vercel.app`
+   - `vscode-bootstrapper.vercel.app`
+   - `vscode-load-config.vercel.app`
+
+   All follow the pattern `https://<sub>.vercel.app/settings/(mac|linux|win)?flag=<N>`. Added to the [C2 Infrastructure](#c2-infrastructure-indicators-of-compromise) section.
+
+7. **OSM submitted 821 new threat reports** across this two-day hunt, bringing total OSM PolinRider entries to **~1,700**. Variant breakdown of the 821 submissions: 591 original variant (`rmcej%otb%`), 113 propagation-only (`temp_auto_push.bat`), 45 `malicious_npm` (ShoeVista/devhire cluster), 27 `tasksjacker`, 1 new variant (`Cot%3t=shtP`), 44 other.
+
+8. **New high-yield search pivots** were identified that find victims even when the JS payload has been cleaned up. The strongest are `filename:temp_auto_push.bat` (101 confirmed-malicious results, 100% true-positive rate) and `"default-configuration.vercel.app"` (106 hits). Sample false-positive rate across 44 random verifications was 0%. See [Refinement Methodology](#refinement-methodology) below.
+
+9. **A new injection vector was confirmed**: at least one victim (`AgbaD/odoo`) has the obfuscated JS payload hidden in a `.woff2` font file (`public/fonts/fa-solid-400.woff2`) that gets executed via Node — confirming the campaign uses multiple injection vectors against the same target.
+
+10. **No third obfuscator variant found.** Exhaustive probing of `global['?']` markers, seed combinations, structural patterns, IOC literals, and sequential `'8-stN'` tags 1–200 (via Sourcegraph regex) produced no evidence of a third variant beyond the two already documented. The actor's new-variant batch is capped at `8-st1..8-st59` (with 21 sequential numbers missing from Sourcegraph's index).
+
+The full v3 + round 2 hunt reports and master TSVs are in `reports/`.
 
 ---
 
@@ -134,16 +175,20 @@ We assume the malware has similar functions to rewrite git history for other ope
 ## Recommended Actions
 
 **For affected repo owners:**
-1. Audit all JS config files (`postcss.config.*`, `tailwind.config.*`, `eslint.config.*`, `next.config.*`) for content appearing after `export default` or `module.exports`
-2. Review `package.json` dependencies — particularly any recently added or updated PostCSS/Tailwind-related packages
-3. Check `node_modules` for postinstall scripts: `grep -r "postinstall" node_modules/*/package.json`
-4. Rotate any secrets, tokens, or credentials that may have been present in the environment during a build
-5. Force-push clean config files and consider signing commits going forward
+1. Audit all JS config files (`postcss.config.*`, `tailwind.config.*`, `eslint.config.*`, `next.config.*`, `vite.config.*`, `webpack.config.js`, `gridsome.config.js`, `vue.config.js`, etc.) for content appearing after `export default` or `module.exports`. Also check non-default branches and nested monorepo paths (`apps/*/`, `frontend/`, `client/`, `web/`, etc.) — many victims are infected only in deep paths.
+2. Look for the propagation-script artifact `temp_auto_push.bat` at the repo root and any `config.bat` referenced from `.gitignore`. **Even if the obfuscated JS payload has been cleaned up, this file is direct evidence of past compromise** and should trigger a credential rotation.
+3. Audit binary assets in `public/`, `static/`, `assets/` for unexpected `.woff` / `.woff2` files — the malware has been observed hiding payloads inside fake font files (the "fake-font" sub-variant).
+4. Review `package.json` dependencies — particularly any recently added or updated PostCSS/Tailwind-related packages such as `tailwind-mainanimation`, `tailwind-autoanimation`, and the other npm packages listed below.
+5. Check `node_modules` for postinstall scripts: `grep -r "postinstall" node_modules/*/package.json`
+6. Rotate any secrets, tokens, or credentials that may have been present in the environment during a build.
+7. Force-push clean config files and consider signing commits going forward.
+8. **Do not assume a previously-cleaned repo remains clean** — the OSM team has observed at least one victim that was re-infected with the rotated `Cot%3t=shtP` variant after a prior cleanup of the `rmcej%otb%` variant. Re-scan periodically.
 
 **For security tooling / registries:**
-- Add YARA/regex rule for `rmcej%otb%` to static analysis pipelines
-- Flag packages with postinstall scripts that write to project root config files
-- Cross-reference affected repo owners against recently published npm packages
+- Add the multi-variant `polinrider_payload` YARA rule (below) to static analysis pipelines — covers both `rmcej%otb%` and `Cot%3t=shtP` variants.
+- Flag packages with postinstall scripts that write to project root config files.
+- Cross-reference affected repo owners against recently published npm packages, especially in the Tailwind / PostCSS ecosystem.
+- Add `filename:temp_auto_push.bat` and `LAST_COMMIT_DATE LAST_COMMIT_TIME extension:bat` as continuous monitoring queries on GitHub Code Search.
 
 ### Check for PolinRider with OSM script
 
@@ -154,19 +199,30 @@ Our team has written a bash script that will check your local system for comprom
 
 ## Infected File Types
 
-| File | Occurrences |
-|------|------------:|
-| `postcss.config.mjs` | 416 |
-| `tailwind.config.js` | 84 |
-| `eslint.config.mjs` | 60 |
-| `postcss.config.js` | 13 |
-| `App.js` | 13 |
-| `next.config.mjs` | 12 |
-| `index.js` | 6 |
-| `astro.config.mjs` | 6 |
-| `tailwind.config.mjs` | 5 |
+The April 10 update significantly expanded the file-type list. The malware targets a wider set of JS-family files than originally documented, and has been observed inside binary assets like `.woff2` font files. Counts below reflect the **2026-04-10 corpus of 1,736 unique repos**.
 
-The dominance of `postcss.config.mjs` (416 of 675 repos, ~62%) strongly points to a compromised PostCSS or Tailwind CSS-adjacent npm package as the primary infection vector.
+| File | Occurrences (Mar 8) | Occurrences (Apr 10) |
+|------|--------------------:|---------------------:|
+| `postcss.config.mjs` | 416 | ~960 |
+| `tailwind.config.js` | 84 | ~210 |
+| `eslint.config.mjs` | 60 | ~150 |
+| `postcss.config.js` | 13 | ~40 |
+| `App.js` | 13 | ~30 |
+| `next.config.mjs` | 12 | ~30 |
+| `index.js` | 6 | ~25 |
+| `astro.config.mjs` | 6 | ~15 |
+| `tailwind.config.mjs` | 5 | ~12 |
+| `vite.config.js` / `vite.config.mjs` | — | ~20 |
+| `webpack.config.js` | — | ~15 |
+| `gridsome.config.js` | — | ~5 |
+| `vue.config.js` | — | ~10 |
+| `truffle.js` | — | ~5 |
+| `temp_auto_push.bat` (propagation script artifact) | — | **101** |
+| `.woff2` font files (fake-font sub-variant) | — | observed |
+
+The dominance of `postcss.config.mjs` (~62% of repos in both data points) continues to point at the PostCSS / Tailwind ecosystem as the primary infection vector. The newly observed entries — `vite.config.*`, `webpack.config.js`, `gridsome.config.js`, `vue.config.js`, `truffle.js`, and binary `.woff2` files — show the malware has expanded its file-targeting heuristics or that the threat actor is using multiple npm-package vehicles to reach victims using different build tooling.
+
+**The propagation-script artifact `temp_auto_push.bat` has been left behind in 101 victim repos**, even in cases where the JS payload has since been cleaned up by the owner. This file is one of the highest-confidence indicators of past compromise.
 
 ---
 
@@ -174,10 +230,21 @@ The dominance of `postcss.config.mjs` (416 of 675 repos, ~62%) strongly points t
 
 ![tailwind-mainanimation NPM Package](images/PolinRider-campaign-npm-readme.png)
 
-The threat actor has published two NPM packages:
+The threat actor has published several malicious NPM packages, all impersonating Tailwind / PostCSS adjacent utilities. As of 2026-04-11, the `allavin` and `blackedward` npm accounts have both been deleted from npm and their packages scrubbed, but the existing victim repos still carry the dependency references and (in many cases) still have the post-install-injected malware in their config files.
 
-- tailwind-mainanimation which was published by the "allavin" NPM user, and is still live
-- tailwind-autoanimation which was published by the blackedward NPM user, that has been removed from the NPM registry.  
+| Package | Latest version | Status | Publisher | Observed victim count (Apr 11) |
+|---|---|---|---|---:|
+| `tailwind-mainanimation` | 2.3.3 → `0.0.1-security` | TAKEN DOWN by npm (replaced by security placeholder 2026-03-13) | `allavin` (account deleted) | 1 |
+| `tailwind-autoanimation` | 2.3.6 | REMOVED from registry | `blackedward` (account deleted) | 2 |
+| `tailwind-animationbased` | — | observed | (account deleted) | 0 |
+| `tailwindcss-typography-style` | 0.8.2 | observed | (account deleted) | 6 |
+| **`tailwindcss-style-animate`** | **1.1.6** | **observed** | **(account deleted)** | **34 ← primary ShoeVista dep** |
+| `tailwindcss-style-modify` | 0.8.3 | observed | (account deleted) | 4 |
+| `tailwindcss-animate-style` | 1.2.5 | observed | (account deleted) | 0 |
+
+The April 11 hunt confirmed that **`tailwindcss-style-animate ^1.1.6`** is the primary malicious dependency of the ShoeVista fake-interview template — 34 of the 46 npm-package-pivot hits are developer reuploads of that template with that exact dependency. The other packages in the list are used by sibling campaigns (e.g. `tailwind-autoanimation` in the `devhire-frontend` cluster and `reactapp-6`).
+
+Investigators looking to pivot via the npm dependents tree should note that this pivot is no longer viable for `tailwind-mainanimation` — npm has scrubbed the live malicious release. Pivot instead via `"<package_name>" filename:package.json` GitHub Code Search queries, which still return the ghost references in victim repos.
 
 ![NPM Packages](images/PolinRider-campaign-npm-author.png)
 
@@ -189,7 +256,14 @@ The tailwind-autoanimation package uses the same exact technique of appending th
 
 ## Malware Summary
 
-PolinRider delivers a multi-stage payload, that culminates in a new version of the DPRK Beavertail malware. The initial payload is a mass-compromise backdoor/infostealer that injects an identical obfuscated JavaScript payload into legitimate developers' repositories. The payload is appended after whitespace padding to common config files (postcss.config.mjs, eslint.config.mjs, tailwind.config.js, etc.) so it executes automatically when build tools import the module. It uses a multi-layer string shuffling deobfuscation routine with the unique signature ("rmcej%otb%",2857687) and function name _$_1e42, ultimately constructing and eval'ing the final payload at runtime.
+PolinRider delivers a multi-stage payload, that culminates in a new version of the DPRK Beavertail malware. The initial payload is a mass-compromise backdoor/infostealer that injects an obfuscated JavaScript payload into legitimate developers' repositories. The payload is appended after whitespace padding to common config files (postcss.config.mjs, eslint.config.mjs, tailwind.config.js, etc.) so it executes automatically when build tools import the module. It uses a multi-layer string shuffling deobfuscation routine, ultimately constructing and eval'ing the final payload at runtime.
+
+The OSM team has so far observed **two active variants** of this obfuscator with rotated unique fingerprints:
+
+- **Original variant (Mar 8 publication)**: signature `("rmcej%otb%",2857687)`, decoder function `_$_1e42`, secondary seed `2667686`, injection marker `global['!']`.
+- **New variant (Apr 10 update)**: signature `Cot%3t=shtP`, shuffle seed `1111436`, decoder function `MDy`, secondary seed `3896884`, injection marker `global['_V']='8-XXX'`. Same architecture, all unique constants rotated — almost certainly an evasion response to the published `rmcej_otb_payload` YARA rule.
+
+Both variants use the same blockchain dead-drop C2 infrastructure (TRON / Aptos / BSC) with the same XOR keys, and both are currently active in the wild.
 
 This final payload is a sophisticated **blockchain-based dead drop resolver** that uses immutable blockchain transactions as Command & Control (C2) infrastructure. The malware fetches encrypted JavaScript payloads from blockchain accounts (TRON, Aptos, and BSC), decrypts them using XOR encryption, and executes them via `eval()`. This technique makes the C2 infrastructure virtually impossible to take down since blockchain data is immutable.
 
@@ -245,6 +319,55 @@ The malware uses four layers of obfuscation:
 **Layer 4:** XOR encryption for final payloads
    - Payloads retrieved from blockchain are XOR-encrypted
    - Two hardcoded keys for different stages
+
+### New Variant: `Cot%3t=shtP`
+
+In April 2026 the OSM team identified a **second active variant** of the PolinRider obfuscator. The architecture is identical to the original — same 4-layer shuffle-cipher, same blockchain dead-drop C2, same multi-stage Beavertail second-stage — but every unique fingerprint string has been **rotated**, almost certainly in response to the published `rmcej_otb_payload` YARA rule.
+
+| Attribute | Original variant | New variant |
+|---|---|---|
+| Signature marker | `rmcej%otb%` | `Cot%3t=shtP` |
+| Shuffle seed (layer 1) | `2857687` | `1111436` |
+| Secondary seed (layer 2) | `2667686` | `3896884` |
+| Decoder function name | `_$_1e42` | `MDy` |
+| Globals injected | `global['!']`, `global['r']`, `global['m']` | `global['_V']`, `global['r']`, `global['m']` |
+| Targeted file types | postcss.config.mjs, tailwind.config.js, eslint.config.mjs, etc. | (same) |
+| Injection style | Appended after legitimate `export default` / module body | (same) |
+| Blockchain C2 | TRON / Aptos / BSC | (same — addresses unchanged) |
+| XOR keys | unchanged | unchanged |
+
+The new variant uses an additional injection marker line: `global['_V']='8-XXX'` (where `8-XXX` is a per-injection version tag, e.g. `8-st1`, `8-st2`, …, `8-st59`, plus a parallel numeric batch like `8-413`, `8-683`, `8-778`, `8-974`). The sequential `'8-stN'` tags are the OSM team's strongest evidence that the threat actor's tooling assigns a numeric ID per victim and that **at least 59 sequential injections** of this variant exist (some not yet indexed by public code search).
+
+#### Notable cross-variant finding
+
+At least one repository — `HassanHabibTahir/testclient` — contains markers from BOTH variants in different files (`rmcej%otb%` in `postcss.config.mjs` and `global['_V']` in another file), indicating the threat actor's tooling is **re-running against previously-compromised hosts** with the rotated obfuscator. Defenders should not assume that a once-cleaned repo remains clean.
+
+### Weaponized Take-Home Templates
+
+In addition to the npm-package and `.vscode/tasks.json` delivery vectors, the PolinRider threat actor has authored at least two **fake take-home test projects** distributed to candidates via fake job-interview lures (the classic Contagious Interview playbook). These project templates ship pre-loaded with malicious dependencies or tasks.json payloads so that simply cloning and running the project triggers the infection.
+
+#### ShoeVista (Tailwind e-commerce template)
+
+- **Template name**: `ShoeVista` (also seen as `shoevista`, `shoe-vista`, `Test-west-shoe`, `Test-002`, `product-catalog`, `mern-app`, various candidate-named forks)
+- **Stack**: React frontend in `client/`, Node/Express backend in `server/` (typical MERN take-home)
+- **Delivery vector**: Malicious npm dependency `"tailwindcss-style-animate": "^1.1.6"` in `client/package.json`
+- **Package.json `name` field**: `"client"` (generic — the ShoeVista branding is in the README / fake-company landing page)
+- **Observed victim repos**: 34+ individual developer reuploads, all created Feb–Mar 2026, all 0 stars / 0 forks (fresh throwaway accounts). Examples: `alaminrifat/shoevista-rifat`, `Atik203/ShoeVista`, `DaviBarros/shoevista`, `IchaCoder/test-shoe`, `Anas-Ali-3673/Test-west-shoe`, `naime7132/client-2` (devhire variant)
+- **Naming pattern**: candidates often name the repo after the fake-company prompt (`ShoeVista`, `shoevista-rifat`, `HedaetShahriar/ShoeVista-Test`) or after the interview platform (`Test-002`, `test-shoe`, `test_upwork`, `test_west_shoe`)
+
+#### StakingGame (VS Code + blockchain automation template)
+
+- **Template fingerprint**: the tasks.json file contains `"projectInfo": { "name": "StakingGame", "description": "Advanced VSCode automation for multi-environment blockchain deployment.", "uuid": "e9b53a7c-2342-4b15-b02d-bd8b8f6a03f9" }` — the UUID is **constant** across all victims and is the strongest indicator of this template
+- **Delivery vector**: Weaponized `.vscode/tasks.json` with `runOn: folderOpen` executing `curl | bash` against `default-configuration.vercel.app` and the other newly-discovered Vercel C2 subdomains
+- **Observed victim repos**: 42+ direct UUID matches plus broader tasks.json usage. Examples: `Devba/lmng-top-`, `wyrustaaruz/cal-eco-platform`
+- **Theme**: positioned as a blockchain / staking-game developer assessment; appeals to Web3 candidates
+
+#### Implications
+
+The existence of pre-weaponized template projects means:
+- **Developers finishing "take-home tests" from unvetted recruiters are a primary infection vector.** This isn't just a supply-chain attack on npm; it's a *social-engineering attack* on the job market.
+- **The victim accounts are not previously-compromised developers.** They are fresh candidate accounts created specifically to complete a test. This explains the large number of 0-star / 0-fork victim repos with account ages < 1 year.
+- **Defenders hunting for victims should include candidate-naming patterns** (`test-*`, `*-test`, `*-interview`, `*-assessment`, `*-task`) in their search heuristics.
 
 ### Execution Flow
 
@@ -315,7 +438,22 @@ require('child_process').spawn('node', ['-e', `global['_V']='...'${decryptedCode
 
 ## C2 Infrastructure (Indicators of Compromise)
 
-### Blockchain Addresses
+### Vercel-hosted HTTP C2 endpoints (TasksJacker-side vector)
+
+Used in `.vscode/tasks.json` `curl | bash` payloads with `runOn: folderOpen`. All follow the URL shape `https://<sub>.vercel.app/settings/(mac|linux|win)?flag=<N>`. These are the attacker-controlled bootstrap servers that deliver the PolinRider JS loader to VS Code victims.
+
+| Subdomain | Count (Apr 11) | First observed | Notes |
+|---|---:|---|---|
+| `260120.vercel.app` | 56 | pre-Mar 8 | Original OSM query Q11; also published in the first blog |
+| **`default-configuration.vercel.app`** | **106** | Apr 2026 | Largest single-subdomain cluster found so far |
+| **`vscode-settings-bootstrap.vercel.app`** | 16 | Apr 2026 | |
+| **`vscode-settings-config.vercel.app`** | 11 | Apr 2026 | |
+| **`vscode-bootstrapper.vercel.app`** | 6 | Apr 2026 | |
+| **`vscode-load-config.vercel.app`** | 6 | Apr 2026 | |
+
+All five of the `vscode-*` / `default-configuration` domains were discovered in the April 10–11 hunt and are now part of the OSM hunting query set. Expect more sibling subdomains as Vercel domains are cheap / disposable to the threat actor.
+
+### Blockchain Addresses (PolinRider-JS-loader second-stage dead-drop)
 
 #### TRON Addresses (Primary C2)
 - **`TMfKQEd7TJJa5xNZJZ2Lep838vrzrs7mAP`** (Primary)
@@ -339,12 +477,54 @@ Method: `eth_getTransactionByHash`
 - **Primary Key:** `2[gWfGj;<:-93Z^C`
 - **Secondary Key:** `m6:tTh^D)cBz?NM]`
 
-### YARA Rule (Suggested)
+### StakingGame template UUID
+- **`e9b53a7c-2342-4b15-b02d-bd8b8f6a03f9`** — appears in the `projectInfo.uuid` field of the malicious `.vscode/tasks.json` for the StakingGame fake-interview template. Highly specific; 0 false positives in testing.
+
+### YARA Rule (Suggested) — covers both variants
+
+The original `rmcej_otb_payload` rule (still valid for the original variant) has been superseded by a multi-variant rule that catches both the original `rmcej%otb%` strain and the rotated `Cot%3t=shtP` strain. Use this in static analysis pipelines.
+
+```yara
+rule polinrider_payload {
+    meta:
+        description = "Detects PolinRider shuffle-cipher JS payloads — both rmcej%otb% (v1) and Cot%3t=shtP (v2) variants"
+        author = "OpenSourceMalware.com"
+        date = "2026-04-10"
+        severity = "high"
+
+    strings:
+        // Original variant (rmcej%otb%)
+        $marker_v1   = "rmcej%otb%"
+        $seed1_v1    = "2857687"
+        $seed2_v1    = "2667686"
+        $varname_v1  = "_$_1e42"
+        $global_bang = "global['!']"
+
+        // New variant (Cot%3t=shtP)
+        $marker_v2   = "Cot%3t=shtP"
+        $seed1_v2    = "1111436"
+        $seed2_v2    = "3896884"
+        $varname_v2  = "MDy"
+        $global_V    = "global['_V']"
+
+        // Common across variants
+        $global_r    = "global['r'] = require"
+        $global_m    = "global['m'] = module"
+
+    condition:
+        any of ($marker_*) or
+        ($global_bang and ($seed1_v1 or $varname_v1)) or
+        ($global_V    and ($seed1_v2 or $varname_v2)) or
+        ($global_r and $global_m and (any of ($seed1_*)))
+}
+```
+
+### YARA Rule (Legacy) — original variant only
 
 ```yara
 rule rmcej_otb_payload {
     meta:
-        description = "Detects rmcej%otb% shuffle-cipher JS payload injected into config files"
+        description = "Detects rmcej%otb% shuffle-cipher JS payload injected into config files (original variant only)"
         author = "OpenSourceMalware.com"
         date = "2026-03-07"
         severity = "high"
@@ -363,7 +543,7 @@ rule rmcej_otb_payload {
 
 ---
 
-## Data Collection
+## Data Collection (Mar 8 — original method)
 
 Data was collected using the GitHub Code Search API via `gh search code`, running one query per infected filename to work around the 1,000-result-per-query cap. Results were deduplicated by repository full name.
 
@@ -381,6 +561,75 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | **Total (pre-dedup)** | **700** |
 | **Unique repos** | **675** |
 
+## Refinement Methodology (Apr 10 — expanded method)
+
+The April 10 hunt expanded the data collection by combining **five orthogonal pivots** and applying a **partition-by-extension/size/fork** strategy to push past GitHub Code Search's 1,000-result-per-query cap on the most powerful pivot.
+
+### Pivots used in the April 10–11 hunt
+
+| # | Pivot | Engine | Unique repos contributed |
+|---|---|---|---:|
+| 1 | `filename:temp_auto_push.bat` | GitHub Code Search | 101 |
+| 2 | `"_$_1e42"` (with extension/size/fork refinement) | GitHub Code Search | 1,323 |
+| 3 | `"function MDy(f)" global _V` | GitHub Code Search | 14 |
+| 4 | `LAST_COMMIT_DATE LAST_COMMIT_TIME extension:bat` | GitHub Code Search | 236 |
+| 5 | `Cot%3t=shtP` regex with `fork:yes archived:yes` | Sourcegraph | 41 |
+| **Round 1 combined** | | | **1,556** |
+| 6 | `"<malicious_npm_package>" filename:package.json` (7 npm packages) | GitHub Code Search | 46 |
+| 7 | `<url> filename:tasks.json` (vercel.app, onrender.com, 260120.vercel.app) | GitHub Code Search | 145 |
+| 8 | `"default-configuration.vercel.app"` and 4 sibling `vscode-*.vercel.app` subdomains | GitHub Code Search | 94 |
+| 9 | `"e9b53a7c-2342-4b15-b02d-bd8b8f6a03f9"` (StakingGame template UUID) | GitHub Code Search | 42 |
+| 10 | Sequential `'8-stN'` 1–200 enumeration (checking for unindexed sequential tags) | Sourcegraph regex | 0 new |
+| **Round 2 combined** | | | **+215** |
+| **Total unique (both rounds + existing CSV)** | | | **1,951** |
+
+### Pushing past the 1,000-result cap
+
+The `_$_1e42` decoder-function-name query reported `total_count: 968` and capped at 1,000 returned items, but the GitHub web UI showed 1,400+ matches. Refining into orthogonal sub-queries that each stay under 1,000 results, then taking the union, broke the cap:
+
+| Refinement | total_count |
+|---|---:|
+| `extension:js` | 430 |
+| `extension:mjs` | 676 |
+| `extension:cjs` | 17 |
+| `extension:ts` | 7 |
+| `extension:html` | 1 |
+| `size:<5000` | 4 |
+| `size:5000..6000` | 630 |
+| `size:6000..7000` | 125 |
+| `size:7000..8000` | 139 |
+| `size:8000..9000` | 56 |
+| `size:9000..10000` | 36 |
+| `size:10000..50000` | 112 |
+| `size:>50000` | 12 |
+| `fork:true` | **157** (excluded by default!) |
+
+Three crucial findings from this exercise:
+
+1. **The single biggest hidden gap was forks.** GitHub Code Search excludes forks by default (`fork:false`). Adding `fork:true` revealed 157 fork repos containing the marker that were completely invisible to the original query.
+2. **Sub-bucketing the `size:5000..10000` range by 1KB slices yielded 986 results vs. the bucket's reported 968** — even within a sub-1000 reported total, the cap can hide entries. The right approach is *recursive bucketing* until each bucket is well under the cap.
+3. **`extension:` splits yield more total results than `language:` splits** because GitHub's language detection sometimes excludes `.mjs` and `.cjs` from the JavaScript bucket.
+
+### Cross-engine union (true scope)
+
+Combining the April 10–11 hunt data with the existing `affected_repos.csv` yields the **true currently-known corpus**:
+
+| Source | Unique repos | Unique owners |
+|---|---:|---:|
+| Original Mar 8 publication | 675 | 352 |
+| `affected_repos.csv` (Mar 18 update) | 769 | 399 |
+| April 10 v3 master (5 pivots) | 1,556 | 835 |
+| April 11 round 2 (5 additional pivots) | +215 net new | +158 net new |
+| **Union (true scope, Apr 11)** | **1,951** | **1,047** |
+
+### Sample-verified false positive rate
+
+Across **44 random samples** taken across both rounds of the hunt, **0 false positives** were observed. Every sampled repo contained at least one of the PolinRider invariants (`rmcej%otb%`, `Cot%3t=shtP`, `_$_1e42`, `MDy`, `global['!']`, `global['_V']`, `LAST_COMMIT_DATE` inside a propagation `.bat`, a known malicious npm package in `package.json`, or a `.vscode/tasks.json` with a `curl | bash` to one of the known C2 subdomains) in the file at the indexed pivot path.
+
+Round 2 specifically introduced two new variant classifications in the submission taxonomy:
+- **`malicious_npm`**: the repo contains one of the 7 known malicious npm packages in a `package.json` (45 submissions — almost all ShoeVista template reuploads).
+- **`tasksjacker`**: the repo contains a `.vscode/tasks.json` with a `runOn: folderOpen` task executing `curl | bash` or `wget | sh` against a Vercel/Render/Railway C2 subdomain (27 submissions — includes the StakingGame template cluster).
+
 ---
 
 ## Files
@@ -388,8 +637,16 @@ Data was collected using the GitHub Code Search API via `gh search code`, runnin
 | File | Description |
 |------|-------------|
 | `README.md` | This report |
-| `affected_repos.csv` | All 675 affected repositories — organisations first, then users, each sorted by stars+forks descending |
-| `affected_users.csv` | All 352 affected owners — organisations first, then users, each sorted by followers descending |
+| `polinrider-rides-again.md` | Follow-up blog (Apr 11) covering the campaign growth, the TasksJacker / PolinRider merger, and the full end-to-end payload reverse engineering |
+| `affected_repos.csv` | Affected repositories — organisations first, then users, each sorted by stars+forks descending. **Note:** as of 2026-04-11 this CSV contains 769 entries from the March 18 collection. The April 10–11 hunts added ~1,180 new repos that have not yet been merged into this CSV (they are tracked in `reports/polinrider-master-v3-1556.tsv` and `reports/polinrider-round2-repos.txt`). True known scope is **1,951** unique repos. |
+| `affected_users.csv` | Affected owners — organisations first, then users, each sorted by followers descending. As of 2026-04-11 contains 399 entries; April hunt union is **1,047** owners. |
+| `reports/polinrider-master-v3-1556.tsv` | April 10 hunt master list: `repo \t osm_status \t threat_id \t severity \t sources` for all 1,556 repos found in the v3 hunt |
+| `reports/polinrider-new-v3.tsv` | The 705 repos newly added to OSM on 2026-04-10 |
+| `reports/polinrider-round2-repos.txt` | Round 2 clean master list (239 unique repos from the 5 new pivots) |
+| `reports/polinrider-round2-submissions-2026-04-11.tsv` | The 72 repos newly added to OSM on 2026-04-11 (round 2) |
+| `reports/polinrider-scope-v3-2026-04-10.md` | Full v3 scope report including refinement methodology and false-positive analysis |
+| `reports/polinrider-submissions-2026-04-10.md` | Mass submission report for the 704 OSM threat reports filed on 2026-04-10 |
+| `reports/polinrider-scope-v3-2026-04-10.md` | v3 scope report |
 
 ---
 
