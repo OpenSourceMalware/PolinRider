@@ -234,11 +234,11 @@ The threat actor has published several malicious NPM packages, all impersonating
 
 | Package | Latest version | Status | Publisher | Observed victim count (Apr 11) |
 |---|---|---|---|---:|
+| **`tailwindcss-style-animate`** | **1.1.6** | **observed** | **(account deleted)** | **34 ← primary ShoeVista dep** |
 | `tailwind-mainanimation` | 2.3.3 → `0.0.1-security` | TAKEN DOWN by npm (replaced by security placeholder 2026-03-13) | `allavin` (account deleted) | 1 |
 | `tailwind-autoanimation` | 2.3.6 | REMOVED from registry | `blackedward` (account deleted) | 2 |
 | `tailwind-animationbased` | — | observed | (account deleted) | 0 |
 | `tailwindcss-typography-style` | 0.8.2 | observed | (account deleted) | 6 |
-| **`tailwindcss-style-animate`** | **1.1.6** | **observed** | **(account deleted)** | **34 ← primary ShoeVista dep** |
 | `tailwindcss-style-modify` | 0.8.3 | observed | (account deleted) | 4 |
 | `tailwindcss-animate-style` | 1.2.5 | observed | (account deleted) | 0 |
 
