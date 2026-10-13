@@ -194,6 +194,11 @@ We assume the malware has similar functions to rewrite git history for other ope
 
 Our team has written a bash script that will check your local system for compromise.  At the end of this blog post you can find out more, or you can checkout the script [here](https://github.com/OpenSourceMalware/PolinRider/blob/main/polinrider-scanner.sh)
 
+
+### Cleaning up GitHub repositories and accounts
+
+[polinrider-cleaner](https://github.com/meSingh/polinrider-cleaner) is an MIT-licensed tool for the GitHub side of a cleanup. It checks every branch and tag of every repository in an account or organization against GitHub's push record rather than commit dates, which this campaign backdates, and restores a branch to its last clean pushed state where that record survives. It also checks the local machine, changes nothing without a typed `yes`, and its indicators are reviewed weekly against this dossier.
+
 ---
 
 
